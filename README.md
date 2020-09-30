@@ -37,7 +37,7 @@
 *  增加mybatis-Plush AutoGenerator 代码一键批量生成功能 详情请见 Jhome-codeGenerator 服务
 *  引入Tcc 分布式事务框架 两阶段补偿提交（后续引入实战demo）  
 *  引入爬虫框架（后续引入实战Demo）
-![image](https://github.com/dayuhan/Jhome/blob/master/img-storage/4.jpg) 
+![image](https://github.com/dayuhan/Jhome/blob/master/img-storage/pc.jpg) 
 
 
 ## jhome v1.1
