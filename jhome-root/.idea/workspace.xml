@@ -85,7 +85,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.33256084" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -351,6 +351,9 @@
       <workItem from="1601278403678" duration="316000" />
       <workItem from="1601282128452" duration="7000" />
       <workItem from="1601453980214" duration="4823000" />
+      <workItem from="1601522827774" duration="346000" />
+      <workItem from="1601619029471" duration="170000" />
+      <workItem from="1601630883705" duration="1353000" />
     </task>
     <servers />
   </component>
@@ -481,12 +484,12 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="-49" y="248" key="Maven.ArtifactSearchDialog/0.40.1440.920@0.40.1440.920" timestamp="1599886468801" />
-    <state x="118" y="110" width="1165" height="707" key="SettingsEditor" timestamp="1600416347537">
+    <state x="118" y="110" width="1165" height="707" key="SettingsEditor" timestamp="1601619198490">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="69" y="50" width="1165" height="707" key="SettingsEditor/0.30.1234.793@0.30.1234.793" timestamp="1595649821104" />
     <state x="81" y="54" width="1359" height="715" key="SettingsEditor/0.31.1440.929@0.31.1440.929" timestamp="1593957928019" />
-    <state x="118" y="110" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1600416347537" />
+    <state x="118" y="110" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1601619198490" />
     <state width="559" height="477" key="SwitcherDM" timestamp="1599884884527">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
