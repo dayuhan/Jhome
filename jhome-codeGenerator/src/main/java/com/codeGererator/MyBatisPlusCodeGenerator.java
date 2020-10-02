@@ -91,7 +91,7 @@ public class MyBatisPlusCodeGenerator {
                 .setDbType(DbType.MYSQL)// 数据库类型
                 .setDriverName("com.mysql.cj.jdbc.Driver")
                 .setUsername("root")
-                .setPassword("root152")
+                .setPassword("123456")
                 .setUrl("jdbc:mysql://10.1.241.152:3306/gta_ebd?serverTimezone=UTC&useSSL=false");
         mpg.setDataSource(dsc);
 
