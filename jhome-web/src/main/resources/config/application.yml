@@ -20,16 +20,16 @@ jhome:
     #消息服务配置
     queueconfig:
       #队列服务器地址
-      hostName: 192.168.43.93
+      hostName: 127.0.0.1SS
       #用户名
-      userName: daxu
+      userName: admin
       #密码
-      passWord: 13528764027
+      passWord: admin
       #虚拟主机
       virtualHost: dxhost
 #================================================================================ com.nettyServer.server settings ===========#
 server:
-  port: 8111
+  port: 8200
   servlet:
     context-path: /jhome
   tomcat:
@@ -56,16 +56,16 @@ spring:
   thymeleaf:
     prefix: classpath:/templates/
   datasource:
-    url: jdbc:mysql://192.168.40.129:3306/jhome # jdbc:mysql://10.1.137.101:3306/qas_ynjm_v184
+    url: jdbc:mysql://127.0.0.1:3306/mysqlDb?serverTimezone=UTC&useSSL=false
     username: root
-    password: 111111
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
   redis:
-    host: 192.168.52.130 #10.1.20.66 #10.1.20.66 #192.168.40.129 #192.168.52.130
+    host: 127.0.0.1 #10.1.20.66 #10.1.20.66 #192.168.40.129 #192.168.52.130
     database: 0
     port: 6379
-    password:
+    password: 123456
     timeout: 10000
 
 #=========================================#
@@ -78,11 +78,15 @@ spring:
 shiro:
   filterChainDefinitionMap: |
 
-    /static/**: anon,
-    /css/**: anon,
-    /images/**: anon,
-    /js/**: anon,
-    /script/**: anon,
+    /login:anon,
+    /logout:anon,
+    /css/**:anon,
+    /images/**:anon,
+    /script/**:anon,
+    /swagger-ui.html:anon,
+    /webjars/**:anon,
+    /v2/**:anon,
+    /swagger-resources/**:anon,
     /web/**: authc,
     /**: authc
   LoginUrl: http://127.0.0.1:8100/jhome/account/login
@@ -128,7 +132,7 @@ eureka:
       defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/
     ###因为该应用为服务提供者，是eureka的一个客户端，需要注册到注册中心
     ####defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/,http://daxunihao:123456@127.0.0.1:9200/jhome/eureka/
-    registerWithEureka: false
+    registerWithEureka: true
     ###是否需要从eureka上检索服务
     fetch-registry: true
   instance:

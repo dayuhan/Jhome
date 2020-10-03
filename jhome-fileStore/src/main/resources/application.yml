@@ -10,9 +10,9 @@ copyrightYear: 2020
 #====================================================================== server-配置 ================#
 
 server:
-  port: 8400
+  port: 8300
   servlet:
-    context-path: /zlbzxt
+    context-path: /jhome
   tomcat:
     uri-encoding: UTF-8
 adminPath: ${lux.sysproperties.adminPath}
@@ -26,11 +26,11 @@ lux:
     #消息服务配置
     queueconfig:
       #队列服务器地址
-      hostName: 192.168.43.93
+      hostName: 127.0.0.1
       #用户名
-      userName: daxu
+      userName: admin
       #密码
-      passWord: 13528764027
+      passWord: admin
       #虚拟主机
       virtualHost: dxhost
     #上传类型
@@ -60,9 +60,9 @@ spring:
   thymeleaf:
     prefix: classpath:/templates/
   datasource:
-    url: jdbc:mysql://10.1.241.152:3306/mysqlDb?serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/mysqlDb?serverTimezone=UTC&useSSL=false
     username: root
-    password: root152
+    password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     druid:
@@ -96,10 +96,10 @@ spring:
       filters: stat,wall,log4j
       useGlobalDataSourceStat: true
   redis:
-    host: 10.1.136.38
+    host: 127.0.0.1
     database: 0
     port: 6379
-    password:
+    password: 123456
     timeout: 10000
     lettuce:
       pool:
@@ -124,7 +124,7 @@ shiro:
     /swagger-resources/**:anon,
     /fileStore/**: authc,
     /**: authc
-  LoginUrl: http://10.1.136.38:8100/zlbzxt/account/login
+  LoginUrl: http://127.0.0.1:8100/jhome/account/login
   #  LoginUrl: http://10.1.20.58:8100/zlbzxt/account/login
   SuccessUrl: /${lux.sysproperties.adminPath}/index
   UnauthorizedUrl: /${lux.sysproperties.adminPath}/sys/error
@@ -154,14 +154,15 @@ mybatis-plus:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://gtanihao:123456@10.1.136.38:9100/zlbzxt/eureka/
+      defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/
     registerWithEureka: true
     fetchRegistry: true
   instance:
     #instanceId: ${spring.application.name}-${server.port} 任务链
     preferIpAddress: true
-    ipAddress: 10.1.136.38
+    ipAddress: 127.0.0.1
 #    ipAddress: 10.1.20.58 #当前IP
+
 
 feign:
   compression:
@@ -212,6 +213,6 @@ lximage:
   filehost: test
 
 # 文件服务器地址
-file_server_addr: 10.1.137.181:22122
+file_server_addr: 127.0.0.1:22122
 fastdfs:
   http_secret_key: HandFastDFSToken

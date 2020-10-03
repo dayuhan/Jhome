@@ -28,7 +28,7 @@ public class Swagger2Config {
                 // 为当前包路径
                 //.apis(RequestHandlerSelectors.basePackage("com.jhome.modules"))
                 .apis(RequestHandlerSelectors.any())
-                .paths((com.google.common.base.Predicate<String>) Predicates.not((Predicate) PathSelectors.regex("/error.*")))
+                //.paths((com.google.common.base.Predicate<String>) Predicates.not((Predicate) PathSelectors.regex("/error.*")))
                 .paths(PathSelectors.regex("/.*"))
                 //.paths(PathSelectors.any())
                 .build();

@@ -45,7 +45,6 @@ import java.util.List;
 @Api(tags = "z、注册系统")
 @RestController
 @RequestMapping("/register")
-
 public class RegisterController extends BaseController {
     @Autowired
     public SysConfigPropertiesService sysConfigPropertieService;

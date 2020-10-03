@@ -175,7 +175,7 @@ public class SysAutoConfiguration {
     @Bean("TTransport")
     @ConditionalOnMissingBean(TTransport.class)
     public TTransport tTransport() {
-        return new TFramedTransport(new TSocket("127.0.0.1", 8899), 600);
+        return new TFramedTransport(new TSocket(spiro.getNettyServiceConfig().getUrl(), spiro.getNettyServiceConfig().getPort()), spiro.getNettyServiceConfig().getMaxLength());
     }
 
     @Bean

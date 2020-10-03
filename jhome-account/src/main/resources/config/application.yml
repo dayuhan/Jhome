@@ -29,11 +29,11 @@ jhome:
     #消息服务配置
     queueconfig:
       #队列服务器地址
-      hostName: 192.168.43.93
+      hostName: 127.0.0.1
       #用户名
-      userName: daxu
+      userName: admin
       #密码
-      passWord: 13528764027
+      passWord: admin
       #虚拟主机
       virtualHost: dxhost
     # redissconfig地址
@@ -51,6 +51,12 @@ jhome:
       redirectUrl: #前段部署地址
       isEnable: false #是否启用Cas认证
     callbackUrl: http://xxxx.com #CAS单点登录退出地址
+    # WebSocket 服务地址配置
+    nettyServiceConfig:
+      url: 127.0.0.1 #服务器地址
+      port: 8899 #端口号
+      maxLength: 600 #传输长度
+
 #================================================================================ 数据库配置地址 =============#
 #================================================================================ Spring 基础配置信息 ===========#
 spring:
@@ -75,14 +81,14 @@ spring:
     servlet:
       content-type: text/html
   datasource:
-    url: jdbc:mysql://192.168.40.129:3306/jhome # jdbc:mysql://10.1.137.101:3306/qas_ynjm_v184
+    url: jdbc:mysql://127.0.0.1:3306/mysqlDb?serverTimezone=UTC&useSSL=false
     username: root
-    password: 111111
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     
   redis:
-    host: 192.168.52.130 #10.1.20.66 #10.1.20.66 #192.168.40.129 #192.168.52.130
+    host: 127.0.0.1 #10.1.20.66 #10.1.20.66 #192.168.40.129 #192.168.52.130
     database: 0
     port: 6379
     password: 123456

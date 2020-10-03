@@ -42,7 +42,7 @@ import java.util.UUID;
  * @create: 2020-08-04 08:54
  **/
 @Repository
-public class SysConfigPropertiesImpl extends HttpDaoImpl implements SysConfigPropertiesDao {
+public class SysConfigPropertiesDImpl extends HttpDaoImpl implements SysConfigPropertiesDao {
     protected Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private JdbcTemplate jdbcTemplate;

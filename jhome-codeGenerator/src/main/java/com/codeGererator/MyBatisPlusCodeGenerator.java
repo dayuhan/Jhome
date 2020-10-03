@@ -92,7 +92,7 @@ public class MyBatisPlusCodeGenerator {
                 .setDriverName("com.mysql.cj.jdbc.Driver")
                 .setUsername("root")
                 .setPassword("123456")
-                .setUrl("jdbc:mysql://10.1.241.152:3306/gta_ebd?serverTimezone=UTC&useSSL=false");
+                .setUrl("jdbc:mysql://192.168.52.130:3306/mysqlDb?serverTimezone=UTC&useSSL=false");
         mpg.setDataSource(dsc);
 
         // 包配置

@@ -52,7 +52,7 @@ public class SysConfigPropertiesImpl implements SysConfigPropertiesService {
     @Autowired
     protected RedisTemplate redisTemplate;
 
-    @Value("${lux.serviceUrl}")
+    @Value("${jhome.serviceUrl}")
     protected String serviceUrl;
 
     @Override
@@ -166,7 +166,7 @@ public class SysConfigPropertiesImpl implements SysConfigPropertiesService {
                 @Override
                 public void run() {
                     try {
-                        //C:\Program Files (x86)\GTA\gtadashujuV1.0\ceshi\bigscreen
+                        //C:\Program Files (x86)\com\dsjV1.0\ceshi\bigscreen
                         String commandStop = "cmd /c start " + serviceUrl + "\\ceshi\\bigscreen\\stop_service.bat";
                         String commandStart = "cmd /c start " + serviceUrl + "\\ceshi\\bigscreen\\start_service.bat";
                         LOGGER.info("..............开始重启...............");

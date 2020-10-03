@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.account.modules.daxu.dao.NsMessageInformationMapper">
+
+        <resultMap id="BaseResultMap" type="com.account.modules.daxu.model.bo.NsMessageInformation">
+                    <id column="Id" property="Id"/>
+                    <result column="from_user_id" property="fromUserId"/>
+                    <result column="to_group_Id" property="toGroupId"/>
+                    <result column="to_user_id" property="toUserId"/>
+                    <result column="content" property="content"/>
+                    <result column="type" property="type"/>
+                    <result column="file_url" property="fileUrl"/>
+                    <result column="file_Size" property="fileSize"/>
+                    <result column="status" property="status"/>
+                    <result column="created_by" property="createdBy"/>
+                    <result column="created_time" property="createdTime"/>
+                    <result column="tenant_id" property="tenantId"/>
+                    <result column="school_year_id" property="schoolYearId"/>
+                    <result column="send_count" property="sendCount"/>
+        </resultMap>
+
+        <sql id="commonSql">
+         `Id`
+            ,
+         `from_user_id`
+            ,
+         `to_group_Id`
+            ,
+         `to_user_id`
+            ,
+         `content`
+            ,
+         `type`
+            ,
+         `file_url`
+            ,
+         `file_Size`
+            ,
+         `status`
+            ,
+         `created_by`
+            ,
+         `created_time`
+            ,
+         `tenant_id`
+            ,
+         `school_year_id`
+            ,
+         `send_count`
+
+    </sql>
+
+        <!-- 分页查询 -->
+        <select id="selectNsMessageInformationPageList" resultMap="BaseResultMap" parameterType="com.account.modules.daxu.model.bo.NsMessageInformationQuery">
+            Select
+            <include refid="commonSql"></include>
+            From ns_message_information
+            <trim prefix="where" prefixOverrides="and|or">
+                AND 1=1
+            </trim>
+        </select>
+</mapper>

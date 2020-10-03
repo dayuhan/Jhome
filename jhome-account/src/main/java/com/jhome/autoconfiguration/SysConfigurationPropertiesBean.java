@@ -17,6 +17,7 @@ public class SysConfigurationPropertiesBean extends SysProperties {
     public DataSourceConfig datasourceconfig;//自定义数据库配置
     public CasConfig casConfig;//CAS单点登录配置
     public String callbackUrl;//cas单点登录回调地址
+    public  NettyServiceConfig nettyServiceConfig;//netty配置信息
 
 
 
@@ -74,5 +75,17 @@ public class SysConfigurationPropertiesBean extends SysProperties {
         public String isEnable;
         public String redirectUrl;
     }
+
+    @Getter
+    @Setter
+    public static class NettyServiceConfig
+    {
+        public String url;
+        public Integer port;
+        public Integer maxLength;
+
+    }
+
+
 
 }

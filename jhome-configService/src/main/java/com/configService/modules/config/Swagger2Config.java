@@ -21,18 +21,28 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Swagger2Config {
     @Bean
     public Docket createRestApi() {
+//        return new Docket(DocumentationType.SWAGGER_2)
+//                .apiInfo(apiInfo())
+//                .pathMapping("/")
+//                .select()
+//                // 为当前包路径
+//                .apis(RequestHandlerSelectors.basePackage("com.configService.modules.registered.web"))
+//                //.apis(RequestHandlerSelectors.any())
+//                //.paths((com.google.common.base.Predicate<String>) Predicates.not((Predicate) PathSelectors.regex("/error.*")))
+//                .paths(PathSelectors.regex("/.*"))
+//                //.paths(PathSelectors.any())
+//                .build();
+
+
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
-                .pathMapping("/")
                 .select()
                 // 为当前包路径
                 .apis(RequestHandlerSelectors.basePackage("com.configService.modules.registered.web"))
-                //.apis(RequestHandlerSelectors.any())
-                .paths((com.google.common.base.Predicate<String>) Predicates.not((Predicate) PathSelectors.regex("/error.*")))
-                .paths(PathSelectors.regex("/.*"))
-                //.paths(PathSelectors.any())
+                .paths(PathSelectors.any())
                 .build();
     }
+
     // api文档的详细信息函数,注意这里的注解引用的是哪个
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
