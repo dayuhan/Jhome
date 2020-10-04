@@ -20,7 +20,7 @@ jhome:
     #消息服务配置
     queueconfig:
       #队列服务器地址
-      hostName: 127.0.0.1SS
+      hostName: 127.0.0.1
       #用户名
       userName: admin
       #密码

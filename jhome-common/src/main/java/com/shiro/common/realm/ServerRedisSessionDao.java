@@ -52,7 +52,7 @@ public class ServerRedisSessionDao extends AbstractSessionDAO {
     //读取会话信息
     @Override
     protected Session doReadSession(Serializable sessionId) {
-        System.out.println("读取会话信息");
+        logger.debug("读取会话信息");
         Session session = (Session) redisTemplate.opsForValue().get(sessionId);
         //SerializedStringToBean(session);
         if (null != session) {
@@ -144,7 +144,7 @@ public class ServerRedisSessionDao extends AbstractSessionDAO {
     //获取所有的在线会话信息
     @Override
     public Collection<Session> getActiveSessions() {
-        System.out.println("获取所有的在线会话信息");
+        logger.debug("获取所有的在线会话信息");
         Set<Serializable> keys = redisTemplate
                 .keys(SessionCons.TOKEN_PREFIX_KEY);
         if (keys.size() == 0) {
@@ -161,6 +161,7 @@ public class ServerRedisSessionDao extends AbstractSessionDAO {
      * @return
      */
     public Serializable doCreateByUserInfo(Session session, UserInfo userInfo) {
+        logger.debug("cas 创建session");
         SessionDaoZH.SerializedBeanToString(session);
         assignSessionId(session, userInfo.getJhomeToken());
         redisTemplate.opsForValue().set(userInfo.getJhomeToken(), session);

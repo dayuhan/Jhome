@@ -1,7 +1,6 @@
 package com.configService.modules.config;
 
-import io.undertow.predicate.Predicate;
-import io.undertow.predicate.Predicates;
+import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -21,25 +20,16 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Swagger2Config {
     @Bean
     public Docket createRestApi() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .apiInfo(apiInfo())
-//                .pathMapping("/")
-//                .select()
-//                // 为当前包路径
-//                .apis(RequestHandlerSelectors.basePackage("com.configService.modules.registered.web"))
-//                //.apis(RequestHandlerSelectors.any())
-//                //.paths((com.google.common.base.Predicate<String>) Predicates.not((Predicate) PathSelectors.regex("/error.*")))
-//                .paths(PathSelectors.regex("/.*"))
-//                //.paths(PathSelectors.any())
-//                .build();
-
-
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
+                .pathMapping("/")
                 .select()
                 // 为当前包路径
                 .apis(RequestHandlerSelectors.basePackage("com.configService.modules.registered.web"))
-                .paths(PathSelectors.any())
+                //.apis(RequestHandlerSelectors.any())
+                .paths( Predicates.not(PathSelectors.regex("/error.*")))
+                .paths(PathSelectors.regex("/.*"))
+                //.paths(PathSelectors.any())
                 .build();
     }
 

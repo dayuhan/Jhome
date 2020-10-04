@@ -19,7 +19,7 @@ import java.util.concurrent.Executors;
 public class webspiderApplication {
     public static void main(String[] args) {
         //Bio 无限创建线程模式
-        ServerSocketByNewThread();
+        //ServerSocketByNewThread();
         //Bio 线程池模式 重复利用已有的线程
         ServerSocketByNewExecutorService();
 

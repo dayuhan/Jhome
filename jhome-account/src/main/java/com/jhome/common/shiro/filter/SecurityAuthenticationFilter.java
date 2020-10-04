@@ -48,8 +48,8 @@ import javax.servlet.http.HttpServletResponse;
  * @author: Daxv
  * @create: 2020-07-18 15:09
  **/
-public class SeparationModeFromAuthenticationFilter extends MixedModeFormAuthenticationFilter {
-    private static final Logger logger = LoggerFactory.getLogger(SeparationModeFromAuthenticationFilter.class);
+public class SecurityAuthenticationFilter extends MixedModeFormAuthenticationFilter {
+    private static final Logger logger = LoggerFactory.getLogger(SecurityAuthenticationFilter.class);
     private String callbackUrl;
 
     /**

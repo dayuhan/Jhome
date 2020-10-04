@@ -1,7 +1,6 @@
 package com.jhome.modules.config;
 
-import io.undertow.predicate.Predicate;
-import io.undertow.predicate.Predicates;
+import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -28,7 +27,7 @@ public class Swagger2Config {
                 // 为当前包路径
                 //.apis(RequestHandlerSelectors.basePackage("com.jhome.modules"))
                 .apis(RequestHandlerSelectors.any())
-                //.paths((com.google.common.base.Predicate<String>) Predicates.not((Predicate) PathSelectors.regex("/error.*")))
+                .paths(Predicates.not(PathSelectors.regex("/error.*")))
                 .paths(PathSelectors.regex("/.*"))
                 //.paths(PathSelectors.any())
                 .build();

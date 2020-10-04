@@ -33,7 +33,7 @@ public class CustomRealm extends ServerBaseAuthorizingRealm {
             String deviceType=token.getDeviceType();
             String pws = new String(((char[]) token.getCredentials()));
             //业务认证....
-            UserInfo userInfo = resolveUser(userName);
+            UserInfo userInfo = this.resolveUser(userName);
             return new SimpleAuthenticationInfo(userInfo.toString(), userInfo.getPassword(), this.getName());
         } catch (Exception ex) {
             logger.info("认证报错：%s",ex.getMessage());
@@ -48,6 +48,9 @@ public class CustomRealm extends ServerBaseAuthorizingRealm {
      */
     public UserInfo resolveUser(String userName)
     {
+        //获取本地用户
+        //...
+        //更新公共用户类
         UserInfo userInfo=new UserInfo();
         String jhomeToken= (String) UserUtil.getSubject().getSession().getId();
         userInfo.setJhomeToken(jhomeToken);

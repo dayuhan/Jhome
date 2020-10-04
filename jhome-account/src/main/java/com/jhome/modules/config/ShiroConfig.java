@@ -454,8 +454,8 @@ public class ShiroConfig {
     /**
      * Form登录过滤器 前后台分离过滤器
      */
-    private SeparationModeFromAuthenticationFilter shiroAuthcFilter() {
-        SeparationModeFromAuthenticationFilter bean = new SeparationModeFromAuthenticationFilter();
+    private SecurityAuthenticationFilter shiroAuthcFilter() {
+        SecurityAuthenticationFilter bean = new SecurityAuthenticationFilter();
         bean.setCallbackUrl(sysConfigurationProperties.getCallbackUrl());
         return bean;
     }
