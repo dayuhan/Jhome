@@ -6,7 +6,7 @@
 *  1.Spring全家桶 （SpringBoot Spring SpringCloud（eureka+feign+config+zuul+Hystrix） ）
 *  2.Shrio 安全框架
 *  3.pack4j 安全框架
-*  4.NIO（Netty）
+*  4.NIO（Netty）+ Quartz 任务调度
 *  5.PRC远程通信协议（ grpc  Thrift ） 
 *  6.分布式两阶段补偿事务（transaction）
 *  7.POI(文档操作)
@@ -27,7 +27,8 @@
 ## jhome v1.3
 ### 升级概要：搭建可靠消息服务（Jhome-TransactionService）
 ### 引入技术： 
-*  RabbitMq 消息队列 实现分布式系统中事务回滚
+*  RabbitMq 消息队列 实现分布式系统中事务回滚 
+*  Quartz 任务调度
 
 
 ## jhome v1.2  
