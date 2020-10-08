@@ -1,12 +1,12 @@
-# 《Jhome 分布式技术框架》
+# 《Jhome 分布式框架》
 
-## 《jhome分布式技术框架》是一个涵盖众多组件：账户认证/授权，消息推送，事务管理，自动化配置，快速部署，分布式文件管理，代码快速生成，服务治理的开发框架，旨在帮助开发者快速构建自己的应用，搭建方便，快速上手，快速开发；
+## 《jhome分布式框架》是一个涵盖众多组件：账户认证/授权，消息推送，事务管理，自动化配置，快速部署，分布式文件管理，代码快速生成，服务治理的快速开发框架，旨在帮助开发者快速构建自己的应用，搭建方便，快速上手；
 
 ## 技术概要：
 *  1.Spring全家桶 （SpringBoot Spring SpringCloud（eureka+feign+config+zuul+Hystrix） ）
 *  2.Shrio 安全框架
 *  3.pack4j 安全框架
-*  4.NIO（Netty）
+*  4.NIO（Netty）+ Quartz 任务调度
 *  5.PRC远程通信协议（ grpc  Thrift ） 
 *  6.分布式两阶段补偿事务（transaction）
 *  7.POI(文档操作)
@@ -27,7 +27,8 @@
 ## jhome v1.3
 ### 升级概要：搭建可靠消息服务（Jhome-TransactionService）
 ### 引入技术： 
-*  RabbitMq 消息队列 实现分布式系统中事务回滚
+*  RabbitMq 消息队列 实现分布式系统中事务回滚 
+*  Quartz 任务调度
 
 
 ## jhome v1.2  
