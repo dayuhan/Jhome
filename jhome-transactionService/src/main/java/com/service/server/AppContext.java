@@ -7,11 +7,14 @@ import com.bracket.common.Queue.QueueHandler;
 import com.bracket.common.Queue.ReadQueueDao;
 import com.service.config.ConfigInfo;
 import io.swagger.annotations.ApiModelProperty;
+import org.quartz.*;
+import org.quartz.impl.StdSchedulerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -50,6 +53,7 @@ public class AppContext {
     protected HandlerThread handlerThread;
     @Autowired
     protected MonitorHandlerThread monitorHandlerThread;
+
     /**
      * 启动服务器
      */
@@ -78,7 +82,8 @@ public class AppContext {
 
             logger.info("启动巡检服务！...");
             long startTime1 = System.currentTimeMillis();   //获取开始时间
-            new Thread(monitorHandlerThread).start();
+            //new Thread(monitorHandlerThread).start();
+            this.StartMonitorHandlerJob();
             long endTime1 = System.currentTimeMillis(); //获取结束时间
             logger.info("启动成功！启动耗时：%s 毫秒", startTime1 - endTime1);
 
@@ -102,7 +107,7 @@ public class AppContext {
                                     public void ReadQueue(String pushInfo) {
                                         HandlerThread thread = null;
                                         try {
-                                            logger.info("收到消息！..."+pushInfo);
+                                            logger.info("收到消息！..." + pushInfo);
                                             handlerThread.setPushInfo(pushInfo);
                                             //thread = new HandlerThread(pushInfo);
                                             executorService.execute(handlerThread);
@@ -122,4 +127,34 @@ public class AppContext {
             } while (true);
         }).start();
     }
+
+    public void StartMonitorHandlerJob() throws SchedulerException {
+        //创建任务
+        JobDetail jobDetail = JobBuilder.newJob(monitorHandlerJob.class)
+                .withDescription("执行巡检服务")
+                .withIdentity("monitorJob", "monitorJob-group")
+                .build();
+
+        JobDetail jobDetail1= JobBuilder.newJob(monitorHandlerJob.class)
+                .withDescription("执行巡检服务")
+                .withIdentity("monitorJob1", "monitorJob-group1")
+                .build();
+
+        //创建触发器
+        Trigger triggers = TriggerBuilder.newTrigger()
+                .withDescription("每2分钟执行一次")
+                .startAt(new Date())
+                .withIdentity("Trigger", "Trigger-group")
+                .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(60))
+                //.withSchedule(SimpleScheduleBuilder.repeatMinutelyForever(1))
+                //.withSchedule(SimpleScheduleBuilder.repeatSecondlyForTotalCount(10, 60))
+                .build();
+        //创建一个调度器
+        StdSchedulerFactory schedulerFactory = new StdSchedulerFactory();
+        Scheduler scheduler = schedulerFactory.getScheduler();
+        scheduler.scheduleJob(jobDetail, triggers);
+        //启动任务
+        scheduler.start();
+    }
+
 }

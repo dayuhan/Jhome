@@ -143,8 +143,16 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-    </dependencies>
+        <!--springboot 整合zookeeper     -->
+        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.zookeeper</groupId>-->
+<!--            <artifactId>zookeeper</artifactId>-->
+<!--            <version>3.6.0</version>-->
+<!--        </dependency>-->
 
+
+    </dependencies>
     <dependencyManagement>
         <dependencies>
             <!-- 导入Spring Cloud的依赖管理 -->

@@ -45,7 +45,7 @@ public class Transactionlog implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String id;
-    @ApiModelProperty(value = "0：待确认 1：已发送 2：已完成")
+    @ApiModelProperty(value = "0：待确认 1：确认消息  提交事务 2：删除消息  3： 已完成  4：失败  回滚事务" )
     private Integer type;
     @ApiModelProperty(value = "0 正常 1删除")
     private Integer status;
@@ -56,7 +56,7 @@ public class Transactionlog implements Serializable {
     @ApiModelProperty(value = "生产者服务")
     private String producer;
 
-    @ApiModelProperty(value = "消费者服务")
+    @ApiModelProperty(value = "消费者服务",notes = "其他上下游服务需要处理，消息队列名称为:jhome-account,jhome-fileStore ")
     private String consumer;
 
     @JsonFormat(

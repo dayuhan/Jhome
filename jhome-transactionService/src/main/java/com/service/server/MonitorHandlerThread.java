@@ -61,12 +61,16 @@ public class MonitorHandlerThread implements Runnable {
                         //http请求 回调上游服务
                         //transactionlogService.SendByPostRequest()
                     }
-                    // 2,巡检 消息状态一直是“已发送”
-                    if (t.getType().equals(MessageType.SENDED.getType())) {
+                    // 2,巡检 消息状态一直是“已经提交事务 已发送”
+                    if (t.getType().equals(MessageType.COMMIT_TRANSACTION.getType())) {
+                        //http请求 回调上游服务
+                    }
+                    // 3,巡检 消息状态是“需要回滚的事务”
+                    if (t.getType().equals(MessageType.BACK_TRANSACTION.getType())) {
                         //http请求 回调上游服务
                     }
                 });
-                Thread.sleep(10000);
+                Thread.sleep(10000);//休息10s后继续执行
             }
             while (true);
         } catch (Exception ex) {
