@@ -83,18 +83,6 @@
             <scope>compile</scope>
         </dependency>
 
-        <!--zookeeper curator  -->
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-recipes</artifactId>
-            <version>4.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-framework</artifactId>
-            <version>4.1.0</version>
-        </dependency>
-
     </dependencies>
 
 

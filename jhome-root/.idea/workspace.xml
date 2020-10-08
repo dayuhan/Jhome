@@ -103,7 +103,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javaHome/Com.Daxv.JavaHome" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jhome-common/src/main/java/com/rpc/common/zk" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.33256084" />
@@ -111,11 +111,15 @@
     <property name="settings.editor.selected.configurable" value="org.mvnsearch.intellij.plugin.zookeeper.ui.ZkProjectConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\XProject\Jhome\jhome-registrationService\src\main\resources" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\rpc\common\zk" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-registrationService\src\main\resources\config" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\bracket\common" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-codeGenerator\src\main\resources\template" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-root\db" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bracket.common.Bus.AbstractValidateParam" />
@@ -124,12 +128,8 @@
       <recent name="com.fileStore.conmmon" />
       <recent name="com.daxu.common.Bus.AbstractInterceptor" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-registrationService\src\main\resources\config" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\bracket\common" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-codeGenerator\src\main\resources\template" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-root\db" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-codeGenerator\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\XProject\Jhome\jhome-registrationService\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -394,7 +394,7 @@
       <workItem from="1602057048771" duration="370000" />
       <workItem from="1602138318491" duration="8762000" />
       <workItem from="1602151961810" duration="1618000" />
-      <workItem from="1602153669847" duration="5518000" />
+      <workItem from="1602153669847" duration="6001000" />
     </task>
     <servers />
   </component>
@@ -465,30 +465,30 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="681" y="138" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1602056566657" />
-    <state width="1085" height="241" key="GridCell.Tab.0.bottom" timestamp="1601900371502">
+    <state width="1397" height="299" key="GridCell.Tab.0.bottom" timestamp="1602159908979">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="1191" height="142" key="GridCell.Tab.0.bottom/0.30.1234.793@0.30.1234.793" timestamp="1595667413470" />
     <state width="1397" height="376" key="GridCell.Tab.0.bottom/0.31.1440.929@0.31.1440.929" timestamp="1593959938685" />
-    <state width="1085" height="241" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1601900371502" />
-    <state width="1085" height="241" key="GridCell.Tab.0.center" timestamp="1601900371502">
+    <state width="1397" height="299" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1602159908979" />
+    <state width="1397" height="299" key="GridCell.Tab.0.center" timestamp="1602159908979">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="1191" height="142" key="GridCell.Tab.0.center/0.30.1234.793@0.30.1234.793" timestamp="1595667413470" />
     <state width="1397" height="376" key="GridCell.Tab.0.center/0.31.1440.929@0.31.1440.929" timestamp="1593959938685" />
-    <state width="1085" height="241" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1601900371502" />
-    <state width="1085" height="241" key="GridCell.Tab.0.left" timestamp="1601900371502">
+    <state width="1397" height="299" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1602159908979" />
+    <state width="1397" height="299" key="GridCell.Tab.0.left" timestamp="1602159908979">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="1191" height="142" key="GridCell.Tab.0.left/0.30.1234.793@0.30.1234.793" timestamp="1595667413470" />
     <state width="1397" height="376" key="GridCell.Tab.0.left/0.31.1440.929@0.31.1440.929" timestamp="1593959938685" />
-    <state width="1085" height="241" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1601900371502" />
-    <state width="1085" height="241" key="GridCell.Tab.0.right" timestamp="1601900371502">
+    <state width="1397" height="299" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1602159908979" />
+    <state width="1397" height="299" key="GridCell.Tab.0.right" timestamp="1602159908979">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="1191" height="142" key="GridCell.Tab.0.right/0.30.1234.793@0.30.1234.793" timestamp="1595667413470" />
     <state width="1397" height="376" key="GridCell.Tab.0.right/0.31.1440.929@0.31.1440.929" timestamp="1593959938685" />
-    <state width="1085" height="241" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1601900371502" />
+    <state width="1397" height="299" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1602159908979" />
     <state width="1085" height="241" key="GridCell.Tab.1.bottom" timestamp="1601900371502">
       <screen x="0" y="40" width="1440" height="920" />
     </state>

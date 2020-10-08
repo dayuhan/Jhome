@@ -1,4 +1,4 @@
-package com.nettyService.common.curator;
+package com.rpc.common.zk;
 
 import java.util.List;
 

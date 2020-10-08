@@ -1,6 +1,5 @@
-package com.nettyService.common.curator;
+package com.rpc.common.zk;
 
-import com.bracket.common.ToolKit.StringUtil;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;

@@ -1,4 +1,4 @@
-package com.nettyService.common.curator;/**
+package com.rpc.common.zk;/**
  * @program: jhome-root
  * @description
  * @author: Daxv

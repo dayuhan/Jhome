@@ -1,4 +1,4 @@
-package com.nettyService.common.curator;
+package com.rpc.common.zk;
 /**
  //
  //                       .::::.
@@ -25,6 +25,6 @@ package com.nettyService.common.curator;
  * @create: 2020-10-08 19:05
  **/
 public interface ServiceRegistry {
-     public void register(String serviceName,String serviceAddress) throws Exception;
+     public void register(String serviceName, String serviceAddress) throws Exception;
 
 }
