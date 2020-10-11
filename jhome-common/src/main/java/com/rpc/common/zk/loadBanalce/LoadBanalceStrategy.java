@@ -1,9 +1,4 @@
-package com.rpc.common.zk;/**
- * @program: jhome-root
- * @description
- * @author: Daxv
- * @create: 2020-10-08 20:16
- **/
+package com.rpc.common.zk.loadBanalce;
 
 import java.util.List;
 
@@ -28,13 +23,11 @@ import java.util.List;
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
  * @program: jhome-root
- * @description:
+ * @description:负载均衡策略
  * @author: Daxv
- * @create: 2020-10-08 20:16
+ * @create: 2020-10-08 19:45
  **/
-public class DubboLoadBanalce extends  AbstractLoadBanalce {
-    @Override
-    protected String doSelectHose(List<String> serviceRepos) {
-        return null;
-    }
+public interface LoadBanalceStrategy {
+    String selectHost(List<String> serviceRepos);
 }
+

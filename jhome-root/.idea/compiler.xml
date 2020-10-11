@@ -9,11 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jhome-account" />
         <module name="jhome-nettyService" />
-        <module name="jhome-fileStore" />
         <module name="jhome-configService" />
         <module name="jhome-transactionService" />
-        <module name="jhome-web" />
         <module name="jhome-common" />
+        <module name="jhome-web" />
+        <module name="jhome-fileStore" />
         <module name="jhome-registrationService" />
         <module name="jhome-webspiderService" />
         <module name="jhome-codeGenerator" />
