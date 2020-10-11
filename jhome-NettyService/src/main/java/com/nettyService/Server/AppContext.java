@@ -1,6 +1,8 @@
 package com.nettyService.server;
 
+import com.nettyService.common.MyPathChildrenCacheListener;
 import com.nettyService.config.ConfigInfo;
+import com.rpc.common.zk.ZkUtil;
 import org.apache.thrift.server.THsHaServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,7 +47,7 @@ public class AppContext {
                             "" +
                             "");
 
-
+            startZookeeper();
             Thread.sleep(2000);
             logger.info("启动消息预警推送服务...");
             new  Thread(notificationServer).start();
@@ -70,5 +72,14 @@ public class AppContext {
         webSocketServer.close();
         logger.info("关闭RPC服务器！...");
         tHsHaServer.stop();
+    }
+
+    public static void startZookeeper()
+    {
+        ZkUtil.initialize();
+        String parent = "/zkconfig";
+        String child = "chynode";
+        String path = parent + "/" + child;
+        ZkUtil.registerPathChildListener(parent,new MyPathChildrenCacheListener());
     }
 }
