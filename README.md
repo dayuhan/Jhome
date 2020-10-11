@@ -17,6 +17,13 @@
 ## jhome 架构图 
 ![image](https://github.com/dayuhan/Jhome/blob/master/img-storage/1.jpg) 
 
+## jhome v1.5  
+### 升级概要：在原有的eureka 基础上引入对zookeeper支持
+### 引入技术： 
+*  zookeeper 3.4.11 客户端 Curator 4.1.0 
+*  Curator 简单封装工具类 ZkUtil
+*  增加抽象模板类 分别对NodeCacheListener（单节点） PathChildrenCacheListener（注册目录中子目录监听器）  TreeCacheListener（注册目录监听器）进行二次封装
+
 ## jhome v1.4  
 ### 升级概要：搭建文件上传服务（Jhome-fileStore）
 ### 引入技术： 
