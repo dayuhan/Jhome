@@ -75,7 +75,6 @@
         <netty.version>4.1.45.Final</netty.version>
         <thrift.version>0.13.0</thrift.version>
         <okhttp3.version>3.14.7</okhttp3.version>
-
         <!--zookeeper-->
         <zookeeper.version>3.4.11</zookeeper.version>
         <curator.version>4.1.0</curator.version>

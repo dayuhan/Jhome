@@ -119,7 +119,7 @@ public class AppContext {
                                 });
                             }
                         }
-                    }).Send();
+                    }).Invoke();
                     Thread.sleep(500);
                 } catch (Exception e) {
                     // TODO: handle exception
