@@ -71,6 +71,7 @@ public class RabbitMqUtil {
                                                           T pushInfo) throws IOException, TimeoutException {
 		boolean flag = false;
 		try {
+			//声明队列
 			ch.queueDeclare(queueName, true, false, false, null);
 			ch.queueBind(queueName, EXCHANGE_NAME, queueName);
 			String pushJsonStr = JSONUtils.beanToJson(pushInfo);

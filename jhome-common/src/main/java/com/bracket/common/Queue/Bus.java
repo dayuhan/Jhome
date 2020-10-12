@@ -40,10 +40,10 @@ public class Bus {
     {
         queueHandler = new QueueHandler(this.queueConfig);
         ibus = person;
-       return this.Send();
+       return this.Invoke();
     }
     //发送消息
-    public boolean Send() {
+    public boolean Invoke() {
         boolean flag = false;
         try {
             ibus.doQueueHandle(queueHandler);
