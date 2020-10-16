@@ -500,6 +500,7 @@
             <version>2.2.1</version>
         </dependency>
 
+        <!--spring整合zookeeper     -->
         <!-- zookeeper -->
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
@@ -527,8 +528,6 @@
             <artifactId>curator-framework</artifactId>
             <version>${curator.version}</version>
         </dependency>
-
-
     </dependencies>
 
 </project>

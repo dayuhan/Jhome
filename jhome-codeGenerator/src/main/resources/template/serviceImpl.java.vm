@@ -56,39 +56,43 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
     protected ${table.mapperName} mapper;
 
     @Override
-    public void add${entity}(${entity}Query obj) throws Exception  {
+    public void add${entity}(${entity}Query obj){
         ${entity} targetObj= BaseUtil.copyProperties(obj,${entity}.class);
         targetObj.setId(UUID.randomUUID().toString());
         int count = mapper.insert(targetObj);
         if (count <= 0)
-            throw new Exception("新增失败");
+            #set ($ModuleName=$package.ModuleName.substring(0,1).toUpperCase() + $package.ModuleName.substring(1,$package.ModuleName.length()))
+            throw new ${ModuleName}Exception}("新增失败");
     }
 
     @Override
-    public void edit${entity}(${entity}Query obj) throws Exception  {
+    public void edit${entity}(${entity}Query obj){
         ${entity} targetObj= BaseUtil.copyProperties(obj,${entity}.class);
         int count = mapper.updateById(targetObj);
         if (count <= 0)
-            throw new Exception("编辑失败");
+             #set ($ModuleName=$package.ModuleName.substring(0,1).toUpperCase() + $package.ModuleName.substring(1,$package.ModuleName.length()))
+             throw new ${ModuleName}Exception("编辑失败");
     }
 
     @Override
-    public void batchDelete${entity}(String[] ids) throws Exception  {
+    public void batchDelete${entity}(String[] ids) {
         int count = mapper.deleteBatchIds(Arrays.asList(ids));
         if (count <= 0)
-            throw new Exception("批量删除失败");
+             #set ($ModuleName=$package.ModuleName.substring(0,1).toUpperCase() + $package.ModuleName.substring(1,$package.ModuleName.length()))
+             throw new ${ModuleName}Exception("批量删除失败");
     }
 
     @Override
-    public void delete${entity}(${entity}Query obj) throws Exception  {
+    public void delete${entity}(${entity}Query obj) {
         ${entity} targetObj= BaseUtil.copyProperties(obj,${entity}.class);
         int count = mapper.deleteById(targetObj);
         if (count <= 0)
-            throw new Exception("删除失败");
+             #set ($ModuleName=$package.ModuleName.substring(0,1).toUpperCase() + $package.ModuleName.substring(1,$package.ModuleName.length()))
+             throw new ${ModuleName}Exception("删除失败");
     }
 
     @Override
-    public  PageUtils<List<${entity}>> select${entity}PageList(${entity}Query queryObject) throws Exception {
+    public  PageUtils<List<${entity}>> select${entity}PageList(${entity}Query queryObject)  {
         IPage<${entity}> page = new Page<>(queryObject.getPageNum(), queryObject.getPageSize());
         IPage<${entity}> result = mapper.select${entity}PageList(page, queryObject);
         PageUtils<List<${entity}>> pageUtils = new PageUtils<List<${entity}>>(
@@ -106,7 +110,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
      * @return
      */
     @Override
-    public ${entity} select${entity}ById(String id) throws Exception  {
+    public ${entity} select${entity}ById(String id) {
         return mapper.selectById(id);
     }
 
@@ -116,7 +120,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
      * @param
      */
     @Override
-    public List<${entity}> selectBatch${entity}ByIds(List<String> idList) throws Exception  {
+    public List<${entity}> selectBatch${entity}ByIds(List<String> idList) {
         return mapper.selectBatchIds(idList);
     }
 
@@ -127,7 +131,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
      * @return
      */
     @Override
-    public ${entity} select${entity}One(QueryWrapper<${entity}> queryObject) throws Exception  {
+    public ${entity} select${entity}One(QueryWrapper<${entity}> queryObject) {
         return mapper.selectOne(queryObject);
     }
 
@@ -138,7 +142,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
      * @return
      */
     @Override
-    public List<${entity}> select${entity}List(QueryWrapper<${entity}> queryObject) throws Exception {
+    public List<${entity}> select${entity}List(QueryWrapper<${entity}> queryObject){
         return mapper.selectList(queryObject);
     }
 }

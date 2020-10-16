@@ -8,15 +8,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jhome-account" />
+        <module name="jhome-api" />
         <module name="jhome-nettyService" />
-        <module name="jhome-configService" />
-        <module name="jhome-transactionService" />
-        <module name="jhome-common" />
-        <module name="jhome-web" />
+        <module name="jhome-position" />
         <module name="jhome-fileStore" />
-        <module name="jhome-registrationService" />
-        <module name="jhome-webspiderService" />
+        <module name="jhome-configService" />
         <module name="jhome-codeGenerator" />
+        <module name="jhome-transactionService" />
+        <module name="jhome-web" />
+        <module name="jhome-common" />
+        <module name="jhome-appPush" />
+        <module name="jhome-webspiderService" />
+        <module name="jhome-registrationService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,12 +40,15 @@
       <module name="jhome-NettyServer" options="-parameters -verbose -bootclasspath &quot;C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar;C:/Program Files/Java/jdk1.8.0_181/jre/lib/jce.jar;C:/Program Files/Java/jdk1.8.0_181/jre/lib/jsse.jar&quot;" />
       <module name="jhome-Pay" options="-parameters" />
       <module name="jhome-account" options="-parameters" />
+      <module name="jhome-api" options="-parameters" />
+      <module name="jhome-appPush" options="-parameters" />
       <module name="jhome-codeGenerator" options="-parameters" />
       <module name="jhome-common" options="-parameters" />
       <module name="jhome-configService" options="-parameters" />
       <module name="jhome-dataCenter" options="-parameters" />
       <module name="jhome-fileStore" options="-parameters" />
       <module name="jhome-nettyService" options="-parameters" />
+      <module name="jhome-position" options="-parameters" />
       <module name="jhome-registrationCenter_One" options="-parameters" />
       <module name="jhome-registrationService" options="-parameters" />
       <module name="jhome-sysAnnotation" options="-parameters" />

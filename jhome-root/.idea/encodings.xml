@@ -2,6 +2,10 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/../jhome-account/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../jhome-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../jhome-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../jhome-appPush/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../jhome-appPush/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-codeGenerator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-codeGenerator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-common/src/main/java" charset="UTF-8" />
@@ -9,6 +13,8 @@
     <file url="file://$PROJECT_DIR$/../jhome-configService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-fileStore/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-nettyService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../jhome-position/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../jhome-position/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-registrationService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-transactionService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-transactionService/src/main/resources" charset="UTF-8" />

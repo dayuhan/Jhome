@@ -24,13 +24,19 @@
         <module>../jhome-codeGenerator</module>
         <module>../jhome-fileStore</module>
         <module>../jhome-transactionService</module>
+        <!--   dubbo实现     -->
+        <module>../jhome-api</module>
+        <module>../jhome-appPush</module>
+        <module>../jhome-position</module>
     </modules>
     <developers>
         <developer>
             <id>jhome</id>
             <name>daxu</name>
             <email>523673705@qq.com</email>
-            <roles><role>Project lead</role></roles>
+            <roles>
+                <role>Project lead</role>
+            </roles>
             <timezone>+8</timezone>
         </developer>
     </developers>

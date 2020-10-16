@@ -63,7 +63,7 @@ public class ValidateParamBase {
     public Object around(ProceedingJoinPoint joinPoint) throws Exception {
         Object result = null;
         // 验证结果
-        ValidateResult validateResult = new ValidateResult(Boolean.TRUE);
+        ValidateResult validateResult = new ValidateResult(Boolean.FALSE);
         // 获取所有的请求参数
         Object[] args = joinPoint.getArgs();
         if (null != args && args.length > 0) {
