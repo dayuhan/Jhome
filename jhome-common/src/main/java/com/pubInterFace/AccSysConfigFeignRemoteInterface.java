@@ -1,4 +1,4 @@
-package com.api.dubbo.service;
+package com.pubInterFace;
 
 import com.alibaba.fastjson.JSONObject;
 import com.bracket.common.Bus.ResponseJson;

@@ -34,7 +34,5 @@ public class JhomeAcccountApplication {
         ZkUtil.createSequentialEphemeralNode(path,"chenlin");
         ZkUtil.createSequentialEphemeralNode(path,"hanhan");
 
-
-
     }
 }

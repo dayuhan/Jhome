@@ -1,0 +1,106 @@
+# 产品或项目名称、软件开发公司名称
+productName: JHome-JavaHome 开发平台
+companyName: JHome V1.0
+# 产品版本、版权年份
+productVersion: V1.0
+copyrightYear: 2020
+
+adminPath: ${jhome.sysproperties.adminPath}
+frontPath: ${jhome.sysproperties.frontPath}
+#================================================================================  System settings ===========#
+jhome:
+  # 系统参数
+  sysproperties:
+    # redis 地址
+    redissonUrl: redis://${spring.redis.host}:${spring.redis.port}
+    # 管理基础路径
+    adminPath: web
+    # 前端基础路径
+    frontPath: web
+    #消息服务配置
+    queueconfig:
+      #队列服务器地址
+      hostName: 127.0.0.1
+      #用户名
+      userName: admin
+      #密码
+      passWord: admin
+      #虚拟主机
+      virtualHost: dxhost
+#================================================================================ com.nettyServer.server settings ===========#
+server:
+  #  port: 9110
+  servlet:
+    context-path: /jhome
+  tomcat:
+    uri-encoding: UTF-8
+
+
+
+# 日志支持
+logging.level.project.user.UserClient: DEBUG
+#================================================================================ 数据库配置地址 =============#
+#================================================================================ Spring 基础配置信息 ===========#
+spring:
+  # 应用程序名称
+  application:
+    name: jhome-appPush
+  # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
+  profiles:
+    active: default
+    include: webService
+  # 打印横幅
+  main:
+    bannerMode: "CONSOLE"
+    allow-bean-definition-overriding: true #遇到同样名字是否覆盖操作
+  #  dubbo:
+  #    application:
+  #      name: provider
+  #    server: true
+  #    registry:
+  #      address: zookeeper://127.0.0.1:2181
+  #    protocol:
+  #      name: dubbo
+  #      port: 20880
+  datasource:
+    url: jdbc:mysql://192.168.52.130:3306/mysqlDb?serverTimezone=UTC&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      web-stat-filter:
+        #不统计这些请求数据
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+      stat-view-servlet:
+        # 默认true 内置监控页面首页/druid/index.html
+        enabled: true
+        url-pattern: /druid/*
+        # 允许清空统计数据
+        reset-enable: true
+        login-username: admin
+        login-password: ENC(9o6QgYtA5qN3i4shHlgfCw==)
+        # IP白名单 多个逗号分隔
+        allow:
+        # IP黑名单
+        deny:
+      initial-size: 1
+      min-idle: 0
+      max-active: 1000
+      max-wait: 60000
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: -1
+      validation-query: SELECT 1 FROM DUAL
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      filters: stat,wall,log4j
+      useGlobalDataSourceStat: true
+#  redis:
+#    host: 192.168.52.130 #10.1.20.66 #10.1.20.66 #192.168.40.129 #192.168.52.130
+#    database: 0
+#    port: 6379
+#    password: 123456
+#    timeout: 10000

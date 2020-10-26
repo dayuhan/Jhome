@@ -8,8 +8,20 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../jhome-parent/pom.xml</relativePath>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>jhome-appPush</artifactId>
+    <packaging>jar</packaging>
+
+    <!--统一管理依赖版本-->
+    <properties>
+
+        <dubbo.version>2.7.5</dubbo.version>
+        <!--        <curator.version>4.2.0</curator.version>-->
+        <!--        &lt;!&ndash; 连接zookeeper的依赖，我的zookeeper版本是3.4.14，感觉这个jar版本和zookeeper是大概保持一致的，但是引入3.4.14会报错，我试了下，从3.4.13开始就不行了 &ndash;&gt;-->
+        <!--        <zookeeper.version>3.4.12</zookeeper.version>-->
+    </properties>
+
     <dependencies>
         <!--Spring Boot -->
         <!--支持 Web 应用开发，包含 Tomcat 和 spring-mvc。 -->
@@ -34,37 +46,66 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
-        <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-
         <!--springboot 整合  dubbo   -->
         <dependency>
-            <groupId>com.alibaba.boot</groupId>
+            <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>0.1.0</version>
-            <exclusions>
-                <!--  此处排除 本组件curator  使用公共组件       -->
-                <exclusion>
-                    <groupId>org.apache.curator</groupId>
-                    <artifactId>curator-framework</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>${dubbo.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.101tec</groupId>
-            <artifactId>zkclient</artifactId>
-            <version>0.10</version>
-        </dependency>
+        <!--   zookeeper 和 客户端操作工具 Curator 放到 common公共组件中      -->
+
+        <!--        &lt;!&ndash; zookeeper的api管理依赖 &ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.curator</groupId>-->
+        <!--            <artifactId>curator-recipes</artifactId>-->
+        <!--            <version>${curator.version}</version>-->
+        <!--        </dependency>-->
+        <!--        &lt;!&ndash; zookeeper依赖 &ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.zookeeper</groupId>-->
+        <!--            <artifactId>zookeeper</artifactId>-->
+        <!--            <version>${zookeeper.version}</version>-->
+        <!--        </dependency>-->
+
+        <!--  公共接口部分      -->
         <dependency>
             <groupId>com.jhome</groupId>
             <artifactId>jhome-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jhome</groupId>
+            <artifactId>jhome-common</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+
+        <!-- 公共组件中加入了数据库连接类，每个子项目都需要加入数据库 否则初始化 dataSouce异常-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatisplus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>${mybatisplus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.3</version>
             <scope>compile</scope>
         </dependency>
+
     </dependencies>
+
+
 </project>

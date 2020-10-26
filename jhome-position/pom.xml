@@ -9,64 +9,114 @@
         <relativePath>../jhome-parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>jhome-position</artifactId>
-  <dependencies>
-      <!--Spring Boot -->
-      <!--支持 Web 应用开发，包含 Tomcat 和 spring-mvc。 -->
-      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter</artifactId>
-      </dependency>
-      <!--支持 Web 应用开发，包含 Tomcat 和 spring-mvc。 -->
-      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-web</artifactId>
-          <!-- Springboot默认使用tomcat服务器，当使用undertow服务器时，需把tomcat排除-->
-          <exclusions>
-              <exclusion>
-                  <groupId>org.springframework.boot</groupId>
-                  <artifactId>spring-boot-starter-tomcat</artifactId>
-              </exclusion>
-          </exclusions>
-      </dependency>
-      <!-- Spring Boot  默认使用tomcat服务器 改成第三方内置NIO 服务器 undertow -->
-      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-undertow</artifactId>
-      </dependency>
-      <!-- Spring Boot -->
-      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-test</artifactId>
-          <scope>test</scope>
-      </dependency>
+    <packaging>jar</packaging>
+    <!--统一管理依赖版本-->
+    <properties>
+
+        <dubbo.version>2.7.5</dubbo.version>
+        <!--        <curator.version>4.2.0</curator.version>-->
+        <!--        &lt;!&ndash; 连接zookeeper的依赖，我的zookeeper版本是3.4.14，感觉这个jar版本和zookeeper是大概保持一致的，但是引入3.4.14会报错，我试了下，从3.4.13开始就不行了 &ndash;&gt;-->
+        <!--        <zookeeper.version>3.4.12</zookeeper.version>-->
+    </properties>
+    <dependencies>
+        <!--Spring Boot -->
+        <!--支持 Web 应用开发，包含 Tomcat 和 spring-mvc。 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!--支持 Web 应用开发，包含 Tomcat 和 spring-mvc。 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <!-- Springboot默认使用tomcat服务器，当使用undertow服务器时，需把tomcat排除-->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Spring Boot  默认使用tomcat服务器 改成第三方内置NIO 服务器 undertow -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+        <!-- Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 
 
-      <!--springboot 整合  dubbo   -->
-      <dependency>
-          <groupId>com.alibaba.boot</groupId>
-          <artifactId>dubbo-spring-boot-starter</artifactId>
-          <version>0.1.0</version>
-          <exclusions>
-            <!--  此处排除 本组件curator  使用公共组件       -->
-              <exclusion>
-                  <groupId>org.apache.curator</groupId>
-                  <artifactId>curator-framework</artifactId>
-              </exclusion>
-          </exclusions>
-      </dependency>
-      <dependency>
-          <groupId>com.101tec</groupId>
-          <artifactId>zkclient</artifactId>
-          <version>0.10</version>
-      </dependency>
-      <dependency>
-          <groupId>com.jhome</groupId>
-          <artifactId>jhome-api</artifactId>
-          <version>0.0.1-SNAPSHOT</version>
-          <scope>compile</scope>
-      </dependency>
-  </dependencies>
+        <!--springboot 整合  dubbo   -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+        <!--   zookeeper 和 客户端操作工具 Curator 放到 common公共组件中      -->
+
+        <!-- zookeeper的api管理依赖 -->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.curator</groupId>-->
+        <!--            <artifactId>curator-recipes</artifactId>-->
+        <!--            <version>${curator.version}</version>-->
+        <!--        </dependency>-->
+        <!--        &lt;!&ndash; zookeeper依赖 &ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.zookeeper</groupId>-->
+        <!--            <artifactId>zookeeper</artifactId>-->
+        <!--            <version>${zookeeper.version}</version>-->
+        <!--        </dependency>-->
+
+        <!--  公共接口部分      -->
+        <dependency>
+            <groupId>com.jhome</groupId>
+            <artifactId>jhome-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jhome</groupId>
+            <artifactId>jhome-common</artifactId>
+            <version>${project.parent.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- MybatisPlush 框架-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatisplus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>${mybatisplus.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.3</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- dynamic-datasource-spring-boot-starter 是一个基于springboot的快速集成多数据源的启动器 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <!-- mybatisPlus 代码生成器 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.3.1.tmp</version>
+        </dependency>
+
+    </dependencies>
 
 </project>

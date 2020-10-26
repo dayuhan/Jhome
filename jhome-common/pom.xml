@@ -392,6 +392,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <!--  Cas认证  -->
         <dependency>
             <groupId>org.pac4j</groupId>
@@ -472,12 +473,14 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!-- alibaba的druid数据库连接池 -->
+        <!-- alibaba的druid数据库连接池  【 注意：所有子需要 集成数据访问ORM mybatis 】。。。。。。。。。。。。。。。。。。。。。。。-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>${druid.version}</version>
         </dependency>
+
+        <!--   rabbitmq Client     -->
         <dependency>
             <groupId>com.rabbitmq</groupId>
             <artifactId>amqp-client</artifactId>

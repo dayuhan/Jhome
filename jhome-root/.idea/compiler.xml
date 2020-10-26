@@ -10,16 +10,16 @@
         <module name="jhome-account" />
         <module name="jhome-api" />
         <module name="jhome-nettyService" />
-        <module name="jhome-position" />
         <module name="jhome-fileStore" />
         <module name="jhome-configService" />
         <module name="jhome-codeGenerator" />
-        <module name="jhome-transactionService" />
+        <module name="jhome-position" />
+        <module name="jhome-appPush" />
         <module name="jhome-web" />
         <module name="jhome-common" />
-        <module name="jhome-appPush" />
-        <module name="jhome-webspiderService" />
         <module name="jhome-registrationService" />
+        <module name="jhome-webspiderService" />
+        <module name="jhome-transactionService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

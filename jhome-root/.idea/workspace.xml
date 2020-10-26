@@ -108,7 +108,7 @@
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.33256084" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -119,18 +119,18 @@
       <recent name="com" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pubInterFace" />
+      <recent name="com.position.common" />
+      <recent name="com.appPush.common" />
       <recent name="com.jhome.common" />
       <recent name="com.bracket.common.Bus.AbstractValidateParam" />
-      <recent name="com.nettyService.service" />
-      <recent name="com.nettyService.config" />
-      <recent name="com.fileStore.conmmon" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-appPush\src\main\resources" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-position\src\main\resources" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-web\src\main\resources\config" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\resources\config" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-nettyService\src\main\resources\config" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\bracket\common\ToolKit" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -142,26 +142,13 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.JhomePostionApplication">
+  <component name="RunManager" selected="Spring Boot.JhomeAppPushApplication">
     <configuration name="JhomeNettyService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.nettyService.JhomeNettyService" />
       <module name="jhome-nettyService" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.nettyService.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JhomeTransactionService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.service.JhomeTransactionService" />
-      <module name="jhome-transactionService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -195,6 +182,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JhomeAppPushApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="jhome-appPush" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appPush.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.appPush.JhomeAppPushApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JhomeConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="jhome-configService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.configService.JhomeConfigServiceApplication" />
@@ -222,22 +222,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JhomeWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jhome-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jhome.JhomeWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.JhomeTransactionService" />
       <item itemvalue="Application.ServiceRegistryImpl" />
       <item itemvalue="Application.JhomeNettyService" />
       <item itemvalue="Spring Boot.JhomeConfigServiceApplication" />
       <item itemvalue="Spring Boot.JhomeRegistrationService" />
-      <item itemvalue="Spring Boot.JhomeAcccountApplication" />
+      <item itemvalue="Spring Boot.JhomeWebApplication" />
       <item itemvalue="Spring Boot.JhomePostionApplication" />
+      <item itemvalue="Spring Boot.JhomeAcccountApplication" />
+      <item itemvalue="Spring Boot.JhomeAppPushApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.JhomeAppPushApplication" />
         <item itemvalue="Spring Boot.JhomePostionApplication" />
         <item itemvalue="Spring Boot.JhomeAcccountApplication" />
         <item itemvalue="Application.JhomeNettyService" />
         <item itemvalue="Application.ServiceRegistryImpl" />
-        <item itemvalue="Application.JhomeTransactionService" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +258,7 @@
             <expand>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.dashboard.RunDashboardServiceViewContributor@2503e858" type="d2cb1801:ServiceModel$ContributorNode" />
+                <item name="com.intellij.execution.dashboard.RunDashboardServiceViewContributor@60813167" type="d2cb1801:ServiceModel$ContributorNode" />
               </path>
             </expand>
             <select />
@@ -415,7 +423,14 @@
       <workItem from="1602643312088" duration="2204000" />
       <workItem from="1602744496732" duration="5932000" />
       <workItem from="1602755102915" duration="1513000" />
-      <workItem from="1602826649811" duration="4407000" />
+      <workItem from="1602826649811" duration="4697000" />
+      <workItem from="1602914879590" duration="473000" />
+      <workItem from="1603423626223" duration="39000" />
+      <workItem from="1603605680364" duration="3848000" />
+      <workItem from="1603705844152" duration="3707000" />
+      <workItem from="1603709597097" duration="1714000" />
+      <workItem from="1603713918123" duration="7358000" />
+      <workItem from="1603721339876" duration="7442000" />
     </task>
     <servers />
   </component>
@@ -431,11 +446,11 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="313" y="159" key="#Notifications/0.40.1440.920@0.40.1440.920" timestamp="1602827049513" />
-    <state x="313" y="162" key="#Project_Structure" timestamp="1602828609448">
+    <state x="313" y="162" key="#Project_Structure" timestamp="1603719593463">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="268" y="135" key="#Project_Structure/0.30.1234.793@0.30.1234.793" timestamp="1595150399512" />
-    <state x="313" y="162" key="#Project_Structure/0.40.1440.920@0.40.1440.920" timestamp="1602828609448" />
+    <state x="313" y="162" key="#Project_Structure/0.40.1440.920@0.40.1440.920" timestamp="1603719593463" />
     <state x="313" y="159" key="#SQL_Dialects" timestamp="1599898887756">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -460,16 +475,14 @@
     <state x="205" y="414" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1596905602312">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="176" y="352" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.30.1234.793@0.30.1234.793" timestamp="1594218083456" />
     <state x="205" y="414" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.40.1440.920@0.40.1440.920" timestamp="1596905602312" />
-    <state x="403" y="359" width="635" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1596355068574">
+    <state x="403" y="359" width="635" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603719541809">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="403" y="359" width="635" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.40.1440.920@0.40.1440.920" timestamp="1596355068574" />
+    <state x="403" y="359" width="635" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.40.1440.920@0.40.1440.920" timestamp="1603719541809" />
     <state x="450" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600415969469">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="386" y="172" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1234.793@0.30.1234.793" timestamp="1595057489096" />
     <state x="450" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1440.920@0.40.1440.920" timestamp="1600415969469" />
     <state x="477" y="352" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601712631042">
       <screen x="0" y="40" width="1440" height="920" />
@@ -479,75 +492,71 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="506" y="192" key="ExecutionTargetDialog/0.40.1440.920@0.40.1440.920" timestamp="1601723379018" />
-    <state x="681" y="138" key="FileChooserDialogImpl" timestamp="1602827627541">
+    <state x="681" y="138" key="FileChooserDialogImpl" timestamp="1603726823849">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="681" y="138" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1602827627541" />
-    <state width="1397" height="287" key="GridCell.Tab.0.bottom" timestamp="1602829397003">
+    <state x="681" y="138" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1603726823849" />
+    <state width="1085" height="340" key="GridCell.Tab.0.bottom" timestamp="1603728799084">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="1191" height="142" key="GridCell.Tab.0.bottom/0.30.1234.793@0.30.1234.793" timestamp="1595667413470" />
-    <state width="1397" height="287" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1602829397003" />
-    <state width="1397" height="287" key="GridCell.Tab.0.center" timestamp="1602829397003">
+    <state width="1085" height="340" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1603728799084" />
+    <state width="1085" height="340" key="GridCell.Tab.0.center" timestamp="1603728799084">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="1191" height="142" key="GridCell.Tab.0.center/0.30.1234.793@0.30.1234.793" timestamp="1595667413470" />
-    <state width="1397" height="287" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1602829397003" />
-    <state width="1397" height="287" key="GridCell.Tab.0.left" timestamp="1602829397003">
+    <state width="1085" height="340" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1603728799084" />
+    <state width="1085" height="340" key="GridCell.Tab.0.left" timestamp="1603728799084">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="1191" height="142" key="GridCell.Tab.0.left/0.30.1234.793@0.30.1234.793" timestamp="1595667413470" />
-    <state width="1397" height="287" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1602829397003" />
-    <state width="1397" height="287" key="GridCell.Tab.0.right" timestamp="1602829397003">
+    <state width="1085" height="340" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1603728799084" />
+    <state width="1085" height="340" key="GridCell.Tab.0.right" timestamp="1603728799084">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="1191" height="142" key="GridCell.Tab.0.right/0.30.1234.793@0.30.1234.793" timestamp="1595667413470" />
-    <state width="1397" height="287" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1602829397003" />
-    <state width="1085" height="382" key="GridCell.Tab.1.bottom" timestamp="1602427744989">
+    <state width="1085" height="340" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1603728799084" />
+    <state width="1085" height="340" key="GridCell.Tab.1.bottom" timestamp="1603728799084">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="813" height="203" key="GridCell.Tab.1.bottom/0.30.1234.793@0.30.1234.793" timestamp="1594219790243" />
-    <state width="1085" height="382" key="GridCell.Tab.1.bottom/0.40.1440.920@0.40.1440.920" timestamp="1602427744989" />
-    <state width="1085" height="382" key="GridCell.Tab.1.center" timestamp="1602427744989">
+    <state width="1085" height="340" key="GridCell.Tab.1.bottom/0.40.1440.920@0.40.1440.920" timestamp="1603728799084" />
+    <state width="1085" height="340" key="GridCell.Tab.1.center" timestamp="1603728799084">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="813" height="203" key="GridCell.Tab.1.center/0.30.1234.793@0.30.1234.793" timestamp="1594219790243" />
-    <state width="1085" height="382" key="GridCell.Tab.1.center/0.40.1440.920@0.40.1440.920" timestamp="1602427744989" />
-    <state width="1085" height="382" key="GridCell.Tab.1.left" timestamp="1602427744989">
+    <state width="1085" height="340" key="GridCell.Tab.1.center/0.40.1440.920@0.40.1440.920" timestamp="1603728799084" />
+    <state width="1085" height="340" key="GridCell.Tab.1.left" timestamp="1603728799084">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="813" height="203" key="GridCell.Tab.1.left/0.30.1234.793@0.30.1234.793" timestamp="1594219790242" />
-    <state width="1085" height="382" key="GridCell.Tab.1.left/0.40.1440.920@0.40.1440.920" timestamp="1602427744989" />
-    <state width="1085" height="382" key="GridCell.Tab.1.right" timestamp="1602427744989">
+    <state width="1085" height="340" key="GridCell.Tab.1.left/0.40.1440.920@0.40.1440.920" timestamp="1603728799084" />
+    <state width="1085" height="340" key="GridCell.Tab.1.right" timestamp="1603728799084">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="813" height="203" key="GridCell.Tab.1.right/0.30.1234.793@0.30.1234.793" timestamp="1594219790243" />
-    <state width="1085" height="382" key="GridCell.Tab.1.right/0.40.1440.920@0.40.1440.920" timestamp="1602427744989" />
-    <state width="943" height="267" key="GridCell.Tab.2.bottom" timestamp="1601784936015">
+    <state width="1085" height="340" key="GridCell.Tab.1.right/0.40.1440.920@0.40.1440.920" timestamp="1603728799084" />
+    <state width="1085" height="269" key="GridCell.Tab.2.bottom" timestamp="1603725199716">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="943" height="267" key="GridCell.Tab.2.bottom/0.40.1440.920@0.40.1440.920" timestamp="1601784936015" />
-    <state width="943" height="267" key="GridCell.Tab.2.center" timestamp="1601784936014">
+    <state width="1085" height="269" key="GridCell.Tab.2.bottom/0.40.1440.920@0.40.1440.920" timestamp="1603725199716" />
+    <state width="1085" height="269" key="GridCell.Tab.2.center" timestamp="1603725199715">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="943" height="267" key="GridCell.Tab.2.center/0.40.1440.920@0.40.1440.920" timestamp="1601784936014" />
-    <state width="943" height="267" key="GridCell.Tab.2.left" timestamp="1601784936014">
+    <state width="1085" height="269" key="GridCell.Tab.2.center/0.40.1440.920@0.40.1440.920" timestamp="1603725199715" />
+    <state width="1085" height="269" key="GridCell.Tab.2.left" timestamp="1603725199715">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="943" height="267" key="GridCell.Tab.2.left/0.40.1440.920@0.40.1440.920" timestamp="1601784936014" />
-    <state width="943" height="267" key="GridCell.Tab.2.right" timestamp="1601784936015">
+    <state width="1085" height="269" key="GridCell.Tab.2.left/0.40.1440.920@0.40.1440.920" timestamp="1603725199715" />
+    <state width="1085" height="269" key="GridCell.Tab.2.right" timestamp="1603725199715">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="943" height="267" key="GridCell.Tab.2.right/0.40.1440.920@0.40.1440.920" timestamp="1601784936015" />
-    <state x="-49" y="248" key="Maven.ArtifactSearchDialog" timestamp="1599886468801">
+    <state width="1085" height="269" key="GridCell.Tab.2.right/0.40.1440.920@0.40.1440.920" timestamp="1603725199715" />
+    <state x="251" y="156" key="Maven.ArtifactSearchDialog" timestamp="1603723200027">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="-49" y="248" key="Maven.ArtifactSearchDialog/0.40.1440.920@0.40.1440.920" timestamp="1599886468801" />
-    <state x="173" y="110" width="1165" height="707" key="SettingsEditor" timestamp="1602828205683">
+    <state x="251" y="156" key="Maven.ArtifactSearchDialog/0.40.1440.920@0.40.1440.920" timestamp="1603723200027" />
+    <state x="173" y="110" width="1165" height="707" key="SettingsEditor" timestamp="1603719562185">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="69" y="50" width="1165" height="707" key="SettingsEditor/0.30.1234.793@0.30.1234.793" timestamp="1595649821104" />
-    <state x="173" y="110" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1602828205683" />
+    <state x="173" y="110" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1603719562185" />
     <state width="559" height="477" key="SwitcherDM" timestamp="1599884884527">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -686,6 +695,11 @@
           <url>file://$PROJECT_DIR$/../jhome-transactionService/src/main/java/com/service/server/monitorHandlerJob.java</url>
           <line>61</line>
           <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-appPush/src/main/java/com/appPush/modules/position/service/TestDubboRemoteImpl.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="103" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -12,12 +12,11 @@
     <artifactId>jhome-api</artifactId>
     <dependencies>
         <!--依赖项目-->
-        <dependency>
-            <groupId>com.jhome</groupId>
-            <artifactId>jhome-common</artifactId>
-            <version>${project.parent.version}</version>
-            <scope>compile</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.jhome</groupId>-->
+<!--            <artifactId>jhome-common</artifactId>-->
+<!--            <version>${project.parent.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>

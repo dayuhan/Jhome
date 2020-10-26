@@ -1,0 +1,81 @@
+# 产品或项目名称、软件开发公司名称
+productName: JHome-JavaHome 开发平台
+companyName: JHome V1.0
+# 产品版本、版权年份
+productVersion: V1.0
+copyrightYear: 2020
+
+adminPath: ${jhome.sysproperties.adminPath}
+frontPath: ${jhome.sysproperties.frontPath}
+#================================================================================  System settings ===========#
+jhome:
+  # 系统参数
+  sysproperties:
+    # redis 地址
+    redissonUrl: redis://${spring.redis.host}:${spring.redis.port}
+    # 管理基础路径
+    adminPath: web
+    # 前端基础路径
+    frontPath: web
+    #消息服务配置
+    queueconfig:
+      #队列服务器地址
+      hostName: 127.0.0.1
+      #用户名
+      userName: admin
+      #密码
+      passWord: admin
+      #虚拟主机
+      virtualHost: dxhost
+#================================================================================ com.nettyServer.server settings ===========#
+server:
+  port: 9110
+  servlet:
+    context-path: /jhome
+  tomcat:
+    uri-encoding: UTF-8
+
+
+
+# 日志支持
+logging.level.project.user.UserClient: DEBUG
+#================================================================================ 数据库配置地址 =============#
+#================================================================================ Spring 基础配置信息 ===========#
+spring:
+  # 应用程序名称
+  application:
+    name: jhome-position
+  # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
+  profiles:
+    active: default
+    include: webService
+  # 打印横幅
+  main:
+    bannerMode: "CONSOLE"
+    allow-bean-definition-overriding: true #遇到同样名字是否覆盖操作
+  datasource:
+    url: jdbc:mysql://192.168.52.130:3306/mysqlDb?serverTimezone=UTC&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+#  redis:
+#    host: 192.168.52.130 #10.1.20.66 #10.1.20.66 #192.168.40.129 #192.168.52.130
+#    database: 0
+#    port: 6379
+#    password: 123456
+#    timeout: 10000
+#  dubbo:
+#    application:            #应用配置，用于配置当前应用信息，不管该应用是提供者还是消费者。
+#      name: consumer
+#    registry:                 #注册中心配置，用于配置连接注册中心相关信息。
+#      address: zookeeper://192.168.1.115:2181
+#    protocol:     #协议配置，用于配置提供服务的协议信息，协议由提供方指定，消费方被动接受（订阅）。
+#      name: dubbo
+#      port: 20880
+#    consumer:
+#      check: false
+#    reference:
+#      loadbalance: roundrobin #轮询机制
+#      #loadbalance: random #随机机制
+#      #loadbalance: leastactive #最少活跃调用数机制

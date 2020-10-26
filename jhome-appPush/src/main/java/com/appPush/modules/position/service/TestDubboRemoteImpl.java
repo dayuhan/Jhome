@@ -2,6 +2,7 @@ package com.appPush.modules.position.service;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.api.dubbo.entity.TestInfo;
 import com.api.dubbo.service.TestDubboRemoteInterface;
+import org.springframework.stereotype.Component;
 
 /**
  //
@@ -28,6 +29,8 @@ import com.api.dubbo.service.TestDubboRemoteInterface;
  * @author: Daxv
  * @create: 2020-10-16 13:59
  **/
+@Component
+// 该service是org.apache.dubbo.config.annotation.Service
 @Service
 public class TestDubboRemoteImpl implements TestDubboRemoteInterface {
     @Override
