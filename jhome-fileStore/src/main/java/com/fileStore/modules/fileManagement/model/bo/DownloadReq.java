@@ -10,6 +10,7 @@ import java.io.Serializable;
 
 @Data
 @ApiModel
+
 @JsonIgnoreProperties(ignoreUnknown = true, value = {"hibernateLazyInitializer", "handler", "fieldHandler"})
 public class DownloadReq implements Serializable {
 

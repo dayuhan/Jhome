@@ -473,7 +473,8 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!-- alibaba的druid数据库连接池  【 注意：所有子需要 集成数据访问ORM mybatis 】。。。。。。。。。。。。。。。。。。。。。。。-->
+
+        <!-- alibaba的druid数据库连接池  【 注意：所有子需要 集成数据访问ORM mybatis 】//////////////////////////////////////////////////////-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
@@ -485,6 +486,7 @@
             <groupId>com.rabbitmq</groupId>
             <artifactId>amqp-client</artifactId>
         </dependency>
+
         <!--   FastDFS Client     -->
         <dependency>
             <groupId>net.oschina.zcx7878</groupId>

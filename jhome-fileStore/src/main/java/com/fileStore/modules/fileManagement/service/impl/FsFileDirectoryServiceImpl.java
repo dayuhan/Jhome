@@ -171,6 +171,7 @@ public class FsFileDirectoryServiceImpl extends ServiceImpl<FsFileDirectoryMappe
     public List<FsFileDirectoryView> selectFsFileDirectoryListByTree(QueryWrapper<FsFileDirectory> queryObject) {
         List<FsFileDirectoryView> fsFileDirectoryViewsByVo = new ArrayList<>();
         try {
+            //获取所有层级目录 构造出自己需要的字段
             List<FsFileDirectoryView> fsFileDirectoryViews = mapper.selectList(queryObject).stream()
                     .map(t -> {
                         FsFileDirectoryView fsFileDirectoryView = new FsFileDirectoryView();
@@ -179,9 +180,13 @@ public class FsFileDirectoryServiceImpl extends ServiceImpl<FsFileDirectoryMappe
                         fsFileDirectoryView.setFileDirectoryName(t.getFileDirectoryName());
                         return fsFileDirectoryView;
                     }).collect(Collectors.toList());
+            //从所有层级中取出一级根目录
             List<FsFileDirectoryView> finalFsFileDirectoryViews = fsFileDirectoryViews.stream().filter(c -> StringUtil.isBlank(c.getParentDirectoryId())).collect(Collectors.toList());
+            //遍历一级根目录
             finalFsFileDirectoryViews.forEach(t -> {
+                //进行递归查询 返回当前根目录下面所有子节点
                 t.setChildren(this.getFsFileDirectoryChild(fsFileDirectoryViews,t));
+                //加入返回对象中去
                 fsFileDirectoryViewsByVo.add(t);
             });
         } catch (Exception ex) {
@@ -190,11 +195,20 @@ public class FsFileDirectoryServiceImpl extends ServiceImpl<FsFileDirectoryMappe
         return fsFileDirectoryViewsByVo;
     }
 
+    /**
+     *
+     * @param fsFileDirectoryViews 所有层级目录
+     * @param fsFileDirectoryView 当前根目录对象
+     * @return
+     */
     public List<FsFileDirectoryView> getFsFileDirectoryChild(List<FsFileDirectoryView> fsFileDirectoryViews,FsFileDirectoryView fsFileDirectoryView) {
-        //t 中数据数据进行遍历
+        //t 从所有层级目录中获取 属于 当前节点的子节点
         List<FsFileDirectoryView> children=fsFileDirectoryViews.stream().filter(e -> e.getParentDirectoryId().equals(fsFileDirectoryView.getId())).collect(Collectors.toList());
+        // 找到匹配的结果，给当前根节点赋值
         fsFileDirectoryView.setChildren(children);
+        // 对找到的匹配结果进行递归，找匹配结果的下一层级；直到找到所有的叶节点
         children.forEach(t->{
+            // 开始递归
             this.getFsFileDirectoryChild(fsFileDirectoryViews,t);
         });
         return children;

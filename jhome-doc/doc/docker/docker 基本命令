@@ -1,0 +1,88 @@
+
+### 1、搜索镜像
+
+     docker search tomcat 
+
+2、拉取镜像
+
+    docker pull tomcat
+
+3、根据镜像启动容器
+
+    docker run --name mytomcat -d tomcat:latest
+
+4、docker ps 查看运行中的容器
+
+5、 停止运行中的容器
+
+    docker stop 容器的id 
+
+6、查看所有的容器
+
+    docker ps -a (运行失败后需要执行，删除失败的)
+
+7、启动容器
+
+    docker start 容器id 
+
+8、删除一个容器
+
+     docker rm 容器id
+
+9、启动一个做了端口映射的tomcat
+
+    docker run -d -p 8888:8080 tomcat
+
+    -d：后台运行
+    -p: 将主机的端口映射到容器的一个端口 主机端口:容器内部的端口
+    11、查看容器的日志 
+
+    docker logs container-name/container-id
+
+13 查看所有本地镜像列表
+
+    docker images
+
+
+14 删除镜像
+
+    docker rmi image-id删除指定的本地镜像
+
+15 启动所有的容器命令
+
+    docker中 启动所有的容器命令 :docker start $(docker ps -a | awk '{ print $1}' | tail -n +2)
+    docker中 关闭所有的容器命令 :docker stop $(docker ps -a | awk '{ print $1}' | tail -n +2)
+    docker中 删除所有的容器命令 :docker rm $(docker ps -a | awk '{ print $1}' | tail -n +2)
+    docker中 删除所有的镜像 :docker rmi $(docker images | awk '{print $3}' |tail -n +2)
+    tail -n +2 表示从第二行开始读取
+
+16.重启docker，刷新 安装源
+
+    systemctl daemon-reload
+    systemctl restart docker 
+
+17 启动docker
+
+    systemctl start docker 
+
+18 随机启动
+
+    systemctl enable docker 
+
+19镜像命名
+
+    docker tag 8d238fgs888sdf kkfileview
+
+20 docker容器运行java后台程序，存到数据库的时间差一天
+
+    docker run -e TZ="Asia/Shanghai" -d -p 80:80 --name nginx nginx-image
+
+    docker run --name mgmt  \
+     -e JAVA_OPTS='-Duser.timezone=GMT+08' \
+     -v /etc/localtime:/etc/localtime:ro \
+     -v /usr/local/docker/unnet-log/:/usr/local/tomcat/logs \
+     -d -p 8090:8080 images-name
+
+ https://blog.csdn.net/lovequanquqn/article/details/105744056
+
+ ﻿​

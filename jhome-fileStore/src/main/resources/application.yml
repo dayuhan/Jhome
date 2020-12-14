@@ -49,6 +49,8 @@ spring:
   servlet:
     multipart:
       enabled: true
+      max-file-size: 100MB #【修改multipart上传大小】
+      max-request-size: 100MB #【修改multipart上传大小】
   # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
   profiles:
     active: default

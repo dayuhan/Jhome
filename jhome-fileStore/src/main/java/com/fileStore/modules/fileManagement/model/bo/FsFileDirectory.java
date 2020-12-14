@@ -39,7 +39,7 @@ import lombok.EqualsAndHashCode;
  **/
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 
 @TableName("fs_file_directory")
 @ApiModel(value = "FsFileDirectory对象", description = "")

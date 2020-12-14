@@ -24,10 +24,14 @@
         <module>../jhome-codeGenerator</module>
         <module>../jhome-fileStore</module>
         <module>../jhome-transactionService</module>
+        <module>../jhome-registerMachine</module>
+
         <!--   dubbo实现     -->
         <module>../jhome-api</module>
         <module>../jhome-appPush</module>
         <module>../jhome-position</module>
+
+        <module>../jhome-doc</module>
     </modules>
     <developers>
         <developer>

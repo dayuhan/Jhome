@@ -1,5 +1,7 @@
 package com.configService.modules.registered.service.impl;
 
+import com.bracket.common.register.ProductCode;
+import com.bracket.common.register.Register;
 import com.configService.modules.registered.dao.SysConfigPropertiesDao;
 import com.configService.modules.registered.model.bo.SysConfigProperties;
 import com.configService.modules.registered.model.query.SysConfigPropertiesQuery;
@@ -16,6 +18,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -132,7 +136,7 @@ public class SysConfigPropertiesImpl implements SysConfigPropertiesService {
                 /**
                  * 注册信息写入缓存
                  */
-               /* String registerCode = registeredCodeAtomicReference.get();
+                String registerCode = registeredCodeAtomicReference.get();
                 String grantCode = replaceBlank(authorizationCodeAtomicReference.get());
                 if(!registerCode.isEmpty()&&!grantCode.isEmpty())
                 {
@@ -144,7 +148,7 @@ public class SysConfigPropertiesImpl implements SysConfigPropertiesService {
                     //RegAPI.setVerifyFlag(success);
                     redisTemplate.opsForValue().set(ProductCode.PRODUCT_CODE.toString(), success);
                     this.StartService();
-                }*/
+                }
             } catch (Exception ex) {
                 LOGGER.info(String.format("批量插入报错：%s", ex.getMessage()));
             } catch (Throwable throwable) {
@@ -155,7 +159,15 @@ public class SysConfigPropertiesImpl implements SysConfigPropertiesService {
             return false;
         }
     }
-
+    public static String replaceBlank(String str) {
+        String dest = "";
+        if (str != null) {
+            Pattern p = Pattern.compile("\\s*|\t|\r|\n");
+            Matcher m = p.matcher(str);
+            dest = m.replaceAll("");
+        }
+        return dest;
+    }
 
     /**
      * 注册完成后重新启动服务
