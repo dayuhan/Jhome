@@ -1,4 +1,4 @@
-
+### mysql 8.0前修改密码
 
     数据库备份
     ------------------------------------------------------------------------------------------
@@ -76,10 +76,6 @@
     
     mysqld -install mysql57new --defaults-file="E:\mysql5.7\my.ini"
     
-    数据库 修改密码
-    ------------------------------------------------------------------------------------------
-    update mysql.user set authentication_string=password('000000') where user='root' and Host='localhost';
-    flush privileges;
-    
-    alter user 'root'@'localhost' identified by '000000';
+
+
 
