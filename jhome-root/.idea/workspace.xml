@@ -107,7 +107,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Lux/Lux-root/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jhome-doc/doc/images" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.33256084" />
@@ -119,11 +119,11 @@
       <recent name="com" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine\src\main\resources" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine\src\main\java\com\registerMachine" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\bracket\common\register" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-appPush\src\main\resources" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-position\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jhome.common.utils" />
@@ -142,18 +142,6 @@
       <expand>
         <path>
           <item name="Found 55 services " type="fcff1e1b:RestServiceStructure$RootNode" />
-        </path>
-        <path>
-          <item name="Found 55 services " type="fcff1e1b:RestServiceStructure$RootNode" />
-          <item name="jhome-configService" type="c588b436:RestServiceStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="Found 55 services " type="fcff1e1b:RestServiceStructure$RootNode" />
-          <item name="jhome-account" type="c588b436:RestServiceStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="Found 55 services " type="fcff1e1b:RestServiceStructure$RootNode" />
-          <item name="jhome-web" type="c588b436:RestServiceStructure$ProjectNode" />
         </path>
       </expand>
       <select />
@@ -489,6 +477,9 @@
       <workItem from="1608038478157" duration="750000" />
       <workItem from="1608039289076" duration="1823000" />
       <workItem from="1608041193531" duration="956000" />
+      <workItem from="1608080288205" duration="2020000" />
+      <workItem from="1608166273816" duration="12775000" />
+      <workItem from="1608214980311" duration="3195000" />
     </task>
     <servers />
   </component>
@@ -516,10 +507,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="176" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1440.920@0.40.1440.920" timestamp="1601723333622" />
-    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607958644948">
+    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608175052091">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1607958644948" />
+    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1608175052091" />
     <state x="534" y="397" width="644" height="245" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1599883167988">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -604,6 +595,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="1085" height="269" key="GridCell.Tab.2.right/0.40.1440.920@0.40.1440.920" timestamp="1603725199715" />
+    <state x="0" y="65" key="MarkdownNavigator.PasteImageDialog" timestamp="1608184273833">
+      <screen x="0" y="40" width="1440" height="920" />
+    </state>
+    <state x="0" y="65" key="MarkdownNavigator.PasteImageDialog/0.40.1440.920@0.40.1440.920" timestamp="1608184273833" />
     <state x="251" y="156" key="Maven.ArtifactSearchDialog" timestamp="1603723200027">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -632,10 +627,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="377" y="236" key="run.anything.popup/0.40.1440.920@0.40.1440.920" timestamp="1600744815335" />
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1608038904693">
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1608215675042">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1608038904693" />
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1608215675042" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

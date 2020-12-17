@@ -7,20 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jhome-api" />
+        <module name="jhome-registrationService" />
         <module name="jhome-position" />
         <module name="jhome-registerMachine" />
         <module name="jhome-transactionService" />
         <module name="jhome-configService" />
         <module name="jhome-common" />
-        <module name="jhome-appPush" />
-        <module name="jhome-registrationService" />
+        <module name="jhome-nettyService" />
+        <module name="jhome-api" />
         <module name="jhome-webspiderService" />
         <module name="jhome-web" />
-        <module name="jhome-nettyService" />
         <module name="jhome-doc" />
         <module name="jhome-fileStore" />
         <module name="jhome-codeGenerator" />
+        <module name="jhome-appPush" />
         <module name="jhome-account" />
       </profile>
     </annotationProcessing>

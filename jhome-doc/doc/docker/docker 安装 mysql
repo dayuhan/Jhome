@@ -1,6 +1,18 @@
 **拉取并且运行镜像**
 
+
+
+
     docker run -di --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7 
+
+**MYSQL并挂在数据文件 **
+
+    真实案例：docker run -p 3306:3306 -v /deploy/docker_mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name mysql8 -d --restart=always eld7dc9731da
+    挂在配置文件：docker run -p 3307:3306 -v /opt/mysql8/conf:/etc/mysql/conf.d -v /opt/mysql8/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=admin123 --name mysql8 -d --restart=always mysql:8.0
+
+**参考博客**
+https://www.cnblogs.com/startscorpio/p/12783790.html
+
 **MYSQL运行状态 **
 
     service mysql status 
