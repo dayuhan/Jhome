@@ -95,6 +95,12 @@ touch test.txt 在/ExpandDisk1 下创建一个测试文件test.txt，可以看�
 
 #### 7 设置开机加载
     echo "/dev/cotenosvg/ExpandDisk1 /ExpandDisk1 ext4 defaults 0 0" >>/etc/fstab
+    
+     开机自动挂载
+    vi /etc/fstab
+    
+    在最下增加一行：
+    /dev/db-lv/lv   /mnt/lvm        ext4    defaults        0       0
 
 #### 参考文献
 https://blog.csdn.net/ichen820/article/details/106274392

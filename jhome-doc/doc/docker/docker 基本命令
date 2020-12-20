@@ -64,6 +64,8 @@
 17 启动docker
 
     systemctl start docker 
+    service docker start 
+
 
 18 随机启动
 
