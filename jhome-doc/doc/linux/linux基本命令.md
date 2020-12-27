@@ -20,7 +20,7 @@
     
     firewall-cmd --permanent --remove-port=8080/tcp 关闭8080端口访问权限，设置后需要重启防火墙
     
-    firewall-cmd --reload重启防火墙
+    firewall-cmd --reload 重启防火墙
     
     service firewalld status ；查看防火墙状态
     service firewalld stop：关闭防火墙 

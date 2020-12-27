@@ -19,9 +19,9 @@ public class ClientSessionDAO extends ClientTokenBySsoAuthorizing {
         String sessionId = "";
         if (StringUtil.isNotBlank(ssoToken)) {
             //解析Tonken
-            sessionId = (String) UserUtil.ParsingToken(this.getSsoToken());
+            //sessionId = (String) UserUtil.ParsingToken(this.getSsoToken());
             //根据ssToken获取Session
-            Session session = super.doReadSession(sessionId);
+            Session session = super.doReadSession(this.getSsoToken());
             return session;
         }
         return null;

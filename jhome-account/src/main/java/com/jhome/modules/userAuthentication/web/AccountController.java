@@ -52,17 +52,17 @@ public class AccountController extends BaseController {
                 session.setAttribute(SessionCons.LOGIN_USER_SESSION, userJson);
                 String tokenStr = (String) session.getId();
                 JSONObject jsonObject = (JSONObject) JSONObject.parse(userJson);
-
-                if (jsonObject.getString("returnCode").equals("200")) {
+                if (StringUtil.isNotBlank(jsonObject.getString("jhomeToken"))) {
                     return new ResponseJson()
                             .success()
-                            .setValue("data", JSONUtils.jsonToMap(jsonObject.getString("data")))
+                            .setValue("data", jsonObject)
                             .toString();
                 } else {
                     return new ResponseJson()
                             .error("用户登陆失败")
                             .toString();
                 }
+
             }
         } catch (Exception ex) {
             return new ResponseJson().error("登陆失败").toString();

@@ -278,7 +278,7 @@ public class FastDFSClient {
 
         TrackerClient trackerClient = new TrackerClient();
         TrackerServer trackerServer = TrackerServerPool.borrowObject();
-        StorageServer storageServer = trackerClient.getStoreStorage(trackerServer);
+        //StorageServer storageServer = trackerClient.getStoreStorage(trackerServer);
         StorageClient1 storageClient = new StorageClient1(trackerServer, null);
         try {
             // 读取流

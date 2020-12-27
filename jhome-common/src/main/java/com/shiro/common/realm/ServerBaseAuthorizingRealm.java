@@ -48,7 +48,7 @@ public abstract class ServerBaseAuthorizingRealm extends AuthorizingRealm {
         // TODO Auto-generated method stub
         try {
             //Token合法性验证
-            if (authenticationToken instanceof jhomeToken)
+            if (!(authenticationToken instanceof jhomeToken))
                 return null;
             upToken = (jhomeToken) authenticationToken;
             SimpleAuthenticationInfo simpleAuthenticationInfo = this.Verification(upToken);
