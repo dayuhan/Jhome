@@ -2,31 +2,33 @@ package com.configService.modules.registered.service;
 
 import com.bracket.common.Bus.ResponseJson;
 import com.configService.modules.registered.model.bo.SysConfigProperties;
+import com.configService.modules.registered.model.query.RegisterQuery;
 import com.configService.modules.registered.model.query.SysConfigPropertiesQuery;
 
 
 import java.util.List;
 
 /**
- //
- //                       .::::.
- //                     .::::::::.
- //                    :::::::::::
- //                 ..:::::::::::'
- //              '::::::::::::'
- //                .::::::::::
- //           '::::::::::::::..
- //                ..::::::::::::.
- //              ``::::::::::::::::
- //               ::::``:::::::::'        .:::.
- //              ::::'   ':::::'       .::::::::.
- //            .::::'      ::::     .:::::::'::::.
- //           .:::'       :::::  .:::::::::' ':::::.
- //          .::'        :::::.:::::::::'      ':::::.
- //         .::'         ::::::::::::::'         ``::::.
- //     ...:::           ::::::::::::'              ``::.
- //    ```` ':.          ':::::::::'                  ::::..
- //                       '.:::::'                    ':'````..
+ * //
+ * //                       .::::.
+ * //                     .::::::::.
+ * //                    :::::::::::
+ * //                 ..:::::::::::'
+ * //              '::::::::::::'
+ * //                .::::::::::
+ * //           '::::::::::::::..
+ * //                ..::::::::::::.
+ * //              ``::::::::::::::::
+ * //               ::::``:::::::::'        .:::.
+ * //              ::::'   ':::::'       .::::::::.
+ * //            .::::'      ::::     .:::::::'::::.
+ * //           .:::'       :::::  .:::::::::' ':::::.
+ * //          .::'        :::::.:::::::::'      ':::::.
+ * //         .::'         ::::::::::::::'         ``::::.
+ * //     ...:::           ::::::::::::'              ``::.
+ * //    ```` ':.          ':::::::::'                  ::::..
+ * //                       '.:::::'                    ':'````..
+ *
  * @program: jhome-root
  * @description:
  * @author: Daxv
@@ -35,6 +37,7 @@ import java.util.List;
 public interface SysConfigPropertiesService {
     /**
      * 保存用户
+     *
      * @param user
      */
     boolean save(SysConfigProperties user);
@@ -42,18 +45,21 @@ public interface SysConfigPropertiesService {
 
     /**
      * 修改
+     *
      * @param user
      */
     boolean update(SysConfigProperties user);
 
     /**
      * 删除
+     *
      * @param id
      */
     boolean delete(String id);
 
     /**
      * 查询全部配置
+     *
      * @return
      */
     List<SysConfigProperties> findAll();
@@ -61,6 +67,7 @@ public interface SysConfigPropertiesService {
 
     /**
      * 根据条件查询
+     *
      * @param
      * @return
      */
@@ -68,8 +75,16 @@ public interface SysConfigPropertiesService {
 
     /**
      * 批量更新
+     *
      * @param sysConfigPropertiesList
      * @return
      */
     boolean batchUpdate(List<SysConfigProperties> sysConfigPropertiesList);
+
+    /**
+     * 注册系统
+     * @param registerQuery
+     * @return
+     */
+    boolean register(RegisterQuery registerQuery) throws Throwable;
 }

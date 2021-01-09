@@ -48,7 +48,7 @@ public class JavaWebToken {
 					.getBody();
 			return jwtClaims;
 		} catch (Exception e) {
-			// log.error("json web token verify failed");
+			// log.error("json controller token verify failed");
 			return null;
 		}
 	}

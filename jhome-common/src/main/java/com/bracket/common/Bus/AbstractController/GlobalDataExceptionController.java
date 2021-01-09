@@ -25,10 +25,8 @@ import java.util.stream.Collectors;
 @ControllerAdvice
 @ResponseBody
 public class GlobalDataExceptionController {
-
-    private static final Logger LOG = LoggerFactory.getLogger(GlobalDataExceptionController.class);
-    private static final ResponseJson ERROR;
-
+    public static final Logger LOG = LoggerFactory.getLogger(GlobalDataExceptionController.class);
+    public static final ResponseJson ERROR;
     static {
         ERROR = new ResponseJson(HttpStatus.INTERNAL_SERVER_ERROR.value()).setMsg("系统出错,请稍候再试");
     }

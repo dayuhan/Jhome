@@ -1,6 +1,9 @@
-package com.configService.modules.registered.web;
+package com.configService.modules.registered.controller;
 
+import com.bracket.common.register.ProductCode;
+import com.bracket.common.register.Register;
 import com.configService.modules.registered.model.bo.SysConfigProperties;
+import com.configService.modules.registered.model.query.RegisterQuery;
 import com.configService.modules.registered.model.query.SysConfigPropertiesQuery;
 import com.configService.modules.registered.service.SysConfigPropertiesService;
 import com.bracket.common.Bus.AbstractController.BaseController;
@@ -55,7 +58,7 @@ public class RegisterController extends BaseController {
         return sysConfigPropertieService.getList(sysConfigPropertiesQuery).toString();
     }
 
-    @ApiOperation(value = "保存参数")
+    @ApiOperation(value = "保存参数,注册验证码")
     @ResponseBody
     @RequestMapping(value = "/saveRegisterInfo", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public ResponseJson saveRegisterInfo(HttpServletRequest request,
@@ -71,4 +74,20 @@ public class RegisterController extends BaseController {
         }
         return new ResponseJson().success();
     }
+
+    @ApiOperation(value = "获取申请码", notes = "获取申请码")
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
+    public ResponseJson getRegisterList() {
+        String applyId = Register.GetCode(ProductCode.PRODUCT_CODE.toString());
+        return new ResponseJson().setValue("data", applyId);
+
+    }
+
+    @ApiOperation(value = "注册")
+    @ResponseBody
+    @RequestMapping(value = " /saveRegister", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+    public ResponseJson saveRegister(@Validated @RequestBody RegisterQuery registerQuery, BindingResult result) throws Throwable {
+        return new ResponseJson().setValue("data", sysConfigPropertieService.register(registerQuery));
+    }
+
 }

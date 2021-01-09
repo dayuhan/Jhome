@@ -6,21 +6,21 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /**
- * 获取容器中的对象
- *  ddService=SpringBeanFactoryUtils.getBean(ddService.class)
+ * main 中获取容器中的对象
+ * ddService=SpringBeanFactoryUtils.getBean(ddService.class)
  */
 @Component
 public class SpringBeanFactoryUtils implements ApplicationContextAware {
-    public static ApplicationContext applicationContext;
+    public static ApplicationContext applicationContextCurrent = null;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-
-        this.applicationContext = applicationContext;
+        if (this.applicationContextCurrent == null)
+            this.applicationContextCurrent = applicationContext;
     }
 
     public static ApplicationContext getApplicationContext() {
-        return applicationContext;
+        return applicationContextCurrent;
     }
 
     public static Object getBean(String name) {

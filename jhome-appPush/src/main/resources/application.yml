@@ -14,9 +14,9 @@ jhome:
     # redis 地址
     redissonUrl: redis://${spring.redis.host}:${spring.redis.port}
     # 管理基础路径
-    adminPath: web
+    adminPath: controller
     # 前端基础路径
-    frontPath: web
+    frontPath: controller
     #消息服务配置
     queueconfig:
       #队列服务器地址

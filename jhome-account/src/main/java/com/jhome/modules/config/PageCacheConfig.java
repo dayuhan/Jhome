@@ -3,7 +3,7 @@ package com.jhome.modules.config;
  * 1、pom.xml:
  * <dependency>
  * 	<groupId>net.sf.ehcache</groupId>
- * 	<artifactId>ehcache-web</artifactId>
+ * 	<artifactId>ehcache-controller</artifactId>
  * 	<version>2.0.4</version>
  * </dependency>
  *

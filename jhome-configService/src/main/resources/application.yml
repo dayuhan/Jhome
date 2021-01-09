@@ -17,7 +17,7 @@ spring:
   application:
     name: jhome-configService
   datasource:
-    url: jdbc:mysql://192.168.0.156:3306/mysqlDb?serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://192.168.0.111:3306/mysqlDb?serverTimezone=UTC&useSSL=false
     username: root
     password: 123456
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -27,7 +27,7 @@ spring:
       server:
         jdbc: true
   redis:
-    host: 192.168.0.156
+    host: 192.168.0.111
     database: 0
     port: 6379
     password: 123456

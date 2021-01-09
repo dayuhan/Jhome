@@ -143,6 +143,8 @@ mybatis-plus:
       field-strategy: NOT_EMPTY
       #数据库类型
       db-type: MYSQL
+      # mybatis-pluse 插入更新 没有赋值数据库产生 null 问题（2020-12-31）
+      logic-delete-field: not_null
   configuration:
     # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
     map-underscore-to-camel-case: true

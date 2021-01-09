@@ -25,7 +25,7 @@ public class Swagger2Config {
                 .pathMapping("/")
                 .select()
                 // 为当前包路径
-                .apis(RequestHandlerSelectors.basePackage("com.configService.modules.registered.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.configService.modules.registered.controller"))
                 //.apis(RequestHandlerSelectors.any())
                 .paths( Predicates.not(PathSelectors.regex("/error.*")))
                 .paths(PathSelectors.regex("/.*"))

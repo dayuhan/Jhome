@@ -1,11 +1,17 @@
 package com.registerMachine.modules.fileManagement.controller;
 
 import com.bracket.common.Bus.AbstractController.BaseController;
+import com.bracket.common.Bus.ResponseJson;
+import com.bracket.common.Bus.Status;
 import com.bracket.common.FastDFS.*;
+import com.registerMachine.modules.fileManagement.service.RegisterMachineService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -45,22 +51,15 @@ import java.util.Locale;
 @RequestMapping("/register")
 public class RegisterCodeGenerateController extends BaseController {
 
-    /**
-     * 文件服务器地址
-     */
-    @Value("${file_server_addr}")
-    private String fileServerAddr;
+    @Autowired
+    protected RegisterMachineService registerMachineService;
 
-    /**
-     * FastDFS秘钥
-     */
-    @Value("${fastdfs.http_secret_key}")
-    private String fastDFSHttpSecretKey;
-
-    @PostMapping(value = "/upload/file/sample",produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    @ApiOperation(value = "上传文件通用，只上传文件到服务器，不会保存记录到数据库", notes = "")
-    public void uploadFileSample(MultipartFile file, HttpServletRequest request){
+    @ApiOperation(value = "添加[代码生成器生成]")
+    @PostMapping(value = "/generateCode", produces = "application/json;charset=UTF-8")
+    public ResponseJson getGenerateCode(@Validated @RequestBody String declareCode, BindingResult result) {
+        return new ResponseJson().success().setValue("data", registerMachineService.getGenerateCode(declareCode));
+
     }
 
 }

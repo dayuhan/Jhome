@@ -100,7 +100,7 @@ public class MyBatisPlusCodeGenerator {
                 .setParent(customPath)// 自定义包路径;
                 .setModuleName(scanner("请输入模块名"));
         if (gc.getAuthor().equals("1")) {
-            pc.setController("controller");// 这里是控制器包名，默认 web
+            pc.setController("controller");// 这里是控制器包名，默认 controller
             pc.setMapper("dao");
             pc.setService("service");
             pc.setServiceImpl("service.impl");

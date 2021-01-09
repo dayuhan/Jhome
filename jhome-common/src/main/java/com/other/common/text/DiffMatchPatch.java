@@ -888,7 +888,7 @@ public class DiffMatchPatch {
 
   /**
    * Look for single edits surrounded on both sides by equalities
-   * which can be shifted sideways to align the edit to a word boundary.
+   * which can be shifted sideways to align the edit to a Word boundary.
    * e.g: The c<ins>at c</ins>ame. -> The <ins>cat </ins>came.
    * @param diffs LinkedList of Diff objects.
    */

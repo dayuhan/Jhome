@@ -4,6 +4,7 @@ import com.bracket.common.register.ProductCode;
 import com.bracket.common.register.Register;
 import com.configService.modules.registered.dao.SysConfigPropertiesDao;
 import com.configService.modules.registered.model.bo.SysConfigProperties;
+import com.configService.modules.registered.model.query.RegisterQuery;
 import com.configService.modules.registered.model.query.SysConfigPropertiesQuery;
 import com.configService.modules.registered.service.SysConfigPropertiesService;
 import com.bracket.common.Bus.ResponseJson;
@@ -138,8 +139,7 @@ public class SysConfigPropertiesImpl implements SysConfigPropertiesService {
                  */
                 String registerCode = registeredCodeAtomicReference.get();
                 String grantCode = replaceBlank(authorizationCodeAtomicReference.get());
-                if(!registerCode.isEmpty()&&!grantCode.isEmpty())
-                {
+                if (!registerCode.isEmpty() && !grantCode.isEmpty()) {
 
                     // 授权
                     boolean success = Register.Registe(ProductCode.PRODUCT_CODE.toString(), registerCode,
@@ -159,6 +159,23 @@ public class SysConfigPropertiesImpl implements SysConfigPropertiesService {
             return false;
         }
     }
+
+    @Override
+    public boolean register(RegisterQuery registerQuery) throws Throwable {
+        boolean success = false;
+        String grantCode = replaceBlank(registerQuery.getGrantCode());
+        String registerCode = replaceBlank(registerQuery.getRegisterCode());
+        //授权部分
+        success = Register.Registe(ProductCode.PRODUCT_CODE.toString(), registerCode, grantCode);
+        if (success) {
+            //通过redis 修改注册状态
+            // 更改授权标识的状态
+            //RegAPI.setVerifyFlag(success);
+            redisTemplate.opsForValue().set(ProductCode.PRODUCT_CODE.toString(), success);
+        }
+        return success;
+    }
+
     public static String replaceBlank(String str) {
         String dest = "";
         if (str != null) {

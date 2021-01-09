@@ -168,7 +168,7 @@ public class BookMark {
 	 * 
 	 * </pre>
 	 * 
-	 * Here, the user has selected the word 'text' and chosen to insert a 
+	 * Here, the user has selected the Word 'text' and chosen to insert a
 	 * bookmark into the document at that point. So, the bookmark tags 'contain' 
 	 * a character run that is styled. Inserting any text after this bookmark, 
 	 * it is important to ensure that the styling is preserved and copied over 

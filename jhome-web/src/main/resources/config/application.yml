@@ -14,9 +14,9 @@ jhome:
     # redis 地址
     redissonUrl: redis://${spring.redis.host}:${spring.redis.port}
     # 管理基础路径
-    adminPath: web
+    adminPath: controller
     # 前端基础路径
-    frontPath: web
+    frontPath: controller
     #消息服务配置
     queueconfig:
       #队列服务器地址
@@ -44,7 +44,7 @@ logging.level.project.user.UserClient: DEBUG
 spring:
   # 应用程序名称
   application:
-    name: jhome-web
+    name: jhome-controller
   # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
   profiles:
     active: default
@@ -90,7 +90,7 @@ shiro:
     /web/**: authc,
     /**: authc
   LoginUrl: http://127.0.0.1:8100/jhome/account/login
-  SuccessUrl: /${jhome.sysproperties.adminPath}/web/index
+  SuccessUrl: /${jhome.sysproperties.adminPath}/controller/index
   UnauthorizedUrl: /${jhome.sysproperties.adminPath}/userAuthentication/error
 
   #================================================================================ mybase 基础配置信息 ===========#

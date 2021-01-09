@@ -1,8 +1,7 @@
-package com.jhome.modules.userAuthentication.web;
+package com.jhome.modules.userAuthentication.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.bracket.common.Bus.AbstractController.BaseController;
-import com.bracket.common.Bus.AbstractModel.PageUtils;
 import com.bracket.common.Bus.ResponseJson;
 import com.bracket.common.Identity.UserUtil;
 import com.bracket.common.ToolKit.JSONUtils;

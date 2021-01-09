@@ -51,7 +51,7 @@
 ----------
 
     启动storage：
-    docker run -d --name storage --net=host -e TRACKER_IP=192.168.0.156:22122 -e GROUP_NAME=group1 --restart always \
+    docker run -d --name storage --net=host -e TRACKER_IP=192.168.0.111:22122 -e GROUP_NAME=group1 --restart always \
     -v /root/Deploy/docker_fastdfs_data/storage1/data:/data/fast_data/ \
     morunchang/fastdfs sh storage.sh 
     

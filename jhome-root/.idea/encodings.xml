@@ -12,6 +12,7 @@
     <file url="file://$PROJECT_DIR$/../jhome-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-configService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-fileStore/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-nettyService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-position/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-position/src/main/resources" charset="UTF-8" />

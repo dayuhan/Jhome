@@ -1,4 +1,4 @@
-package com.jhome.modules.userAuthentication.web;
+package com.jhome.modules.userAuthentication.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;

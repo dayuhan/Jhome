@@ -31,7 +31,10 @@
         <module>../jhome-appPush</module>
         <module>../jhome-position</module>
 
+        <!--   doc     -->
         <module>../jhome-doc</module>
+        <!--   GEOSERVER     -->
+        <module>../jhome-geoServerToolsService</module>
     </modules>
     <developers>
         <developer>

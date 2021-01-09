@@ -203,7 +203,7 @@ public class AesUtils {
 	
 //	public static void main(String[] args) {
 //
-//		String s = "hello word!";
+//		String s = "hello Word!";
 //		System.out.println(s);
 //		
 //		String k = genKeyString();

@@ -1,4 +1,4 @@
-package com.jhome.modules.ymx.web;
+package com.jhome.modules.ymx.controller;
 
 import com.bracket.common.Bus.AbstractController.BaseController;
 import com.bracket.common.Bus.IBus;
@@ -12,10 +12,6 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.models.Model;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.subject.Subject;
-import org.mengyun.tcctransaction.api.Compensable;
-import org.mengyun.tcctransaction.api.Propagation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

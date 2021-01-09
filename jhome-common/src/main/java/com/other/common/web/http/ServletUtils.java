@@ -35,8 +35,8 @@ public class ServletUtils {
 	
 	/**
 	 * 获取当前请求对象
-	 * web.xml: <listener><listener-class>
-	 * 	org.springframework.web.context.request.RequestContextListener
+	 * controller.xml: <listener><listener-class>
+	 * 	org.springframework.controller.context.request.RequestContextListener
 	 * 	</listener-class></listener>
 	 */
 	public static HttpServletRequest getRequest(){
@@ -54,8 +54,8 @@ public class ServletUtils {
 	
 	/**
 	 * 获取当前相应对象
-	 * web.xml: <filter><filter-name>requestContextFilter</filter-name><filter-class>
-	 * 	org.springframework.web.filter.RequestContextFilter</filter-class></filter><filter-mapping>
+	 * controller.xml: <filter><filter-name>requestContextFilter</filter-name><filter-class>
+	 * 	org.springframework.controller.filter.RequestContextFilter</filter-class></filter><filter-mapping>
 	 * 	<filter-name>requestContextFilter</filter-name><url-pattern>/*</url-pattern></filter-mapping>
 	 */
 	public static HttpServletResponse getResponse(){
@@ -124,15 +124,15 @@ public class ServletUtils {
 		if (staticFiles == null){
 			PropertiesUtils pl = PropertiesUtils.getInstance();
 			try{
-				staticFiles = StringUtils.split(pl.getProperty("web.staticFile"), ",");
-				staticFileExcludeUri = StringUtils.split(pl.getProperty("web.staticFileExcludeUri"), ",");
+				staticFiles = StringUtils.split(pl.getProperty("controller.staticFile"), ",");
+				staticFileExcludeUri = StringUtils.split(pl.getProperty("controller.staticFileExcludeUri"), ",");
 			}catch(NoSuchElementException nsee){
 				; // 什么也不做
 			}
 			if (staticFiles == null){
 				try {
-					throw new Exception("检测到“other.yml”中没有配置“web.staticFile”属性。"
-							+ "配置示例：\n#静态文件后缀\nweb.staticFile=.css,.js,.png,.jpg,.gif,"
+					throw new Exception("检测到“other.yml”中没有配置“controller.staticFile”属性。"
+							+ "配置示例：\n#静态文件后缀\ncontroller.staticFile=.css,.js,.png,.jpg,.gif,"
 							+ ".jpeg,.bmp,.ico,.swf,.psd,.htc,.crx,.xpi,.exe,.ipa,.apk");
 				} catch (Exception e) {
 					e.printStackTrace();

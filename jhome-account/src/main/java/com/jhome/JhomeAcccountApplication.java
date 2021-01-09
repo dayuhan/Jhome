@@ -16,7 +16,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableDiscoveryClient
 //@ComponentScan({"com.jhome.autoconfiguration"})
 //@MapperScan("")
-//@sysScan("com.jhome.modules.userAuthentication.web")
+//@sysScan("com.jhome.modules.userAuthentication.controller")
 public class JhomeAcccountApplication {
     public static void main(String[] args) {
         regZookerper();

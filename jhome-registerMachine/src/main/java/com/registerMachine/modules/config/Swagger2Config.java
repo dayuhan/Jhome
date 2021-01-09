@@ -25,7 +25,7 @@ public class Swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 // 为当前包路径
-                .apis(RequestHandlerSelectors.basePackage("com.fileStore.modules.fileManagement.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.fileStore.modules.geoServer.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
