@@ -23,7 +23,7 @@
     EXPOSE 8080 
     ENTRYPOINT ["java","-jar","-Dspring.config.location=/root/Deploy/docker_jar_data/jhome-account/config/application-accountService.yml","/root/Deploy/docker_jar_data/jhome-account/lib/jhome-account.jar"]  
 #### 第四步 创建镜像文件，把jar打包成 镜像文件
-    docker build -t jhome .  # 在当前dockerFile下执行编译
+    docker build -t jhome:20210122 .  #在当前dockerFile下执行编译 jhome:tag  :tag 指定版本 不指定为last
 #### 第五步 查看镜像是否生成
     docker images
 #### 第六步 运行容器读取新的配置文件

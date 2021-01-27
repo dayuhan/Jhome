@@ -157,7 +157,24 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+    <!--springboot 多文件配置-->
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <spring.active>local</spring.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <spring.active>dev</spring.active>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
     <!--热部署-->
     <build>
         <plugins>
@@ -175,6 +192,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>

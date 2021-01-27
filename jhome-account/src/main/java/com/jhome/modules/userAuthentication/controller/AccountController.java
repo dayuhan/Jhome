@@ -34,12 +34,12 @@ public class AccountController extends BaseController {
 
 
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
-    public String login(HttpServletRequest request, HttpServletResponse response, @RequestBody UserInfo user) {
+    public ResponseJson login(HttpServletRequest request, HttpServletResponse response, @RequestBody UserInfo user) {
         try {
             if (user == null || StringUtil.isBlank(user.getLoginName()) || StringUtil.isBlank(user.getPassword()))
-                return JSONUtils.beanToJson(new ResponseJson().error("用户名密码不能为空！"));
+                return new ResponseJson().error("用户名密码不能为空！");
             if (!DeviceType.toList().contains(user.getDeviceType()))
-                return JSONUtils.beanToJson(new ResponseJson().error("登陆设备类型不能存在！"));
+                return new ResponseJson().error("登陆设备类型不能存在！");
             Subject subject = SecurityUtils.getSubject();
             jhomeToken token = new jhomeToken(user.getLoginName(), user.getPassword(), 0, user.getDeviceType());
             token.setRememberMe(true);
@@ -54,17 +54,15 @@ public class AccountController extends BaseController {
                 if (StringUtil.isNotBlank(jsonObject.getString("jhomeToken"))) {
                     return new ResponseJson()
                             .success()
-                            .setValue("data", jsonObject)
-                            .toString();
+                            .setValue("data", jsonObject);
                 } else {
                     return new ResponseJson()
-                            .error("用户登陆失败")
-                            .toString();
+                            .error("用户登陆失败");
                 }
 
             }
         } catch (Exception ex) {
-            return new ResponseJson().error("登陆失败").toString();
+            return new ResponseJson().error("登陆失败");
         }
 
         return null;

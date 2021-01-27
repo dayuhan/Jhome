@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="jhome-geoServerToolsService">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../jhome-geoServerToolsService" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/../jhome-geoServerToolsService" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../jhome-geoServerToolsService" recursive="false" />
+  </library>
+</component>

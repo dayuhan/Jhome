@@ -24,8 +24,11 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.client.OkHttp3ClientHttpRequestFactory;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.client.RestTemplate;
+
+import java.nio.charset.StandardCharsets;
 
 /**
  * 系统组件
@@ -160,10 +163,12 @@ public class SysAutoConfiguration {
         return pageHelper;
     }*/
     @Bean
-    @LoadBalanced
+    @LoadBalanced //(启用spring cloud 负载均衡 查询服务 如果单纯调外部网址，请删除)
     @ConditionalOnMissingBean(RestTemplate.class)
     public RestTemplate restTemplate() {
-        return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
+        RestTemplate restTemplate=new RestTemplate(new OkHttp3ClientHttpRequestFactory());
+        restTemplate.getMessageConverters().set(1,new StringHttpMessageConverter(StandardCharsets.UTF_8));//支持中文编码
+        return restTemplate;
     }
 
 

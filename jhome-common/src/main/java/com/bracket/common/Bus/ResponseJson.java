@@ -64,8 +64,7 @@ public class ResponseJson extends HashMap<String, Object> {
         HashMap<String, Object> data = (HashMap<String, Object>) get("data");
         if (data == null) {
             data = new HashMap<String, Object>();
-            put("data", data);
-
+            put("data", data); 
         }
         data.put(key, obj);
         return this;
