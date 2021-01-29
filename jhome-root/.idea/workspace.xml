@@ -119,21 +119,8 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-appPush\src\main\resources" />
-      <recent name="D:\XProject\Jhome\jhome-registrationService\src\main\resources" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.geoServer.conmmon" />
-      <recent name="com.geoServer.autoconfiguration" />
-      <recent name="com.jhome.common.utils" />
-      <recent name="com.pubInterFace" />
-      <recent name="com.position.common" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\resources\config" />
@@ -141,6 +128,19 @@
       <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shiro.common.realm" />
+      <recent name="com.geoServer.conmmon" />
+      <recent name="com.geoServer.autoconfiguration" />
+      <recent name="com.jhome.common.utils" />
+      <recent name="com.pubInterFace" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-appPush\src\main\resources" />
+      <recent name="D:\XProject\Jhome\jhome-registrationService\src\main\resources" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -293,12 +293,7 @@
         <serviceView>
           <option name="contentProportion" value="0.19663742" />
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.dashboard.RunDashboardServiceViewContributor@2b5fda34" type="d2cb1801:ServiceModel$ContributorNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
           <option name="groupByServiceGroups" value="false" />
@@ -560,6 +555,8 @@
       <workItem from="1611537491548" duration="5669000" />
       <workItem from="1611729071773" duration="4247000" />
       <workItem from="1611881901724" duration="4584000" />
+      <workItem from="1611902768411" duration="263000" />
+      <workItem from="1611906046553" duration="2422000" />
     </task>
     <servers />
   </component>
@@ -650,22 +647,22 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="545" y="397" width="375" height="207" key="Github.CreateGistDialog/0.40.1440.920@0.40.1440.920" timestamp="1610590650221" />
-    <state width="1098" height="251" key="GridCell.Tab.0.bottom" timestamp="1611902334749">
+    <state width="1397" height="283" key="GridCell.Tab.0.bottom" timestamp="1611903030339">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="251" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1611902334749" />
-    <state width="1098" height="251" key="GridCell.Tab.0.center" timestamp="1611902334749">
+    <state width="1397" height="283" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1611903030339" />
+    <state width="1397" height="283" key="GridCell.Tab.0.center" timestamp="1611903030339">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="251" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1611902334749" />
-    <state width="1098" height="251" key="GridCell.Tab.0.left" timestamp="1611902334749">
+    <state width="1397" height="283" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1611903030339" />
+    <state width="1397" height="283" key="GridCell.Tab.0.left" timestamp="1611903030339">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="251" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1611902334749" />
-    <state width="1098" height="251" key="GridCell.Tab.0.right" timestamp="1611902334749">
+    <state width="1397" height="283" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1611903030339" />
+    <state width="1397" height="283" key="GridCell.Tab.0.right" timestamp="1611903030339">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="251" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1611902334749" />
+    <state width="1397" height="283" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1611903030339" />
     <state width="1098" height="251" key="GridCell.Tab.1.bottom" timestamp="1611902334749">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -710,6 +707,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="191" y="95" width="1122" height="715" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1610693309417" />
+    <state x="442" y="242" width="540" height="524" key="StructurePopup" timestamp="1611912536114">
+      <screen x="0" y="40" width="1440" height="920" />
+    </state>
+    <state x="442" y="242" width="540" height="524" key="StructurePopup/0.40.1440.920@0.40.1440.920" timestamp="1611912536114" />
     <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1610540797722">
       <screen x="0" y="40" width="1440" height="920" />
     </state>

@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
  * @author : Daxv
  * @date : 11:03 2020/5/12 0012
  */
-public class ServerRedisSessionDao extends AbstractSessionDAO {
+public class ServerRedisSessionDao_BAK extends AbstractSessionDAO {
     protected final long PC_EXPIRE_TIME = 600;
     protected final long APP_EXPIRE_TIME = 600;
     protected Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -33,7 +33,7 @@ public class ServerRedisSessionDao extends AbstractSessionDAO {
     //过期时间
     private long expiredTime;
 
-    public ServerRedisSessionDao() {
+    public ServerRedisSessionDao_BAK() {
     }
 
     //用户第一次访问系统时创建会话信息
