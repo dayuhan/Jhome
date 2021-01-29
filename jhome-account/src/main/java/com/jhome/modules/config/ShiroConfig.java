@@ -39,6 +39,8 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.*;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.RedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.web.filter.DelegatingFilterProxy;
 
 import javax.servlet.DispatcherType;
@@ -339,6 +341,16 @@ public class ShiroConfig {
         redisSessionDao.setRedisTemplate(redisTemplate);
         redisSessionDao.setExpiredTime(sysConfigurationProperties.getExpiredTime());
         return redisSessionDao;
+    }
+
+    @Bean
+    public RedisTemplate<String, Object> stringSerializerRedisTemplate() {
+        RedisSerializer<String> stringSerializer = new StringRedisSerializer();
+        redisTemplate.setKeySerializer(stringSerializer);
+        redisTemplate.setValueSerializer(stringSerializer);
+        redisTemplate.setHashKeySerializer(stringSerializer);
+        redisTemplate.setHashValueSerializer(stringSerializer);
+        return redisTemplate;
     }
 
     /**
