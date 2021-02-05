@@ -119,15 +119,15 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\yml配置" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-appPush\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\resources\config" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\java\com\geoServer" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.shiro.common.realm" />
@@ -136,11 +136,12 @@
       <recent name="com.jhome.common.utils" />
       <recent name="com.pubInterFace" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-appPush\src\main\resources" />
-      <recent name="D:\XProject\Jhome\jhome-registrationService\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\resources\config" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\java\com\geoServer" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine\src\main\resources" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -557,6 +558,11 @@
       <workItem from="1611881901724" duration="4584000" />
       <workItem from="1611902768411" duration="263000" />
       <workItem from="1611906046553" duration="2422000" />
+      <workItem from="1612233137447" duration="4758000" />
+      <workItem from="1612337860664" duration="65000" />
+      <workItem from="1612426282024" duration="662000" />
+      <workItem from="1612427884737" duration="1720000" />
+      <workItem from="1612508542372" duration="2591000" />
     </task>
     <servers />
   </component>
@@ -575,10 +581,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="357" y="40" width="741" height="920" key="#GeoServerApplication/0.40.1440.920@0.40.1440.920" timestamp="1610448087827" />
-    <state x="313" y="162" key="#Project_Structure" timestamp="1611901856505">
+    <state x="313" y="162" key="#Project_Structure" timestamp="1612508558702">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="313" y="162" key="#Project_Structure/0.40.1440.920@0.40.1440.920" timestamp="1611901856505" />
+    <state x="313" y="162" key="#Project_Structure/0.40.1440.920@0.40.1440.920" timestamp="1612508558702" />
     <state x="451" y="256" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1604628568100">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -587,10 +593,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="176" y="156" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1440.920@0.40.1440.920" timestamp="1610451139800" />
-    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611900838569">
+    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612234919542">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1611900838569" />
+    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1612234919542" />
     <state x="508" y="205" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1610446686757">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -611,10 +617,6 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="583" y="164" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.40.1440.920@0.40.1440.920" timestamp="1610679024902" />
-    <state x="403" y="359" width="635" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603719541809">
-      <screen x="0" y="40" width="1440" height="920" />
-    </state>
-    <state x="403" y="359" width="635" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.40.1440.920@0.40.1440.920" timestamp="1603719541809" />
     <state x="0" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610163970945">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -639,10 +641,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="34" y="206" width="1255" height="735" key="DiffContextDialog/0.40.1440.920@0.40.1440.920" timestamp="1607955450704" />
-    <state x="681" y="138" key="FileChooserDialogImpl" timestamp="1610678849740">
+    <state x="681" y="138" key="FileChooserDialogImpl" timestamp="1612509666313">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="681" y="138" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1610678849740" />
+    <state x="681" y="138" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1612509666313" />
     <state x="545" y="397" width="375" height="207" key="Github.CreateGistDialog" timestamp="1610590650221">
       <screen x="0" y="40" width="1440" height="920" />
     </state>

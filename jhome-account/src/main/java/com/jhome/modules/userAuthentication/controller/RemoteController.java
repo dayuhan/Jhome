@@ -12,6 +12,7 @@ import com.shiro.common.session.ShiroSession;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ import java.io.Serializable;
 
 @Api(tags = "S、服务器远程调用接口")
 @Controller
-@RequestMapping("/${foreignServerPath}")
+@RequestMapping(value = "/${foreignServerPath}",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)//解决汉字转换问题
 public class RemoteController extends BaseController {
 
     @Autowired
