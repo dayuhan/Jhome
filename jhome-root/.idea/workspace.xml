@@ -111,7 +111,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jhome-account/src/main/resources/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jhome-doc/doc/images" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.33256084" />
@@ -120,8 +120,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\yml配置" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\yml配置" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-appPush\src\main\resources" />
@@ -137,10 +137,10 @@
       <recent name="com.pubInterFace" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\resources\config" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\java\com\geoServer" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine\src\main\resources" />
     </key>
   </component>
@@ -562,7 +562,11 @@
       <workItem from="1612337860664" duration="65000" />
       <workItem from="1612426282024" duration="662000" />
       <workItem from="1612427884737" duration="1720000" />
-      <workItem from="1612508542372" duration="2591000" />
+      <workItem from="1612508542372" duration="3746000" />
+      <workItem from="1612680921781" duration="8074000" />
+      <workItem from="1612698685949" duration="3883000" />
+      <workItem from="1612749628170" duration="2468000" />
+      <workItem from="1612763019281" duration="810000" />
     </task>
     <servers />
   </component>

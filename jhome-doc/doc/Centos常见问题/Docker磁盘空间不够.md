@@ -1,3 +1,7 @@
+### CentOS虚拟机根分区磁盘扩容操作
+https://blog.csdn.net/sinat_27674731/article/details/113740374
+
+
 # 启动容器时，报如下错：
     docker: Error response from daemon: failed to copy files: copy file range failed: no space left on device.
 
@@ -39,15 +43,25 @@ LVM常用命令
     /dev/sda1   *           1          64      512000   83  Linux
     /dev/sda2              64        2611    20458496   8e  Linux LVM
 
-
-
-
-
-
 ### 第一、扩展虚拟机硬盘空间
 #### 1 创建物理分区
     命令进入fdisk命令模式:
     sudo fdisk /dev/sda
+    
+    命令	    含义                    操作流程
+    n (new)	    添加一个新分区
+    p (print)	打印分区表
+    w (write)	添将表写入磁盘并退出
+    d (delete)	删除一个分区         d删除分区，回车（默认删除分区号4），p（查看分区）发现已经还剩3个主分区了
+   
+    p 主分区:
+    都用主分区的话，最多可以划分4个。如果想划分多个的话，可以划分3个主分区。另外一个划分为扩展分区。在扩展分区里面再接着划分逻辑分区。
+    创建主分区流程：
+    创建第一个主分区（+2G）
+    n创建新分区，p选择主分区，回车（默认分区号1），回车（默认磁盘扇区从2048开始），+2G（设置分区大小为2G）
+   
+    e 扩展分区
+    
 ![alt 属性文本](../images/lmv6.png)
 
 出现这个界面后输入n，创建新的分区。
@@ -56,6 +70,9 @@ LVM常用命令
 Partition type、Partition number和磁盘的范围都是默认就行，敲四个回车就可以。之后输入w写入分区表。
 
 ![alt 属性文本](../images/lmv8.png)  
+也可以自己输入大小：n创建新分区，p选择主分区，输入分区号4（默认分区号1），扇区起始位置按回车（默认磁盘扇区从2048开始），第二个位置输入+200G（设置分区大小为2G）   
+![alt 属性文本](../images/lvm10.png)  
+选择合适的分区大小，这里分为40G，K为KB,M为MB，G为GB,T为TB，P为PB。 
 输入sudo fdisk -l查看磁盘信息，会看到新出现的/dev/sda3。
 
 ![alt 属性文本](../images/lmv9.png)
@@ -104,11 +121,32 @@ touch test.txt 在/ExpandDisk1 下创建一个测试文件test.txt，可以看�
 
 #### 参考文献
 https://blog.csdn.net/ichen820/article/details/106274392
+ 
 
----
+### 第二 删除卷组 
+    
+    1.取消挂载
+    umount /mnt/lv0 
+    
+    2.取消逻辑卷
+    lvremove /dev/vg0/lv0
+     
+    3.取消卷组（直接写卷组名称就可以）
+    vgremove vg0 
+    
+    4.取消物理卷
+    pvremove /dev/sd{b,c}{1,2,3} 
+    
+    5.删除主分区
+     sudo fdisk /dev/sda  # sudo fdisk /dev/sdb...
+     输入：d
+     输入：分区号{1,2,3,4}
+     d删除分区，回车（默认删除分区号4），p（查看分区）发现已经还剩3个主分区了
+     
+#### 参考文献
+https://blog.csdn.net/ichen820/article/details/106274392
 
-
-### 第二 其他、暴力方法 删除无用数据
+### 第三 其他、暴力方法 删除无用数据
 错误原因是，docker  里面存在很多孤立的卷（删除容器的遗留），可以使用以下命令查看
 
     docker volume ls -qf dangling=true  
@@ -116,6 +154,8 @@ https://blog.csdn.net/ichen820/article/details/106274392
 将会显示所有"已作废"的卷,具体里面有没有有用信息，自行判断。只需要将这些卷彻底删除，磁盘就够用了，执行：
 
     docker volume rm $(docker volume ls -qf dangling=true) #会删除mysql相关资源 慎用
+
+ 
 
 **参考文献**
     https://www.cnblogs.com/raisins/p/13224353.html
