@@ -116,18 +116,18 @@
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.33256084" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\yml配置" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-appPush\src\main\resources" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\resources\config" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\java\com\geoServer" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.shiro.common.realm" />
@@ -136,12 +136,12 @@
       <recent name="com.jhome.common.utils" />
       <recent name="com.pubInterFace" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\多线程" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\resources\config" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\java\com\geoServer" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine\src\main\resources" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\yml配置" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -567,6 +567,12 @@
       <workItem from="1612698685949" duration="3883000" />
       <workItem from="1612749628170" duration="2468000" />
       <workItem from="1612763019281" duration="810000" />
+      <workItem from="1612833310554" duration="1196000" />
+      <workItem from="1612862221074" duration="452000" />
+      <workItem from="1613612951366" duration="5930000" />
+      <workItem from="1613633737802" duration="124000" />
+      <workItem from="1613698510043" duration="4420000" />
+      <workItem from="1613784226479" duration="8919000" />
     </task>
     <servers />
   </component>
@@ -589,18 +595,14 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="313" y="162" key="#Project_Structure/0.40.1440.920@0.40.1440.920" timestamp="1612508558702" />
-    <state x="451" y="256" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1604628568100">
-      <screen x="0" y="40" width="1440" height="920" />
-    </state>
-    <state x="451" y="256" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.40.1440.920@0.40.1440.920" timestamp="1604628568100" />
     <state x="176" y="156" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610451139800">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="176" y="156" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1440.920@0.40.1440.920" timestamp="1610451139800" />
-    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612234919542">
+    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613628753838">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1612234919542" />
+    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1613628753838" />
     <state x="508" y="205" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1610446686757">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -653,22 +655,22 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="545" y="397" width="375" height="207" key="Github.CreateGistDialog/0.40.1440.920@0.40.1440.920" timestamp="1610590650221" />
-    <state width="1397" height="283" key="GridCell.Tab.0.bottom" timestamp="1611903030339">
+    <state width="1397" height="283" key="GridCell.Tab.0.bottom" timestamp="1613632551706">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="283" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1611903030339" />
-    <state width="1397" height="283" key="GridCell.Tab.0.center" timestamp="1611903030339">
+    <state width="1397" height="283" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1613632551706" />
+    <state width="1397" height="283" key="GridCell.Tab.0.center" timestamp="1613632551705">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="283" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1611903030339" />
-    <state width="1397" height="283" key="GridCell.Tab.0.left" timestamp="1611903030339">
+    <state width="1397" height="283" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1613632551705" />
+    <state width="1397" height="283" key="GridCell.Tab.0.left" timestamp="1613632551705">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="283" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1611903030339" />
-    <state width="1397" height="283" key="GridCell.Tab.0.right" timestamp="1611903030339">
+    <state width="1397" height="283" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1613632551705" />
+    <state width="1397" height="283" key="GridCell.Tab.0.right" timestamp="1613632551706">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="283" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1611903030339" />
+    <state width="1397" height="283" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1613632551706" />
     <state width="1098" height="251" key="GridCell.Tab.1.bottom" timestamp="1611902334749">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -709,10 +711,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="251" y="156" key="Maven.ArtifactSearchDialog/0.40.1440.920@0.40.1440.920" timestamp="1610413590905" />
-    <state x="191" y="95" width="1122" height="715" key="SettingsEditor" timestamp="1610693309417">
+    <state x="191" y="95" width="1122" height="715" key="SettingsEditor" timestamp="1613813325729">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="191" y="95" width="1122" height="715" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1610693309417" />
+    <state x="191" y="95" width="1122" height="715" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1613813325729" />
     <state x="442" y="242" width="540" height="524" key="StructurePopup" timestamp="1611912536114">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -729,10 +731,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="198" y="237" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.40.1440.920@0.40.1440.920" timestamp="1608452480229" />
-    <state x="408" y="68" width="851" height="892" key="find.popup" timestamp="1611300848807">
+    <state x="408" y="68" width="884" height="892" key="find.popup" timestamp="1613724291438">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="408" y="68" width="851" height="892" key="find.popup/0.40.1440.920@0.40.1440.920" timestamp="1611300848807" />
+    <state x="408" y="68" width="884" height="892" key="find.popup/0.40.1440.920@0.40.1440.920" timestamp="1613724291438" />
     <state x="382" y="211" width="763" height="571" key="new project wizard" timestamp="1610162342988">
       <screen x="0" y="40" width="1440" height="920" />
     </state>

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Setter
 @Getter
+@Component
 public class SysConfigurationPropertiesBean extends SysProperties {
     public String adminPath;//后台路径
     public String frontPath;//前台路径

@@ -69,10 +69,10 @@ public class ShiroConfig {
 
     //    @Autowired
 //    public SysShiroProperties spro;
-    @Bean(name = "SysConfigurationPropertiesBean")
-    public SysConfigurationPropertiesBean sysConfigurationPropertiesBean() {
-        return new SysConfigurationPropertiesBean();
-    }
+//    @Bean(name = "SysConfigurationPropertiesBean")
+//    public SysConfigurationPropertiesBean sysConfigurationPropertiesBean() {
+//        return new SysConfigurationPropertiesBean();
+//    }
 
 
     @Bean(name = "SysShiroProperties")
@@ -504,6 +504,7 @@ public class ShiroConfig {
 
     /**
      * 用户辅助类
+     *
      * @return
      */
     @Bean("UserAuxiliary")
