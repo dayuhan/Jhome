@@ -10,6 +10,9 @@ Job for network.service failed because the control process exited with error cod
     systemctl restart network -- 重启服务
 
 2和配置文件的MAC地址不匹配，这个也好解决，使用ip addr（或ifconfig）查看mac地址
+3.如果主机同时装了visualbox和vm，也会导致其中一个虚拟机ping不通主机，因此使用vm或vb时，在主机上禁用另一个虚拟网卡即可。   
+![alt 属性文本](../images/linux6.png)
+
 
 
 参考：
