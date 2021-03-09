@@ -53,6 +53,7 @@
       <module name="jhome-fileStore" options="-parameters" />
       <module name="jhome-geoServerToolsService" options="-parameters" />
       <module name="jhome-nettyService" options="-parameters" />
+      <module name="jhome-parent" options="" />
       <module name="jhome-position" options="-parameters" />
       <module name="jhome-registerMachine" options="-parameters" />
       <module name="jhome-registrationCenter_One" options="-parameters" />

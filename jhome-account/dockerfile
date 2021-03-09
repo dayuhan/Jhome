@@ -1,0 +1,6 @@
+FROM java:8u1111
+VOLUME /tmp
+ARG JAR_FILE
+COPY ${JAR_FILE} APP.jar
+EXPOSE 8100
+ENTRYPOINT ["java","-jar","/app.jar"]

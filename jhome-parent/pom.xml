@@ -82,6 +82,8 @@
         <zookeeper.version>3.4.12</zookeeper.version>
         <curator.version>4.2.0</curator.version>
         <geotools.version>23.2</geotools.version>
+
+        <docker.image.prefix>fatcat</docker.image.prefix>
     </properties>
 
     <dependencies>
@@ -100,7 +102,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+
                 <configuration>
+
                     <showWarnings>true</showWarnings>
                     <!-- 					<compilerArguments> -->
                     <!-- 						<verbose /> 输出有关编译器正在执行的操作的消息 -->
@@ -181,6 +185,18 @@
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
 
+            <!-- docker 镜像打包 -->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.3.6</version>
+                <configuration>
+                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                    <buildArgs>
+                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                    </buildArgs>
+                </configuration>
+            </plugin>
         </plugins>
 
         <pluginManagement>
@@ -381,8 +397,24 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <profiles>
 
+    <profiles>
+        <!--springboot 多文件配置-->
+        <profile>
+            <id>local</id>
+            <properties>
+                <spring.active>local</spring.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <spring.active>dev</spring.active>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
         <!-- 打包项目 -->
         <profile>
             <id>javadoc</id>

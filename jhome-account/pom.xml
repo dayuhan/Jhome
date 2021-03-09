@@ -157,30 +157,17 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <!--springboot 多文件配置-->
-    <profiles>
-        <profile>
-            <id>local</id>
-            <properties>
-                <spring.active>local</spring.active>
-            </properties>
-        </profile>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <spring.active>dev</spring.active>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-    </profiles>
+
     <!--热部署-->
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- 允许本地 jar导入-->
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
                 <dependencies>
                     <!-- spring热部署 插件 -->
                     <dependency>
