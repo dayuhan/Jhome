@@ -111,12 +111,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jhome-geoServerToolsService/osrjni.dll" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jhome-common/src/main/resources/lib" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.33256084" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -137,11 +137,11 @@
       <recent name="com.pubInterFace" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\resources\lib" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\resources\config" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\java\com\geoServer" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -163,7 +163,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GeoServerApplication">
+  <component name="RunManager" selected="Docker.jhome-account">
     <configuration name="JhomeNettyService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.nettyService.JhomeNettyService" />
       <module name="jhome-nettyService" />
@@ -266,8 +266,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="jhome-account" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="jhome-account" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="jhome-account" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8100" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8100" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="../jhome-account/dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="D:\EatingTools\XProject\Jhome\jhome-account/pom.xml" goal="" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.JhomeNettyService" />
+      <item itemvalue="Docker.jhome-account" />
       <item itemvalue="Spring Boot.JhomeConfigServiceApplication" />
       <item itemvalue="Spring Boot.JhomeRegistrationService" />
       <item itemvalue="Spring Boot.JhomeWebApplication" />
@@ -582,7 +608,20 @@
       <workItem from="1614760008230" duration="465000" />
       <workItem from="1614761811533" duration="47000" />
       <workItem from="1615262287949" duration="5349000" />
-      <workItem from="1615273752638" duration="601000" />
+      <workItem from="1615273752638" duration="1854000" />
+      <workItem from="1615277108366" duration="880000" />
+      <workItem from="1615278053943" duration="79000" />
+      <workItem from="1615279379034" duration="98000" />
+      <workItem from="1615279730576" duration="3614000" />
+      <workItem from="1615346354437" duration="3056000" />
+      <workItem from="1615366587045" duration="64000" />
+      <workItem from="1615367443199" duration="2140000" />
+      <workItem from="1615424628734" duration="2378000" />
+      <workItem from="1615427787023" duration="1376000" />
+      <workItem from="1615429205551" duration="614000" />
+      <workItem from="1615429880681" duration="1167000" />
+      <workItem from="1615431156425" duration="4745000" />
+      <workItem from="1615437578701" duration="3840000" />
     </task>
     <servers />
   </component>
@@ -597,6 +636,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="289" y="116" key="#Custom_Plugin_Repositories/0.40.1440.920@0.40.1440.920" timestamp="1609914454515" />
+    <state x="444" y="148" key="#Docker" timestamp="1615277986568">
+      <screen x="0" y="40" width="1440" height="920" />
+    </state>
+    <state x="444" y="148" key="#Docker/0.40.1440.920@0.40.1440.920" timestamp="1615277986568" />
     <state x="357" y="40" width="741" height="920" key="#GeoServerApplication" timestamp="1610448087827">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -605,14 +648,14 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="313" y="162" key="#Project_Structure/0.40.1440.920@0.40.1440.920" timestamp="1614150489074" />
-    <state x="176" y="156" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610451139800">
+    <state x="307" y="145" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615277988562">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="176" y="156" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1440.920@0.40.1440.920" timestamp="1610451139800" />
-    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613628753838">
+    <state x="307" y="145" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1440.920@0.40.1440.920" timestamp="1615277988562" />
+    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615442270479">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1613628753838" />
+    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1615442270479" />
     <state x="508" y="205" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1610446686757">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -641,10 +684,14 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="450" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1440.920@0.40.1440.920" timestamp="1613972700129" />
-    <state x="147" y="143" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1613965948974">
+    <state x="147" y="143" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1615434458794">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="147" y="143" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.40.1440.920@0.40.1440.920" timestamp="1613965948974" />
+    <state x="147" y="143" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.40.1440.920@0.40.1440.920" timestamp="1615434458794" />
+    <state x="431" y="74" key="#jhome-account" timestamp="1615277828298">
+      <screen x="0" y="40" width="1440" height="920" />
+    </state>
+    <state x="431" y="74" key="#jhome-account/0.40.1440.920@0.40.1440.920" timestamp="1615277828298" />
     <state width="559" height="466" key="DebuggerActiveHint" timestamp="1610590337483">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -657,30 +704,30 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="34" y="206" width="1255" height="735" key="DiffContextDialog/0.40.1440.920@0.40.1440.920" timestamp="1607955450704" />
-    <state x="681" y="138" key="FileChooserDialogImpl" timestamp="1614070593967">
+    <state x="769" y="118" key="FileChooserDialogImpl" timestamp="1615432536489">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="681" y="138" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1614070593967" />
+    <state x="769" y="118" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1615432536489" />
     <state x="545" y="397" width="375" height="207" key="Github.CreateGistDialog" timestamp="1610590650221">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="545" y="397" width="375" height="207" key="Github.CreateGistDialog/0.40.1440.920@0.40.1440.920" timestamp="1610590650221" />
-    <state width="1397" height="242" key="GridCell.Tab.0.bottom" timestamp="1615273361977">
+    <state width="1397" height="239" key="GridCell.Tab.0.bottom" timestamp="1615444147737">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="242" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1615273361977" />
-    <state width="1397" height="242" key="GridCell.Tab.0.center" timestamp="1615273361976">
+    <state width="1397" height="239" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1615444147737" />
+    <state width="1397" height="239" key="GridCell.Tab.0.center" timestamp="1615444147737">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="242" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1615273361976" />
-    <state width="1397" height="242" key="GridCell.Tab.0.left" timestamp="1615273361976">
+    <state width="1397" height="239" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1615444147737" />
+    <state width="1397" height="239" key="GridCell.Tab.0.left" timestamp="1615444147737">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="242" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1615273361976" />
-    <state width="1397" height="242" key="GridCell.Tab.0.right" timestamp="1615273361977">
+    <state width="1397" height="239" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1615444147737" />
+    <state width="1397" height="239" key="GridCell.Tab.0.right" timestamp="1615444147737">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="242" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1615273361977" />
+    <state width="1397" height="239" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1615444147737" />
     <state width="1098" height="251" key="GridCell.Tab.1.bottom" timestamp="1614074301517">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -717,14 +764,14 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="0" y="65" key="MarkdownNavigator.PasteImageDialog/0.40.1440.920@0.40.1440.920" timestamp="1608184273833" />
-    <state x="251" y="156" key="Maven.ArtifactSearchDialog" timestamp="1613972361071">
+    <state x="251" y="156" key="Maven.ArtifactSearchDialog" timestamp="1615429478717">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="251" y="156" key="Maven.ArtifactSearchDialog/0.40.1440.920@0.40.1440.920" timestamp="1613972361071" />
-    <state x="191" y="95" width="1122" height="715" key="SettingsEditor" timestamp="1614070602150">
+    <state x="251" y="156" key="Maven.ArtifactSearchDialog/0.40.1440.920@0.40.1440.920" timestamp="1615429478717" />
+    <state x="95" y="125" width="1122" height="715" key="SettingsEditor" timestamp="1615434470769">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="191" y="95" width="1122" height="715" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1614070602150" />
+    <state x="95" y="125" width="1122" height="715" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1615434470769" />
     <state x="442" y="242" width="540" height="524" key="StructurePopup" timestamp="1611912536114">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -733,6 +780,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="727" height="467" key="XDebugger.FullValuePopup/0.40.1440.920@0.40.1440.920" timestamp="1610540797722" />
+    <state x="594" y="231" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1615277906954">
+      <screen x="0" y="40" width="1440" height="920" />
+    </state>
+    <state x="594" y="231" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/0.40.1440.920@0.40.1440.920" timestamp="1615277906954" />
     <state x="404" y="351" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1610444719772">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -761,10 +812,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="377" y="231" key="run.anything.popup/0.40.1440.920@0.40.1440.920" timestamp="1610591114306" />
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1615271384284">
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1615431324267">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1615271384284" />
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1615431324267" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

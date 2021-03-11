@@ -61,8 +61,6 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-
-
     <dependencyManagement>
         <dependencies>
             <!-- 导入Spring Cloud的依赖管理 -->
@@ -77,25 +75,4 @@
         </dependencies>
     </dependencyManagement>
 
-    <!--热部署-->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <!-- 允许本地 jar导入-->
-                    <includeSystemScope>true</includeSystemScope>
-                </configuration>
-                <dependencies>
-                    <!-- spring热部署 插件 -->
-                    <dependency>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>springloaded</artifactId>
-                        <version>1.2.6.RELEASE</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
 </project>

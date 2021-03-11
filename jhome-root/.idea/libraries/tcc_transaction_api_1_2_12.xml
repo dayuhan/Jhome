@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="tcc-transaction-api-1.2.12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Lib/tcc-transaction-api-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Lib/tcc-transaction-core-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Lib/tcc-transaction-spring-1.2.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

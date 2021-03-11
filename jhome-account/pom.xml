@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <artifactId>jhome-parent</artifactId>
         <groupId>com.jhome</groupId>
@@ -112,12 +111,7 @@
         <!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
         <!--        </dependency>-->
         <!--依赖项目-->
-        <dependency>
-            <groupId>com.jhome</groupId>
-            <artifactId>jhome-common</artifactId>
-            <version>${project.parent.version}</version>
-            <scope>compile</scope>
-        </dependency>
+
         <!--热部署 一 重新发布模式 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -142,6 +136,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.jhome</groupId>
+            <artifactId>jhome-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -158,25 +158,4 @@
         </dependencies>
     </dependencyManagement>
 
-    <!--热部署-->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <!-- 允许本地 jar导入-->
-                    <includeSystemScope>true</includeSystemScope>
-                </configuration>
-                <dependencies>
-                    <!-- spring热部署 插件 -->
-                    <dependency>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>springloaded</artifactId>
-                        <version>1.2.6.RELEASE</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
 </project>

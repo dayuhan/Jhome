@@ -7,6 +7,7 @@
         <groupId>com.jhome</groupId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../jhome-parent/pom.xml</relativePath>
+
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>jhome-common</artifactId>
@@ -410,17 +411,34 @@
             <groupId>org.mengyun</groupId>
             <artifactId>tcc-transaction-spring</artifactId>
             <version>${tcc.version}</version>
+            <scope>system</scope>
+
+            <!--            <systemPath>${project.basedir}/src/main/resources/lib/tcc-transaction-spring-1.2.12.jar</systemPath>-->
+            <systemPath>
+                D:/EatingTools/XProject/Jhome/jhome-common/src/main/resources/lib/tcc-transaction-spring-1.2.12.jar
+            </systemPath>
         </dependency>
         <dependency>
             <groupId>org.mengyun</groupId>
             <artifactId>tcc-transaction-core</artifactId>
             <version>${tcc.version}</version>
+            <scope>system</scope>
+            <!--            <systemPath>${project.basedir}/src/main/resources/lib/tcc-transaction-core-1.2.12.jar</systemPath>-->
+            <systemPath>
+                D:/EatingTools/XProject/Jhome/jhome-common/src/main/resources/lib/tcc-transaction-core-1.2.12.jar
+            </systemPath>
         </dependency>
         <dependency>
             <groupId>org.mengyun</groupId>
             <artifactId>tcc-transaction-api</artifactId>
             <version>${tcc.version}</version>
+            <scope>system</scope>
+            <!--            <systemPath>${project.basedir}/src/main/resources/lib/tcc-transaction-api-1.2.12.jar</systemPath>-->
+            <systemPath>
+                D:/EatingTools/XProject/Jhome/jhome-common/src/main/resources/lib/tcc-transaction-api-1.2.12.jar
+            </systemPath>
         </dependency>
+
 
         <!--Thrift -->
         <dependency>
@@ -509,32 +527,32 @@
         <!-- zookeeper -->
 
 
-<!--        <dependency>-->
-<!--            <groupId>org.apache.zookeeper</groupId>-->
-<!--            <artifactId>zookeeper</artifactId>-->
-<!--            <version>${zookeeper.version}</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.zookeeper</groupId>-->
+        <!--            <artifactId>zookeeper</artifactId>-->
+        <!--            <version>${zookeeper.version}</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
             <version>3.4.12</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.apache.zookeeper</groupId>-->
-<!--            <artifactId>zookeeper</artifactId>-->
-<!--            <version>${zookeeper.version}</version>-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <groupId>org.slf4j</groupId>-->
-<!--                    <artifactId>slf4j-log4j12</artifactId>-->
-<!--                </exclusion>-->
-<!--                <exclusion>-->
-<!--                    <groupId>log4j</groupId>-->
-<!--                    <artifactId>log4j</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.zookeeper</groupId>-->
+        <!--            <artifactId>zookeeper</artifactId>-->
+        <!--            <version>${zookeeper.version}</version>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>org.slf4j</groupId>-->
+        <!--                    <artifactId>slf4j-log4j12</artifactId>-->
+        <!--                </exclusion>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>log4j</groupId>-->
+        <!--                    <artifactId>log4j</artifactId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
         <!--zookeeper curator  -->
         <dependency>
             <groupId>org.apache.curator</groupId>
@@ -548,4 +566,16 @@
         </dependency>
     </dependencies>
 
+<!--    排除父pom中的通用打包组件-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

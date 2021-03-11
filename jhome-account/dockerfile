@@ -1,6 +1,16 @@
+# Docker image for springboot application
+# VERSION 0.0.1
+# Author: daxv
+
+### 基础镜像，使用alpine操作系统，openjkd使用8u201
+#FROM openjdk:8u201-jdk-alpine3.9
 FROM java:8u1111
+#声明一个挂载点，容器内此路径会对应宿主机的某个文件夹
 VOLUME /tmp
 ARG JAR_FILE
+#应用构建成功后的jar文件被复制到镜像内，名字也改成了app.jar
 COPY ${JAR_FILE} APP.jar
+#暴露8080端口
 EXPOSE 8100
+#启动容器时的进程
 ENTRYPOINT ["java","-jar","/app.jar"]

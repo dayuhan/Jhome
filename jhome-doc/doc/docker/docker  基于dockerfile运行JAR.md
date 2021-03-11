@@ -32,3 +32,5 @@
     docker logs -f -t jhome  
 #### 参考博文
     https://www.cnblogs.com/guanxiaohe/p/11906092.html
+    
+tails/108226433?spm=1001.2101.3001.4242

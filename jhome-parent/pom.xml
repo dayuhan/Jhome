@@ -81,8 +81,8 @@
         <!--使用已经调通的-->
         <zookeeper.version>3.4.12</zookeeper.version>
         <curator.version>4.2.0</curator.version>
-        <geotools.version>23.2</geotools.version>
 
+        <geotools.version>23.2</geotools.version>
         <docker.image.prefix>fatcat</docker.image.prefix>
     </properties>
 
@@ -94,8 +94,10 @@
         </dependency>
     </dependencies>
 
-
+    <!--打包插件-->
     <build>
+        <!-- docker 镜像打包maven报错 加上修复 -->
+        <defaultGoal>compile</defaultGoal>
         <plugins>
 
             <!-- Compiler 插件, 设定JDK版本 -->
@@ -185,20 +187,43 @@
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
 
-            <!-- docker 镜像打包 -->
+            <!--   &lt;!&ndash;  docker 镜像打包&ndash;&gt;
+               <plugin>
+                   <groupId>com.spotify</groupId>
+                   <artifactId>dockerfile-maven-plugin</artifactId>
+                   <version>1.3.6</version>
+                   <configuration>
+                       <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                       <buildArgs>
+                           <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                       </buildArgs>
+                   </configuration>
+               </plugin>
+   -->
+
+            <!--   spring boot 集成 Maven打包插件-->
             <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>dockerfile-maven-plugin</artifactId>
-                <version>1.3.6</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
-                    <buildArgs>
-                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-                    </buildArgs>
+                    <!-- 允许本地 jar导入-->
+                    <includeSystemScope>true</includeSystemScope>
+                    <excludes>
+                        <!--注意这玩意从编译结果目录开始算目录结构-->
+                        <!--一下分别是排除源文件目录，资源文件， 资源文件目录 根目录是target/classes-->
+<!--                        <exclude>/jhome-common</exclude>-->
+                    </excludes>
                 </configuration>
+                <dependencies>
+                    <!-- spring热部署 插件 -->
+                    <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>springloaded</artifactId>
+                        <version>1.2.6.RELEASE</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
-
         <pluginManagement>
 
             <plugins>
@@ -307,7 +332,6 @@
             </plugins>
 
         </pluginManagement>
-
         <!-- 资源文件配置 -->
         <resources>
             <resource>
@@ -323,25 +347,8 @@
                 </excludes>
             </resource>
         </resources>
-
     </build>
-
-    <developers>
-        <developer>
-            <id>jhome</id>
-            <name>daxu</name>
-            <email>523673705@qq.com</email>
-            <roles>
-                <role>Project lead</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-    </developers>
-    <organization>
-        <name>jhome</name>
-        <url>http://jhome.com</url>
-    </organization>
-
+    <!--仓库配置-->
     <repositories>
         <!--  阿里 仓库-->
         <repository>
@@ -396,8 +403,7 @@
             <url>https://maven.aliyun.com/repository/public</url>
         </pluginRepository>
     </pluginRepositories>
-
-
+    <!--打包配置-->
     <profiles>
         <!--springboot 多文件配置-->
         <profile>
@@ -460,5 +466,21 @@
             </distributionManagement>
         </profile>
     </profiles>
-
+    <!--开发者配置-->
+    <developers>
+        <developer>
+            <id>jhome</id>
+            <name>daxu</name>
+            <email>523673705@qq.com</email>
+            <roles>
+                <role>Project lead</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+    <!--组织配置-->
+    <organization>
+        <name>jhome</name>
+        <url>http://jhome.com</url>
+    </organization>
 </project>
