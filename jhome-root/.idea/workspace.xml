@@ -53,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
         <option value="Enum" />
+        <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -621,7 +621,20 @@
       <workItem from="1615429205551" duration="614000" />
       <workItem from="1615429880681" duration="1167000" />
       <workItem from="1615431156425" duration="4745000" />
-      <workItem from="1615437578701" duration="3840000" />
+      <workItem from="1615437578701" duration="4387000" />
+      <workItem from="1615444889375" duration="294000" />
+      <workItem from="1615448462313" duration="290000" />
+      <workItem from="1615456464195" duration="443000" />
+      <workItem from="1615512294318" duration="3685000" />
+      <workItem from="1615517356511" duration="12753000" />
+      <workItem from="1615794286398" duration="1597000" />
+      <workItem from="1615863249671" duration="454000" />
+      <workItem from="1615874304525" duration="1857000" />
+      <workItem from="1616035882341" duration="6392000" />
+      <workItem from="1616118390600" duration="187000" />
+      <workItem from="1616119507553" duration="2721000" />
+      <workItem from="1616401741759" duration="1444000" />
+      <workItem from="1616720251504" duration="7180000" />
     </task>
     <servers />
   </component>
@@ -652,18 +665,18 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="307" y="145" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1440.920@0.40.1440.920" timestamp="1615277988562" />
-    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615442270479">
+    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615448505053">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1615442270479" />
+    <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1615448505053" />
     <state x="508" y="205" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1610446686757">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="508" y="205" key="#com.intellij.ide.macro.MacrosDialog/0.40.1440.920@0.40.1440.920" timestamp="1610446686757" />
-    <state x="365" y="39" width="921" height="761" key="#com.intellij.ide.util.MemberChooser" timestamp="1609400551175">
+    <state x="365" y="39" width="921" height="761" key="#com.intellij.ide.util.MemberChooser" timestamp="1616726475228">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="365" y="39" key="#com.intellij.ide.util.MemberChooser/0.40.1440.920@0.40.1440.920" timestamp="1609400551175" />
+    <state x="365" y="39" key="#com.intellij.ide.util.MemberChooser/0.40.1440.920@0.40.1440.920" timestamp="1616726475228" />
     <state x="542" y="359" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1610679058915">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -700,10 +713,6 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="475" y="216" key="DetectedRootsChooserDialog/0.40.1440.920@0.40.1440.920" timestamp="1610444638171" />
-    <state x="34" y="206" width="1255" height="735" key="DiffContextDialog" timestamp="1607955450704">
-      <screen x="0" y="40" width="1440" height="920" />
-    </state>
-    <state x="34" y="206" width="1255" height="735" key="DiffContextDialog/0.40.1440.920@0.40.1440.920" timestamp="1607955450704" />
     <state x="769" y="118" key="FileChooserDialogImpl" timestamp="1615432536489">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -712,22 +721,22 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="545" y="397" width="375" height="207" key="Github.CreateGistDialog/0.40.1440.920@0.40.1440.920" timestamp="1610590650221" />
-    <state width="1397" height="239" key="GridCell.Tab.0.bottom" timestamp="1615444147737">
+    <state width="1397" height="239" key="GridCell.Tab.0.bottom" timestamp="1616727438385">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="239" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1615444147737" />
-    <state width="1397" height="239" key="GridCell.Tab.0.center" timestamp="1615444147737">
+    <state width="1397" height="239" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1616727438385" />
+    <state width="1397" height="239" key="GridCell.Tab.0.center" timestamp="1616727438383">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="239" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1615444147737" />
-    <state width="1397" height="239" key="GridCell.Tab.0.left" timestamp="1615444147737">
+    <state width="1397" height="239" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1616727438383" />
+    <state width="1397" height="239" key="GridCell.Tab.0.left" timestamp="1616727438383">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="239" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1615444147737" />
-    <state width="1397" height="239" key="GridCell.Tab.0.right" timestamp="1615444147737">
+    <state width="1397" height="239" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1616727438383" />
+    <state width="1397" height="239" key="GridCell.Tab.0.right" timestamp="1616727438384">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="239" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1615444147737" />
+    <state width="1397" height="239" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1616727438384" />
     <state width="1098" height="251" key="GridCell.Tab.1.bottom" timestamp="1614074301517">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -788,34 +797,30 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="404" y="351" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.40.1440.920@0.40.1440.920" timestamp="1610444719772" />
-    <state x="388" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1614150131880">
+    <state x="388" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1616056272447">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="388" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.40.1440.920@0.40.1440.920" timestamp="1614150131880" />
+    <state x="388" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.40.1440.920@0.40.1440.920" timestamp="1616056272447" />
     <state x="198" y="237" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1608452480229">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="198" y="237" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.40.1440.920@0.40.1440.920" timestamp="1608452480229" />
-    <state x="408" y="68" width="884" height="892" key="find.popup" timestamp="1614326986628">
+    <state x="222" y="68" width="884" height="892" key="find.popup" timestamp="1615537221708">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="408" y="68" width="884" height="892" key="find.popup/0.40.1440.920@0.40.1440.920" timestamp="1614326986628" />
+    <state x="222" y="68" width="884" height="892" key="find.popup/0.40.1440.920@0.40.1440.920" timestamp="1615537221708" />
     <state x="382" y="211" width="763" height="571" key="new project wizard" timestamp="1610162342988">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="382" y="211" width="763" height="571" key="new project wizard/0.40.1440.920@0.40.1440.920" timestamp="1610162342988" />
-    <state x="447" y="115" width="713" height="569" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1608038948135">
-      <screen x="0" y="40" width="1440" height="920" />
-    </state>
-    <state x="447" y="115" width="713" height="569" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.40.1440.920@0.40.1440.920" timestamp="1608038948134" />
     <state x="377" y="231" key="run.anything.popup" timestamp="1610591114306">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="377" y="231" key="run.anything.popup/0.40.1440.920@0.40.1440.920" timestamp="1610591114306" />
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1615431324267">
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1616723254811">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1615431324267" />
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1616723254811" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,8 @@
 package com.sysAnnotation.common.jhomeScan;
 
+import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.annotation.ImportSelector;
+import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.core.type.AnnotationMetadata;
 
 /**
@@ -15,11 +17,11 @@ public class sysScannerRegistrar implements ImportSelector {
         //System.out.println(annotationMetadata);
         return new String[0];
     }
-/*    public void registersysScanner(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
+    public void registersysScanner(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
         AnnotationAttributes mapperScanAttrs = AnnotationAttributes.fromMap(importingClassMetadata.getAnnotationAttributes(sysScan.class.getName()));
         if (mapperScanAttrs != null) {
             System.out.println(mapperScanAttrs);
             //this.registerBeanDefinitions(mapperScanAttrs, registry);
         }
-    }*/
+    }
 }

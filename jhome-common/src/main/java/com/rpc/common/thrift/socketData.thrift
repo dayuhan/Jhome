@@ -3,8 +3,9 @@ namespace java com.rpc.common
 #include "basedata.thrift"
 
 /*基于thrift 编译器 生成IDL 代码*/
-/*编译器：D:\rj\thrift.exe*/
-/*thrift --gen java src\main\java\com\rpc\common\thrift\socketData.thrift*/
+/*编译器：D:\rj\thrift\thrift.exe*/
+/*thrift --gen java D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\rpc\common\thrift\socketData.thrift*/
+/*thrift --gen c++ D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\rpc\common\thrift\socketData.thrift*/
 
 
 /*IDL文件定义*/

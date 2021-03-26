@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.bracket.common.Bus.AbstractController.BaseController;
 import com.bracket.common.Bus.ResponseJson;
 import com.bracket.common.Identity.UserUtil;
+import com.bracket.common.ToolKit.CookieUtil;
 import com.bracket.common.ToolKit.JSONUtils;
 import com.bracket.common.ToolKit.StringUtil;
 import com.domain.common.UserInfo;
@@ -18,8 +19,11 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -31,11 +35,20 @@ public class AccountController extends BaseController {
     public SysConfigurationPropertiesBean sysConfigurationPropertiesBean;
     @Autowired
     public RemoteService remoteService;
+    @Autowired
+    public RedisTemplate redisTemplate;
 
 
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public ResponseJson login(HttpServletRequest request, HttpServletResponse response, @RequestBody UserInfo user) {
         try {
+            Cookie cookie = CookieUtil.get(request, "JhomeCookie");
+            if (cookie!=null)
+            {
+                Object sessionJson=redisTemplate.opsForValue().get(cookie.getValue());
+                if (sessionJson!=null)
+                    return new ResponseJson(HttpStatus.OK.value()).setMsg("您已经登录过了！");
+            }
             if (user == null || StringUtil.isBlank(user.getLoginName()) || StringUtil.isBlank(user.getPassword()))
                 return new ResponseJson().error("用户名密码不能为空！");
             if (!DeviceType.toList().contains(user.getDeviceType()))
@@ -68,6 +81,7 @@ public class AccountController extends BaseController {
         return null;
     }
 
+    
 
     //退出
     @RequestMapping(value = "/logout", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
