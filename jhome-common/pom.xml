@@ -567,9 +567,16 @@
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
         </dependency>
+        <!--生成UID 时间戳 作为IDid使用-->
+        <dependency>
+            <groupId>com.xfvape.uid</groupId>
+            <artifactId>uid-generator</artifactId>
+            <version>0.0.4-RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
-<!--    排除父pom中的通用打包组件-->
+    <!--    排除父pom中的通用打包组件-->
     <build>
         <plugins>
             <plugin>
