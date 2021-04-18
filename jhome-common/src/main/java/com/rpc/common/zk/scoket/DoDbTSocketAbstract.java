@@ -36,7 +36,7 @@ import java.util.Map;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: 模板类 生产 socketService.Client 对象
  * @author: Daxv
  * @create: 2021-03-26 09:27

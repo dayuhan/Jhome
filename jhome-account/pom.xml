@@ -55,7 +55,35 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-
+        <!--2020-07-01 ACC项目整合 用户权限系统 依赖项目-->
+        <dependency>
+            <groupId>com.melloware</groupId>
+            <artifactId>jasypt</artifactId>
+            <version>1.9.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>javacv</artifactId>
+            <version>1.5.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>javacv</artifactId>
+            <version>1.5.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>cz.mallat.uasparser</groupId>
+            <artifactId>uasparser</artifactId>
+            <version>0.6.2</version>
+            <scope>compile</scope>
+        </dependency>
 
         <!-- Mybatis 框架-->
         <!--        <dependency>-->

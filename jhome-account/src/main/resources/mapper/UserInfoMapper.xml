@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.account.modules.userAuthority.dao.UserInfoMapper">
+
+    <!-- 查询用户集合  -->
+    <select id="findByUserList" resultType="com.account.modules.userAuthority.model.response.ListUserInfoRes"
+            parameterType="com.account.modules.userAuthority.model.request.ListUserReq">
+        SELECT
+        DISTINCT
+        u.`id`,u.`login_name`,u.`nick_name`,u.`real_name`,u.`mobile`,u.`status`,u.`sex`,u.`create_time`,u.`tenant_id`,u.`source`,u.no,u.role_id
+        FROM `user` u
+        LEFT JOIN user_organization_role uo ON uo.`user_id` = u.`id`
+        <trim prefix="where" prefixOverrides="and |or">
+            <if test="request.orgId != null and request.orgId != ''">
+                AND uo.org_id = #{request.orgId}
+            </if>
+            <if test="request.startTime != null and request.startTime != ''">
+                AND u.create_time &gt;= #{request.startTime}
+            </if>
+            <if test="request.endTime != null and request.endTime != ''">
+                AND u.create_time &lt;= #{request.endTime}
+            </if>
+            <if test="request.tenantId != null and request.tenantId != ''">
+                AND u.tenant_id = #{request.tenantId}
+            </if>
+            <if test="request.source != null">
+                AND u.`source` = #{request.source}
+            </if>
+
+            <if test="request.valueName != null and request.valueName != ''">
+                OR u.real_name like CONCAT ('%',#{request.valueName},'%')
+            </if>
+
+            <if test="request.loginName != null and request.loginName != ''">
+                OR u.login_name like CONCAT ('%',#{request.loginName},'%')
+            </if>
+
+<!--            <if test="(request.valueName != null and request.valueName != '') ||-->
+<!--                       (request.valueName != null and request.valueName != '') ||-->
+<!--                        (request.valueName != null and request.valueName != '')">-->
+<!--                AND (-->
+<!--&lt;!&ndash;                <trim prefix="" prefixOverrides="or">&ndash;&gt;-->
+<!--                    <if test="request.valueName != null and request.valueName != ''">-->
+<!--                        OR u.real_name like CONCAT ('%',#{request.valueName},'%')-->
+<!--                    </if>-->
+<!--&lt;!&ndash;                    <if test="request.valueName != null and request.valueName != ''">&ndash;&gt;-->
+<!--&lt;!&ndash;                        OR u.no = #{request.valueName}&ndash;&gt;-->
+<!--&lt;!&ndash;                    </if>&ndash;&gt;-->
+<!--&lt;!&ndash;                </trim>&ndash;&gt;-->
+<!--                )-->
+<!--            </if>-->
+            AND u.delete_flag = 0
+        </trim>
+        ORDER BY u.create_time DESC
+    </select>
+
+    <!-- 修改 -->
+    <update id="updateByIds" parameterType="com.account.modules.userAuthority.model.dto.EditUserDto">
+        UPDATE `user`
+        <set>
+            <if test="request.password != null and request.password != ''">
+                password = #{request.password,jdbcType=VARCHAR},
+            </if>
+            <if test="request.status != null and request.status != ''">
+                status = #{request.status,jdbcType=INTEGER},
+            </if>
+            <if test="request.deleteFlag != null and request.deleteFlag != 0">
+                delete_flag = #{request.deleteFlag,jdbcType=INTEGER},
+            </if>
+            <if test="request.salt != null and request.salt != ''">
+                salt = #{request.salt,jdbcType=VARCHAR},
+            </if>
+        </set>
+        WHERE
+        id IN
+        <foreach collection="request.ids" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </update>
+
+    <!-- 用户信息 -->
+    <select id="getUserDetails" resultType="com.account.modules.userAuthority.model.response.UserInfoBackstageRes"
+            parameterType="Long">
+        SELECT u.`id`,u.`login_name`,u.`mobile`,u.`nick_name`,u.`status`,u.`real_name`,u.`sex`,u.`source`,u.`tenant_id`,u.no
+        FROM `user` u
+        WHERE u.id = #{id}
+        AND
+        u.delete_flag = 0
+    </select>
+
+    <!-- 用户关联组织角色信息 -->
+    <select id="findUserOrgRoleList" resultType="com.account.modules.userAuthority.domain.UserOrganizationRole"
+            parameterType="Long">
+        SELECT DISTINCT id,user_id,org_id,role_id,tenant_id,default_flag,create_time
+        FROM user_organization_role WHERE user_id = #{id}
+        ORDER BY create_time DESC
+    </select>
+
+    <select id="findUserOrgRoleIdList" resultType="com.account.modules.userAuthority.domain.UserOrganizationRole"
+            parameterType="Long">
+        SELECT DISTINCT role_id FROM user_organization_role WHERE org_id = #{id} AND user_id = #{userId}
+    </select>
+
+    <select id="getRoleInfo" resultType="com.account.modules.userAuthority.model.dto.RoleListDTO"
+            parameterType="Long">
+        SELECT id,role_name,create_time FROM role WHERE id = #{id}
+    </select>
+
+    <select id="getOrgInfo" resultType="com.account.modules.userAuthority.model.dto.UserDetailsRoleDTO"
+            parameterType="Long">
+        SELECT id,name,organization_code,tenant_id FROM organization WHERE id = #{id}
+    </select>
+
+    <!-- 查询用户和手机 -->
+    <select id="findByUserName" parameterType="com.account.modules.userAuthority.model.request.UserInfoReq"
+            resultType="com.account.modules.userAuthority.domain.User">
+        SELECT login_name,mobile,nick_name
+        FROM  `user`
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="request.loginName != null and request.loginName != ''">
+                AND login_name = #{request.loginName}
+            </if>
+            <if test="request.mobile != null and request.mobile != ''">
+                AND mobile = #{request.mobile}
+            </if>
+            <if test="request.nickName != null and request.nickName != ''">
+                AND nick_name = #{request.nickName}
+            </if>
+            <if test="request.userId != null and request.userId != 0">
+                AND id = #{request.userId}
+            </if>
+            <if test="request.deleteFlag == null and request.deleteFlag == ''">
+                AND delete_flag = 0
+            </if>
+        </trim>
+    </select>
+
+    <delete id="deleteUserOrgRole" parameterType="java.util.List">
+        DELETE FROM user_organization_role
+        WHERE
+        id IN
+        <foreach collection="ids" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </delete>
+
+    <!-- 用户关联组织角色信息 -->
+    <select id="findUserOrgRoles" resultType="com.account.modules.userAuthority.domain.UserOrganizationRole"
+            parameterType="Long">
+        SELECT MAX(id) AS id,user_id,org_id
+        FROM user_organization_role
+        WHERE user_id = #{id} GROUP BY user_id,org_id
+    </select>
+
+    <select id="findByLoginName" resultMap="LoginRes" parameterType="String">
+            select
+             u.id AS userId,
+                        u.sex AS gender,
+                        4 AS type,
+                        u.password,
+                        u.salt,
+                        u.mobile AS phone,
+                        u.resume,
+                        u.photo AS imgUrl,
+                        u.real_name,
+                        u.login_name as loginName,
+                        u.sex,
+                        u.tenant_id,
+                        u.status,
+                        r.role_name  AS roleNames,
+                        sm.*
+            from `user` as  u
+            INNER JOIN user_organization_role as ur on ur.user_id=u.id
+            INNER JOIN role as r on ur.role_id=r.id
+            INNER JOIN role_sysmenu as rs on ur.role_id=rs.role_id
+            INNER JOIN sys_menu as sm on rs.sys_menu_id=sm.id
+            WHERE u.delete_flag = 0  AND (u.login_name = #{userName} OR u.mobile = #{userName})
+    </select>
+
+    <resultMap id="LoginRes" type="com.account.modules.userAuthority.model.response.LoginRes">
+        <result property="userId" column="userId"></result>
+        <result property="type" column="type"></result>
+        <result property="password" column="password"></result>
+        <result property="salt" column="salt"></result>
+        <result property="phone" column="phone"></result>
+        <result property="resume" column="resume"></result>
+        <result property="imgUrl" column="imgUrl"></result>
+        <result property="real_name" column="realName"></result>
+        <result property="loginName" column="loginName"></result>
+        <result property="gender" column="sex"></result>
+        <result property="tenant_id" column="tenantId"></result>
+        <result property="status" column="status"></result>
+        <result property="roleNames" column="roleNames"></result>
+        <collection property="sysMenuResponses" javaType="list" ofType="com.account.modules.userAuthority.model.response.GetSysMenuResponse">
+            <id property="id" column="id"></id>
+            <result property="icon" column="icon"></result>
+            <result property="name" column="name"></result>
+            <result property="hidden" column="hidden"></result>
+            <result property="component" column="component"></result>
+            <result property="path" column="path"></result>
+            <result property="redirect" column="redirect"></result>
+            <result property="sort" column="sort"></result>
+            <result property="level" column="level"></result>
+            <result property="parentId" column="parent_id"></result>
+            <result property="requires_auth" column="requiresAuth"></result>
+            <result property="create_time" column="createTime"></result>
+            <result property="create_user_id" column="createUserId"></result>
+            <result property="update_time" column="updateTime"></result>
+            <result property="update_user_id" column="updateUserId"></result>
+            <result property="delete_flag" column="deleteFlag"></result>
+            <result property="tenant_id" column="tenantId"></result>
+            <result property="type" column="type"></result>
+            <result property="identification" column="identification"></result>
+            <result property="product_id" column="productId"></result>
+
+        </collection>
+    </resultMap>
+
+
+
+
+    <select id="findUserById" resultType="com.account.modules.userAuthority.model.response.LoginRes"
+            parameterType="java.lang.Long">
+       		  SELECT u.id AS userId,
+            u.sex AS gender,
+            4 AS type,
+            u.password,
+            u.salt,
+            u.mobile AS phone,
+            u.resume,
+            u.photo AS imgUrl,
+            u.real_name,
+            u.tenant_id,
+            (SELECT GROUP_CONCAT(DISTINCT r.role_name) FROM user_organization_role uor LEFT JOIN role r ON uor.role_id = r.id WHERE uor.user_id = u.id AND uor.tenant_id = u.tenant_id)  AS roleNames
+            FROM user u  LEFT JOIN role r ON u.role_id = r.id
+                WHERE u.delete_flag = 0
+                AND u.id = #{id}
+    </select>
+
+
+
+
+
+    <select id="findByUserOrgIdsList" resultType="com.account.modules.userAuthority.model.response.ListUserInfoRes"
+            parameterType="com.account.modules.userAuthority.model.request.ListUserOrgIdsReq">
+        SELECT
+        DISTINCT
+        u.`id`,u.`login_name`,u.`nick_name`,u.`real_name`,u.`mobile`,u.`status`,u.`sex`,u.`create_time`,u.`tenant_id`,u.`source`
+        FROM  `user` u
+        LEFT JOIN user_organization_role uo ON uo.`user_id` = u.`id`
+        <trim prefix="where" prefixOverrides="and |or">
+            <if test="request.orgIds != null and request.orgIds != ''">
+                AND uo.org_id in
+                <foreach collection="request.orgIds" item="item" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="request.startTime != null and request.startTime != ''">
+                AND u.create_time &gt;= #{request.startTime}
+            </if>
+            <if test="request.endTime != null and request.endTime != ''">
+                AND u.create_time &lt;= #{request.endTime}
+            </if>
+            <if test="request.tenantId != null and request.tenantId != ''">
+                AND u.tenant_id = #{request.tenantId}
+            </if>
+            <if test="request.source != null">
+                AND u.`source` = #{request.source}
+            </if>
+            <if test="(request.valueName != null and request.valueName != '') ||
+                       (request.valueName != null and request.valueName != '') ||
+                        (request.valueName != null and request.valueName != '')">
+                AND (
+                <trim prefix="" prefixOverrides="or">
+                    <if test="request.valueName != null and request.valueName != ''">
+                        OR u.mobile = #{request.valueName}
+                    </if>
+                    <if test="request.valueName != null and request.valueName != ''">
+                        OR u.login_name like CONCAT ('%',#{request.valueName},'%')
+                    </if>
+                    <if test="request.valueName != null and request.valueName != ''">
+                        OR u.real_name like CONCAT ('%',#{request.valueName},'%')
+                    </if>
+                </trim>
+                )
+            </if>
+            AND u.delete_flag = 0
+        </trim>
+        ORDER BY u.create_time DESC
+    </select>
+
+    <select id="isExistNo" resultType="java.lang.Long">
+       		SELECT count(*)
+            FROM  `user` u
+                WHERE u.delete_flag = 0
+                AND u.id != #{id}
+                AND u.no =#{no}
+                AND u.tenant_id = #{tenantId}
+    </select>
+
+</mapper>

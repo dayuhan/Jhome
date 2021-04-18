@@ -12,7 +12,7 @@ copyrightYear: 2020
 server:
   port: 8300
   servlet:
-    context-path: /jhome
+    context-path: /account
   tomcat:
     uri-encoding: UTF-8
 adminPath: ${lux.sysproperties.adminPath}
@@ -44,7 +44,7 @@ logging.level.project.user.UserClient: DEBUG
 spring:
   # 应用程序名称
   application:
-    name: jhome-fileStore
+    name: account-fileStore
     include: fileStoreService
   servlet:
     multipart:
@@ -126,7 +126,7 @@ shiro:
     /swagger-resources/**:anon,
     /fileStore/**: authc,
     /**: authc
-  LoginUrl: http://127.0.0.1:8100/jhome/account/login
+  LoginUrl: http://127.0.0.1:8100/account/account/login
   #  LoginUrl: http://10.1.20.58:8100/zlbzxt/account/login
   SuccessUrl: /${lux.sysproperties.adminPath}/index
   UnauthorizedUrl: /${lux.sysproperties.adminPath}/sys/error
@@ -156,7 +156,7 @@ mybatis-plus:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/
+      defaultZone: http://daxunihao:123456@127.0.0.1:9100/account/eureka/
     registerWithEureka: true
     fetchRegistry: true
   instance:

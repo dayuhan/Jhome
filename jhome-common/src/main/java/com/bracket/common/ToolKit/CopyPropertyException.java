@@ -1,5 +1,5 @@
 package com.bracket.common.ToolKit;/**
- * @program: jhome-root
+ * @program: account-root
  * @description
  * @author: Daxv
  * @create: 2020-09-30 16:42
@@ -25,7 +25,7 @@ package com.bracket.common.ToolKit;/**
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: jhome-root
+ * @program: account-root
  * @description: 对象复制异常
  * @author: Daxv
  * @create: 2020-09-30 16:42

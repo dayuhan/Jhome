@@ -1,5 +1,5 @@
 package com.rpc.common.zk.loadBanalce;/**
- * @program: jhome-root
+ * @program: account-root
  * @description
  * @author: Daxv
  * @create: 2020-10-08 19:47
@@ -28,7 +28,7 @@ import java.util.List;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: 抽象负载均衡算法
  * @author: Daxv
  * @create: 2020-10-08 19:47

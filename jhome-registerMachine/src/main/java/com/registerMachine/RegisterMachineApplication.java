@@ -24,7 +24,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: 启动
  * @author: Daxv
  * @create: 2020-12-08 09:08

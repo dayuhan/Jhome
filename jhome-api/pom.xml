@@ -13,8 +13,8 @@
     <dependencies>
         <!--依赖项目-->
 <!--        <dependency>-->
-<!--            <groupId>com.jhome</groupId>-->
-<!--            <artifactId>jhome-common</artifactId>-->
+<!--            <groupId>com.accountnt</groupId>-->
+<!--            <artifactId>account-common</artifactId>-->
 <!--            <version>${project.parent.version}</version>-->
 <!--        </dependency>-->
         <dependency>

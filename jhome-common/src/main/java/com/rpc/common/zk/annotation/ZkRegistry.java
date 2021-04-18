@@ -27,7 +27,7 @@ import org.springframework.core.type.AnnotationMetadata;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: 注册到zookper中
  * @author: Daxv
  * @create: 2021-03-12 17:13

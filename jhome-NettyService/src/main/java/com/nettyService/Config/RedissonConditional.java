@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
- * @program: jhome-root
+ * @program: account-root
  * @description
  * @author: Daxv
  * @create: 2020-05-22 14:53

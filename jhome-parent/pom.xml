@@ -210,7 +210,7 @@
                     <excludes>
                         <!--注意这玩意从编译结果目录开始算目录结构-->
                         <!--一下分别是排除源文件目录，资源文件， 资源文件目录 根目录是target/classes-->
-                        <!--                        <exclude>/jhome-common</exclude>-->
+                        <!--                        <exclude>/account-common</exclude>-->
                     </excludes>
                 </configuration>
                 <dependencies>

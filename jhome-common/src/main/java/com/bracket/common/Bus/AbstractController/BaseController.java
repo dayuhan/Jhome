@@ -18,9 +18,9 @@ public abstract class BaseController {
 
     public BaseController() {
     }
-//    @Value("${jhome.sysproperties.adminPath}")
+//    @Value("${account.sysproperties.adminPath}")
 //    protected String adminPath;
-//    @Value("${jhome.sysproperties.foreignServerPath}")
+//    @Value("${account.sysproperties.foreignServerPath}")
 //    protected String frontPath;
 
 

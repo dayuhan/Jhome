@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.account.modules.userAuthority.dao.SysMenuRoleMapper">
+
+    <select id="findMenuByUserId" resultType="com.account.modules.userAuthority.model.response.GetSysMenuResponse">
+             SELECT sm.id, sm.name, sm.create_time, sm.update_time, sm.icon, sm.hidden, sm.component, sm.path,
+             sm.parent_id, sm2.name AS parentName,
+        sm.redirect, sm.sort, sm.level, sm.requires_auth, sm.type, sm.identification
+    FROM  user_organization_role ur
+     LEFT JOIN role_sysmenu rs ON ur.role_id = rs.role_id
+     LEFT JOIN sys_menu sm ON rs.sys_menu_id = sm.id
+     LEFT JOIN sys_menu sm2 ON sm.parent_id = sm2.id
+    WHERE
+      ur.user_id = #{userId,jdbcType=BIGINT}
+       AND ur.tenant_id = #{tenantId,jdbcType=BIGINT}
+      AND sm.delete_flag = 0
+      ORDER BY sm.level ASC, sm.sort ASC
+    </select>
+
+    <select id="findAllMenu" resultType="com.account.modules.userAuthority.model.response.GetSysMenuResponse">
+             SELECT sm.id, sm.name, sm.create_time, sm.update_time, sm.icon, sm.hidden, sm.component, sm.path,
+             sm.parent_id, sm2.name AS parentName,
+        sm.redirect, sm.sort, sm.level, sm.requires_auth, sm.type, sm.identification
+    FROM
+      sys_menu sm LEFT JOIN sys_menu sm2 ON sm.parent_id = sm2.id
+    WHERE
+       sm.delete_flag = 0
+       ORDER BY sm.level ASC, sm.sort ASC
+    </select>
+
+    <select id="findRoleByUserId" resultType="com.account.modules.userAuthority.model.response.GetRoleResponse">
+        SELECT r.id, r.role_name, r.remark, r.create_time, r.tenant_id
+    FROM
+      role r
+    WHERE
+       r.delete_flag = 0
+        AND r.tenant_id = #{tenantId,jdbcType=BIGINT}
+       ORDER BY r.id ASC
+    </select>
+
+    <select id="findAllRole" resultType="com.account.modules.userAuthority.model.response.GetRoleResponse">
+             SELECT r.id, r.role_name, r.remark, r.create_time, r.tenant_id
+    FROM
+      role r
+    WHERE
+       r.delete_flag = 0
+       ORDER BY r.create_time desc
+    </select>
+
+    <select id="findLeafMenuByRoleId" resultType="com.account.modules.userAuthority.model.response.GetRoleSysMenuResponse">
+             SELECT sm.id
+    FROM role_sysmenu rs
+     LEFT JOIN sys_menu sm ON rs.sys_menu_id = sm.id
+     LEFT JOIN sys_menu sm2 ON sm.id = sm2.parent_id
+    WHERE
+      rs.role_id = #{roleId,jdbcType=BIGINT}
+      AND sm.delete_flag = 0 AND  sm2.id is null
+      ORDER BY sm.level ASC, sm.sort ASC
+    </select>
+
+    <select id="findSubMenuId" resultType="Long">
+	    select id from (
+              select t1.id,
+              if(find_in_set(parent_id, @pids) > 0, @pids := concat(@pids, ',', id), 0) as ischild
+              from (
+                   select id,parent_id from sys_menu t where t.delete_flag = 0 order by parent_id, id
+                  ) t1,
+                  (select @pids := #{id,jdbcType=BIGINT}) t2
+             ) t3 where ischild != 0
+    </select>
+
+    <select id="findAllRoleLeafMenu" resultType="com.account.modules.userAuthority.model.response.GetRoleSysMenuResponse">
+       SELECT a.id FROM sys_menu a LEFT JOIN sys_menu b ON a.id=b.parent_id
+       WHERE a.delete_flag = 0 AND b.id is null
+       ORDER BY a.level ASC, a.sort ASC
+    </select>
+
+    <select id="findRoleByTenantId" resultType="com.account.modules.userAuthority.model.response.GetRoleResponse">
+             SELECT r.id, r.role_name, r.remark, r.create_time, r.tenant_id
+    FROM role r
+    WHERE
+      r.tenant_id = #{tenantId,jdbcType=BIGINT}
+      AND r.delete_flag = 0
+      ORDER BY r.create_time desc
+    </select>
+</mapper>

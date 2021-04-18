@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: jhome-root
+ * @program: account-root
  * @description: 实现服务注册
  * @author: Daxv
  * @create: 2020-10-08 19:14
@@ -57,8 +57,8 @@ public class ServiceRegistryImpl implements ServiceRegistry {
 
     public static void main(String[] args) throws Exception {
         ServiceRegistryImpl serviceRegistry=new ServiceRegistryImpl();
-        serviceRegistry.register("jhome-account","127.0.0.1:8100");
-        serviceRegistry.register("jhome-fileStore","127.0.0.1:8300");
+        serviceRegistry.register("account-account","127.0.0.1:8100");
+        serviceRegistry.register("account-fileStore","127.0.0.1:8300");
 
     }
 

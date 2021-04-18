@@ -33,7 +33,7 @@ import javax.security.auth.Subject;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: 统一异常捕获
  * @author: Daxv
  * @create: 2021-01-07 11:50

@@ -1,5 +1,5 @@
 package com.domain.common;/**
- * @program: jhome-root
+ * @program: account-root
  * @description
  * @author: Daxv
  * @create: 2020-07-04 15:13
@@ -28,7 +28,7 @@ import sun.rmi.runtime.Log;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description:
  * @author: Daxv
  * @create: 2020-07-04 15:13

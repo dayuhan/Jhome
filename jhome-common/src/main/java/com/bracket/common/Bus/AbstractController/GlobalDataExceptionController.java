@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -31,18 +32,7 @@ public class GlobalDataExceptionController {
         ERROR = new ResponseJson(HttpStatus.INTERNAL_SERVER_ERROR.value()).setMsg("系统出错,请稍候再试");
     }
 
-    /**
-     * 描述：默认异常提示
-     *
-     * @param exception
-     * @return
-     */
-    @ExceptionHandler(Exception.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ResponseJson defaultErrorHandler(Exception exception) {
-        LOG.error(exception.getMessage(), exception);
-        return ERROR;
-    }
+
 
     /**
      * 描述：参数不合法默认异常提示
@@ -52,7 +42,7 @@ public class GlobalDataExceptionController {
      */
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ResponseJson securityExceptionHandler(Exception exception) {
+    public ResponseJson securityExceptionHandler(Exception exception, HttpServletRequest request) {
         return new ResponseJson(HttpStatus.INTERNAL_SERVER_ERROR.value()).setMsg(exception.getMessage());
     }
 
@@ -64,7 +54,7 @@ public class GlobalDataExceptionController {
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseJson illegalParamExceptionHandler(MethodArgumentNotValidException exception) {
+    public ResponseJson illegalParamExceptionHandler(MethodArgumentNotValidException exception, HttpServletRequest request) {
         List<FieldError> errors = exception.getBindingResult().getFieldErrors();
         String tips = "参数不合法";
         ResponseJson result = new ResponseJson(HttpStatus.BAD_REQUEST.value());
@@ -86,7 +76,7 @@ public class GlobalDataExceptionController {
      */
     @ExceptionHandler(MissingServletRequestParameterException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseJson servletRequestParameterExceptionHandler(MissingServletRequestParameterException exception) {
+    public ResponseJson servletRequestParameterExceptionHandler(MissingServletRequestParameterException exception, HttpServletRequest request) {
         return new ResponseJson(HttpStatus.BAD_REQUEST.value()).setMsg(exception.getMessage());
     }
 
@@ -98,7 +88,7 @@ public class GlobalDataExceptionController {
      */
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
-    public ResponseJson methodNotSupportedExceptionHandler(HttpRequestMethodNotSupportedException exception) {
+    public ResponseJson methodNotSupportedExceptionHandler(HttpRequestMethodNotSupportedException exception, HttpServletRequest request) {
         String supportedMethods = exception.getSupportedHttpMethods().stream()
                 .map(method -> method.toString())
                 .collect(Collectors.joining("/"));
@@ -115,7 +105,7 @@ public class GlobalDataExceptionController {
      */
     @ExceptionHandler(BindException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseJson validationBindException(BindException exception) {
+    public ResponseJson validationBindException(BindException exception, HttpServletRequest request) {
         String errors = exception.getFieldErrors().stream()
                 .map(error -> error.getField() + error.getDefaultMessage())
                 .collect(Collectors.joining(","));
@@ -130,7 +120,7 @@ public class GlobalDataExceptionController {
      */
     @ExceptionHandler(CopyPropertyException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseJson copyPropertyExceptionException(BindException exception) {
+    public ResponseJson copyPropertyExceptionException(BindException exception, HttpServletRequest request) {
         String errors = exception.getFieldErrors().stream()
                 .map(error -> error.getField() + error.getDefaultMessage())
                 .collect(Collectors.joining(","));

@@ -111,7 +111,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jhome-common/src/main/resources/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.33256084" />
@@ -130,18 +130,18 @@
       <recent name="com" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.account.modules.config" />
+      <recent name="com.account.common" />
       <recent name="com.shiro.common.realm" />
       <recent name="com.geoServer.conmmon" />
       <recent name="com.geoServer.autoconfiguration" />
-      <recent name="com.jhome.common.utils" />
-      <recent name="com.pubInterFace" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\resources\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\resources\config" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\java\com\account\common" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\java\com\account\modules" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\resources" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\domain\common" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\java\com\jhome\common" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -190,11 +190,11 @@
       <module name="jhome-account" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jhome.*" />
+          <option name="PATTERN" value="com.account.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jhome.JhomeAcccountApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.account.JhomeAcccountApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -254,7 +254,7 @@
     </configuration>
     <configuration name="JhomeWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="jhome-web" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jhome.JhomeWebApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.account.JhomeWebApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -644,6 +644,17 @@
       <workItem from="1617947062508" duration="138000" />
       <workItem from="1618188740570" duration="1219000" />
       <workItem from="1618192017958" duration="448000" />
+      <workItem from="1618299658749" duration="1250000" />
+      <workItem from="1618306526731" duration="1987000" />
+      <workItem from="1618361734306" duration="834000" />
+      <workItem from="1618364909795" duration="517000" />
+      <workItem from="1618370969752" duration="693000" />
+      <workItem from="1618450362647" duration="1498000" />
+      <workItem from="1618471865600" duration="1934000" />
+      <workItem from="1618556500580" duration="279000" />
+      <workItem from="1618558265667" duration="8232000" />
+      <workItem from="1618651660809" duration="843000" />
+      <workItem from="1618742866413" duration="583000" />
     </task>
     <servers />
   </component>
@@ -654,10 +665,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="289" y="116" key="#Custom_Plugin_Repositories" timestamp="1609914454515">
-      <screen x="0" y="40" width="1440" height="920" />
-    </state>
-    <state x="289" y="116" key="#Custom_Plugin_Repositories/0.40.1440.920@0.40.1440.920" timestamp="1609914454515" />
     <state x="444" y="148" key="#Docker" timestamp="1615277986568">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -682,10 +689,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="508" y="205" key="#com.intellij.ide.macro.MacrosDialog/0.40.1440.920@0.40.1440.920" timestamp="1610446686757" />
-    <state x="365" y="39" width="921" height="761" key="#com.intellij.ide.util.MemberChooser" timestamp="1616726475228">
+    <state x="365" y="39" width="921" height="761" key="#com.intellij.ide.util.MemberChooser" timestamp="1618558875011">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="365" y="39" key="#com.intellij.ide.util.MemberChooser/0.40.1440.920@0.40.1440.920" timestamp="1616726475228" />
+    <state x="365" y="39" key="#com.intellij.ide.util.MemberChooser/0.40.1440.920@0.40.1440.920" timestamp="1618558875011" />
     <state x="542" y="359" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1610679058915">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -722,30 +729,30 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="475" y="216" key="DetectedRootsChooserDialog/0.40.1440.920@0.40.1440.920" timestamp="1610444638171" />
-    <state x="769" y="118" key="FileChooserDialogImpl" timestamp="1615432536489">
+    <state x="769" y="118" key="FileChooserDialogImpl" timestamp="1618743059145">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="769" y="118" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1615432536489" />
+    <state x="769" y="118" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1618743059145" />
     <state x="545" y="397" width="375" height="207" key="Github.CreateGistDialog" timestamp="1610590650221">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="545" y="397" width="375" height="207" key="Github.CreateGistDialog/0.40.1440.920@0.40.1440.920" timestamp="1610590650221" />
-    <state width="1397" height="239" key="GridCell.Tab.0.bottom" timestamp="1617703813182">
+    <state width="1397" height="197" key="GridCell.Tab.0.bottom" timestamp="1618743378206">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="239" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1617703813182" />
-    <state width="1397" height="239" key="GridCell.Tab.0.center" timestamp="1617703813182">
+    <state width="1397" height="197" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1618743378206" />
+    <state width="1397" height="197" key="GridCell.Tab.0.center" timestamp="1618743378205">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="239" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1617703813182" />
-    <state width="1397" height="239" key="GridCell.Tab.0.left" timestamp="1617703813182">
+    <state width="1397" height="197" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1618743378205" />
+    <state width="1397" height="197" key="GridCell.Tab.0.left" timestamp="1618743378205">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="239" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1617703813182" />
-    <state width="1397" height="239" key="GridCell.Tab.0.right" timestamp="1617703813182">
+    <state width="1397" height="197" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1618743378205" />
+    <state width="1397" height="197" key="GridCell.Tab.0.right" timestamp="1618743378205">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="239" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1617703813182" />
+    <state width="1397" height="197" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1618743378205" />
     <state width="1098" height="251" key="GridCell.Tab.1.bottom" timestamp="1614074301517">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -806,22 +813,22 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="388" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.40.1440.920@0.40.1440.920" timestamp="1616056272447" />
-    <state x="222" y="68" width="884" height="892" key="find.popup" timestamp="1615537221708">
+    <state x="222" y="68" width="884" height="892" key="find.popup" timestamp="1618562868383">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="222" y="68" width="884" height="892" key="find.popup/0.40.1440.920@0.40.1440.920" timestamp="1615537221708" />
+    <state x="222" y="68" width="884" height="892" key="find.popup/0.40.1440.920@0.40.1440.920" timestamp="1618562868383" />
     <state x="382" y="211" width="763" height="571" key="new project wizard" timestamp="1610162342988">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="382" y="211" width="763" height="571" key="new project wizard/0.40.1440.920@0.40.1440.920" timestamp="1610162342988" />
-    <state x="377" y="231" key="run.anything.popup" timestamp="1610591114306">
+    <state x="377" y="231" key="run.anything.popup" timestamp="1618364983628">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="377" y="231" key="run.anything.popup/0.40.1440.920@0.40.1440.920" timestamp="1610591114306" />
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1617692262510">
+    <state x="377" y="231" key="run.anything.popup/0.40.1440.920@0.40.1440.920" timestamp="1618364983628" />
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1618471929001">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1617692262510" />
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1618471929001" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -872,8 +879,8 @@
           <option name="timeStamp" value="130" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../jhome-account/src/main/java/com/jhome/modules/userAuthentication/cert/CustomRealm.java</url>
-          <line>63</line>
+          <url>file://$PROJECT_DIR$/../jhome-account/src/main/java/com/account/modules/userAuthentication/cert/CustomRealm.java</url>
+          <line>110</line>
           <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

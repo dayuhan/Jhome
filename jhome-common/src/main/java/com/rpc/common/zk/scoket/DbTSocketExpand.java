@@ -34,7 +34,7 @@ import java.net.SocketException;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: 重载TSocket
  * @author: Daxv
  * @create: 2021-03-26 09:48

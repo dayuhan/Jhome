@@ -36,7 +36,7 @@ import java.util.UUID;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: SysConfigProperties
  * @author: Daxv
  * @create: 2020-08-04 08:54

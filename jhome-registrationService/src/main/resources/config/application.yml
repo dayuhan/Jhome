@@ -9,7 +9,7 @@ copyrightYear: 2020
 server:
   port: 9100
   servlet:
-    context-path: /jhome
+    context-path: /account
   tomcat:
     uri-encoding: UTF-8
 
@@ -18,7 +18,7 @@ server:
 
 spring:
   application:
-    name: jhome-registrationService
+    name: account-registrationService
   security:
     basic:
       enable: true #开启基于HTTP basic的认证
@@ -35,7 +35,7 @@ eureka:
   #    客户端调用地址
   client:
     service-url:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/jhome/eureka/
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/account/eureka/
                    # http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
                    # http://${security.user.name}:${security.user.password}@127.0.0.1:${server.port}/eureka/
                    # http://daxunihao:123456@127.0.0.1:8100/eureka/

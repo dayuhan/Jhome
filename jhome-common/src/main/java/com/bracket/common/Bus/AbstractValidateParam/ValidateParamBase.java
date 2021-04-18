@@ -34,7 +34,7 @@ import org.springframework.validation.BindingResult;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: ValidateParamBase 需要工程项目继承 AOP拦截验证参数
  * @author: Daxv
  * @create: 2020-09-30 16:34

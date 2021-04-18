@@ -2,7 +2,7 @@
 server:
   port: 8899
   servlet:
-    context-path: /jhome
+    context-path: /account
   tomcat:
     uri-encoding: UTF-8
 jhome:
@@ -15,7 +15,7 @@ spring:
     active: jdbc
     include: geoServerToolsService
   application:
-    name: jhome-geoServerToolsService
+    name: account-geoServerToolsService
   datasource:
     url: jdbc:mysql://192.168.0.111:3306/mysqlDb?serverTimezone=UTC&useSSL=false
     username: root
@@ -42,7 +42,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/
+      defaultZone: http://daxunihao:123456@127.0.0.1:9100/account/eureka/
     registerWithEureka: true
     fetchRegistry: true
   instance:

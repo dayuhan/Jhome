@@ -55,7 +55,7 @@ public interface RemoteBaseInterface {
      * obj.put("key","00");
      * this.getSessionTest(obj)
      */
-//    @RequestMapping(value = "/jhome/RemoteService/getSession", method = RequestMethod.POST)
+//    @RequestMapping(value = "/account/RemoteService/getSession", method = RequestMethod.POST)
 //    String getSessionTest(@RequestBody JSONObject obj);
 
 

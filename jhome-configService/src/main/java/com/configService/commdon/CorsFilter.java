@@ -1,5 +1,5 @@
 package com.configService.commdon;/**
- * @program: jhome-root
+ * @program: account-root
  * @description
  * @author: Daxv
  * @create: 2020-07-07 21:40
@@ -34,7 +34,7 @@ import java.io.IOException;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: shrio跨域
  * @author: Daxv
  * @create: 2020-07-07 21:40

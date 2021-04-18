@@ -1,5 +1,5 @@
 package com.bracket.common.ToolKit;/**
- * @program: jhome-root
+ * @program: account-root
  * @description
  * @author: Daxv
  * @create: 2020-08-28 10:45
@@ -36,7 +36,7 @@ import java.nio.charset.Charset;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: jhome-root
+ * @program: account-root
  * @description: resquest 复制对象
  * @author: Daxv
  * @create: 2020-08-28 10:45

@@ -52,7 +52,7 @@ import java.util.Properties;
  */
 public class ZkUtil {
     private static final Logger log = LoggerFactory.getLogger(ZkUtil.class);
-    public static String NAMESPACE = "jhome";
+    public static String NAMESPACE = "account";
     public static Properties pu = PropertiesUtil.loadProperties("config/zkconfig.properties");
     public static CuratorFramework client;
     public static String env = "DEV";

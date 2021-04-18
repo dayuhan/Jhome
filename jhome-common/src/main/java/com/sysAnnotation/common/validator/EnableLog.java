@@ -6,5 +6,5 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE,ElementType.METHOD})
 @Documented
 public @interface EnableLog {
-    String value() default "jhome";
+    String value() default "account";
 }

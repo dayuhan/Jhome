@@ -1,7 +1,7 @@
 package com.bracket.common.Bus.AbstractDaoImpl;
 
 /**
- * @program: jhome-root
+ * @program: account-root
  * @description
  * @author: Daxv
  * @create: 2020-06-20 17:49

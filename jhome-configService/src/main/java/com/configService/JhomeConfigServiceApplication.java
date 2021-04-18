@@ -35,7 +35,7 @@ import java.util.concurrent.TimeUnit;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: spring cloud config  配置中心
  * @author: Daxv
  * @create: 2017-08-02 13:51

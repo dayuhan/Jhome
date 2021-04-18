@@ -1,5 +1,5 @@
 package com.bracket.common.Identity;/**
- * @program: jhome-root
+ * @program: account-root
  * @description
  * @author: Daxv
  * @create: 2020-07-25 12:28
@@ -28,7 +28,7 @@ import org.apache.shiro.session.Session;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: jhome-root
+ * @program: account-root
  * @description: 用户认证处理类
  * @author: Daxv
  * @create: 2020-07-25 12:28

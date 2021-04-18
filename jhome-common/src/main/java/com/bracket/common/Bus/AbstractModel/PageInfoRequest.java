@@ -1,5 +1,5 @@
 package com.bracket.common.Bus.AbstractModel;/**
- * @program: jhome-root
+ * @program: account-root
  * @description
  * @author: Daxv
  * @create: 2020-08-22 12:30
@@ -25,7 +25,7 @@ package com.bracket.common.Bus.AbstractModel;/**
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: jhome-root
+ * @program: account-root
  * @description: 请求层公共类
  * @author: Daxv
  * @create: 2020-08-22 12:30

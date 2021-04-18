@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.account.modules.userAuthority.dao.UserOrgRoleMapper">
+
+    <select id="listRoleMember" resultType="com.account.modules.userAuthority.model.response.ListRoleMemberResponse">
+        SELECT uor.id,
+        uor.role_id,
+        u.id AS userId,
+        u.login_name,
+        u.real_name,
+        u.mobile,
+        o.name AS orgName
+        FROM user_organization_role uor LEFT JOIN user u ON uor.user_id = u.id
+        LEFT JOIN organization o ON uor.org_id = o.id
+        <where>
+            u.delete_flag = 0 AND o.delete_flag = 0
+            <if test="roleId != null">AND uor.role_id = #{roleId}</if>
+        </where>
+    </select>
+
+    <delete id="deleteByIds">
+        DELETE FROM user_organization_role WHERE id IN
+        <foreach collection="ids" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </delete>
+
+    <select id="listMemberExcludeRole" resultType="com.account.modules.userAuthority.model.response.ListRoleMemberResponse"
+            parameterType="com.account.modules.userAuthority.model.request.UserOrgRolePageRequest">
+        SELECT uor.id,
+        u.id AS userId,
+        uor.role_id,
+        u.login_name,
+        u.real_name,
+        u.mobile,
+        o.name AS orgName
+        FROM user_organization_role uor LEFT JOIN user u ON uor.user_id = u.id
+        LEFT JOIN organization o ON uor.org_id = o.id
+        <where>
+            u.delete_flag = 0 AND o.delete_flag = 0
+            <if test="request.roleId != null">AND uor.role_id != #{request.roleId}</if>
+            <if test="request.searchName != null and request.searchName != ''">
+                AND (u.id = #{request.searchName} OR u.login_name = #{request.searchName} OR u.real_name =
+                #{request.searchName} OR u.mobile = #{request.searchName} )
+            </if>
+        </where>
+    </select>
+    <select id="listUserOrgRoleByUserId" resultType="com.account.modules.userAuthority.model.dto.UserOrgRoleDTO">
+      SELECT
+		GROUP_CONCAT(DISTINCT r.role_name) AS roleNames,
+        t.tenant_name,
+		uor.tenant_id,
+		CASE WHEN uor.tenant_id = #{tenantId} THEN 1 ELSE 0 END AS defaultFlag
+        FROM user_organization_role uor LEFT JOIN role r ON uor.role_id = r.id
+        LEFT JOIN tenant t ON uor.tenant_id = t.id
+        WHERE
+            r.delete_flag = 0 AND t.delete_flag = 0
+            AND uor.user_id = #{userId}
+         GROUP BY uor.tenant_id
+         ORDER BY defaultFlag DESC
+    </select>
+
+    <select id="GetUserTenantListByUserId" resultType="com.account.modules.userAuthority.model.dto.UserTenantRoleDTO"
+            parameterType="com.account.modules.userAuthority.model.request.UserTenantRequest">
+      SELECT
+		uor.tenant_id,
+        t.tenant_name,
+        t.tenant_logo,
+        CASE WHEN uor.tenant_id = #{request.tenantId} THEN 1 ELSE 0 END AS defaultFlag,
+        GROUP_CONCAT(CONCAT_WS(',', r.id,r.role_name,uor.default_flag) separator ';' )as roles
+        FROM user_organization_role uor LEFT JOIN role r ON uor.role_id = r.id
+        LEFT JOIN tenant t ON uor.tenant_id = t.id
+        WHERE
+            r.delete_flag = 0 AND t.delete_flag = 0
+            AND uor.user_id = #{request.userId}
+        GROUP BY uor.tenant_id
+        ORDER BY defaultFlag DESC
+    </select>
+
+    <select id="findFirstRoleByUserIdAndTenantId" resultType="java.lang.Long">
+      SELECT
+		uor.role_id
+        FROM user_organization_role uor
+        WHERE
+             uor.user_id = #{userId} AND uor.tenant_id = #{tenantId}
+             limit 0,1
+    </select>
+
+    <select id="findFirstUserOrgRoleByUserIdAndTenantIdAndRoleId" resultType="com.account.modules.userAuthority.model.dto.UserOrgRole">
+      SELECT
+		uor.id, uor.user_id, uor.tenant_id, uor.role_id, uor.default_flag
+        FROM user_organization_role uor
+        WHERE
+             uor.user_id = #{request.userId} AND uor.tenant_id = #{request.tenantId} AND uor.role_id = #{request.roleId}
+             limit 0,1
+    </select>
+
+</mapper>

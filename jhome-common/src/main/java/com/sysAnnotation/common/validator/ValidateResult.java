@@ -1,5 +1,5 @@
 package com.sysAnnotation.common.validator;/**
- * @program: jhome-root
+ * @program: account-root
  * @description
  * @author: Daxv
  * @create: 2020-09-30 16:24
@@ -26,7 +26,7 @@ package com.sysAnnotation.common.validator;/**
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: 验证结果
  * @author: Daxv
  * @create: 2020-09-30 16:24

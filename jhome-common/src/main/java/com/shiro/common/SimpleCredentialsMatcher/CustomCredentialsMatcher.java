@@ -1,6 +1,9 @@
 package com.shiro.common.SimpleCredentialsMatcher;
 
+import com.alibaba.fastjson.JSONObject;
+import com.ar.common.util.StringUtil;
 import com.bracket.common.ToolKit.MD5Util;
+import com.domain.common.UserInfo;
 import com.shiro.common.token.DeviceType;
 import com.shiro.common.token.jhomeToken;
 import lombok.SneakyThrows;
@@ -34,8 +37,7 @@ public class CustomCredentialsMatcher extends SimpleCredentialsMatcher {
     @SneakyThrows
     public boolean doCredentialsMatch(AuthenticationToken token, AuthenticationInfo info) {
 
-        return  true;
-        /*
+        UsernamePasswordToken upToken = (UsernamePasswordToken) token;
         //1.向下转型
         jhomeToken jhomeToken = (com.shiro.common.token.jhomeToken) token;
         //过滤单点登录
@@ -43,12 +45,17 @@ public class CustomCredentialsMatcher extends SimpleCredentialsMatcher {
             return true;
         //2.获取用户名或密码
         String username = jhomeToken.getUsername();
+        String userInfoStr = info.getPrincipals().toString();
+        UserInfo userInfo = JSONObject.parseObject(userInfoStr, UserInfo.class);
+        String pwd = new String(upToken.getPassword());
         //获取密码并使用Md5Hash算法进行加密
-        String inputPwdEncrypt = MD5Util.md5(new String(jhomeToken.getPassword()), "jhome");
+        //String inputPwdEncrypt = MD5Util.md5(new String(jhomeToken.getPassword()), "account");
+        String inputPwdEncrypt = StringUtil.hashPassword(pwd,userInfo.getSalt());
         //3.获取数据库中的加密的密码
         String dbPwd = info.getCredentials().toString();
         return equals(inputPwdEncrypt, dbPwd);
-        */
+        //return true;
+
 
     }
 }

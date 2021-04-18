@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 
 @ConfigurationProperties(
-        prefix = "jhome.sysproperties"
+        prefix = "account.sysproperties"
 )
 public abstract class SysProperties {
 }

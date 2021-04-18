@@ -24,7 +24,7 @@ import org.springframework.web.client.RestTemplate;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: jhome-root
+ * @program: account-root
  * @description: http请求处理 【需要被工程项目继承】
  * @author: Daxv
  * @create: 2020-08-09 00:18

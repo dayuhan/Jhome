@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.account.modules.sysConfig.dao.CsRegisteredConfigMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.account.modules.sysConfig.model.bo.CsRegisteredConfig">
+        <id column="id" property="id"/>
+        <result column="paramName" property="paramName"/>
+        <result column="key" property="key"/>
+        <result column="value" property="value"/>
+        <result column="application" property="application"/>
+        <result column="isEnable" property="isEnable"/>
+        <result column="profile" property="profile"/>
+        <result column="label" property="label"/>
+        <result column="createTime" property="createTime"/>
+        <result column="createBy" property="createBy"/>
+        <result column="updateTime" property="updateTime"/>
+        <result column="updateBy" property="updateBy"/>
+        <result column="isPublicComponent" property="isPublicComponent"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="commonSql">
+        `id`, `paramName`, `key`, `value`, `application`, `isEnable`, `profile`, `label`, `createTime`, `createBy`, `updateTime`, `updateBy`, `isPublicComponent`
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="queryCsRegisteredConfigList"
+            resultType="com.account.modules.sysConfig.model.vo.CsRegisteredConfigModelView"
+            parameterType="com.account.modules.sysConfig.model.query.CsRegisteredConfigQuery">
+        Select
+            crc.id,
+            crc.paramName,
+            crc.`key`,
+            crc.`value`,
+            crc.`application`,
+            crc.`profile`,
+            crc.`label`,
+            crc.`isEnable`,
+            asdd.DictonaryDetailName as applicationName,
+            crc.serviceId
+        from  account_sc_dictionary_catalogue as asdc
+        inner join account_sc_dictionary_detail as asdd  on asdc.id= asdd.DictonaryCatalogueId
+        inner join cs_registered_config as crc on crc.serviceId=asdd.id
+        <trim prefix="where" prefixOverrides="and|or">
+            AND 1=1
+            <if test="queryObject.serviceId!=null and queryObject.serviceId!=''">
+             AND  crc.serviceId=#{queryObject.serviceId}  and crc.isPublicComponent=0
+            </if>
+            <if test="queryObject.isPublicComponent!=null and queryObject.isPublicComponent!=''">
+                AND  crc.isPublicComponent=#{queryObject.isPublicComponent}
+            </if>
+            <if test="queryObject.paramName!=null">
+                and   crc.paramName like  CONCAT ('%',#{queryObject.paramName},'%')
+            </if>
+        </trim>
+    </select>
+</mapper>

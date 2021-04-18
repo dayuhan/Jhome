@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.account.modules.sysConfig.dao.AccountScDictionaryDetailMapper">
+
+        <resultMap id="BaseResultMap" type="com.account.modules.sysConfig.model.bo.AccountScDictionaryDetail">
+                    <id column="id" property="id"/>
+                    <result column="dictonaryCatalogueId" property="dictonaryCatalogueId"/>
+                    <result column="dictonaryCatalogueCode" property="dictonaryCatalogueCode"/>
+                    <result column="dictonaryDetailName" property="dictonaryDetailName"/>
+                    <result column="sort" property="sort"/>
+                    <result column="status" property="status"/>
+                    <result column="createdBy" property="createdBy"/>
+                    <result column="createdTime" property="createdTime"/>
+                    <result column="updatedBy" property="updatedBy"/>
+                    <result column="updatedTime" property="updatedTime"/>
+                    <result column="isDeleted" property="isDeleted"/>
+                    <result column="remark" property="remark"/>
+                    <result column="tenantId" property="tenantId"/>
+        </resultMap>
+
+        <sql id="commonSql">
+         `id`
+            ,
+         `dictonaryCatalogueId`
+            ,
+         `dictonaryCatalogueCode`
+            ,
+         `dictonaryDetailName`
+            ,
+         `sort`
+            ,
+         `status`
+            ,
+         `createdBy`
+            ,
+         `createdTime`
+            ,
+         `updatedBy`
+            ,
+         `updatedTime`
+            ,
+         `isDeleted`
+            ,
+         `remark`
+            ,
+         `tenantId`
+
+    </sql>
+
+    <!-- 分页查询 -->
+    <select id="selectAccountScDictionaryDetailPageList" resultMap="BaseResultMap" parameterType="com.account.modules.sysConfig.model.query.AccountScDictionaryDetailQuery">
+        Select
+             <include refid="commonSql"></include>
+        From account_sc_dictionary_detail
+        <trim prefix="where" prefixOverrides="and|or">
+            AND 1=1
+        </trim>
+    </select>
+</mapper>

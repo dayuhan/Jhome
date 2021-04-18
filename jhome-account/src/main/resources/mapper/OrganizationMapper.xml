@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.account.modules.userAuthority.dao.OrganizationMapper">
+
+    <!-- 新增组织架构 -->
+    <insert id="addOrganization" parameterType="com.account.modules.userAuthority.domain.Organization">
+        INSERT INTO organization
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="org.id != null">
+                id,
+            </if>
+            <if test="org.name != null">
+                name,
+            </if>
+            <if test="org.organizationCode != null">
+                organization_code,
+            </if>
+            <if test="org.sort != null">
+                sort,
+            </if>
+            <if test="org.level != null">
+                level,
+            </if>
+            <if test="org.parentId != null">
+                parent_id,
+            </if>
+            <if test="org.type != null">
+                type,
+            </if>
+            <if test="org.isLeaf != null">
+                is_leaf,
+            </if>
+            <if test="org.createTime != null">
+                create_time,
+            </if>
+            <if test="org.createUserId != null">
+                create_user_id,
+            </if>
+            <if test="org.updateTime != null">
+                update_time,
+            </if>
+            <if test="org.updateUserId != null">
+                update_user_id,
+            </if>
+            <if test="org.deleteFlag != null">
+                delete_flag,
+            </if>
+            <if test="org.tenantId != null">
+                tenant_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="org.id != null">
+                #{org.id,jdbcType=INTEGER},
+            </if>
+            <if test="org.name !=null">
+                #{org.name,jdbcType=VARCHAR},
+            </if>
+            <if test="org.organizationCode !=null">
+                #{org.organizationCode,jdbcType=VARCHAR},
+            </if>
+            <if test="org.sort != null">
+                #{org.sort,jdbcType=INTEGER},
+            </if>
+            <if test="org.level != null">
+                #{org.level,jdbcType=INTEGER},
+            </if>
+            <if test="org.parentId != null">
+                #{org.parentId,jdbcType=INTEGER},
+            </if>
+            <if test="org.type !=null ">
+                #{org.type,jdbcType=INTEGER},
+            </if>
+            <if test="org.isLeaf !=null ">
+                #{org.isLeaf,jdbcType=INTEGER},
+            </if>
+            <if test="org.createTime !=null ">
+                #{org.createTime,jdbcType=VARCHAR},
+            </if>
+            <if test="org.createUserId !=null ">
+                #{org.createUserId,jdbcType=INTEGER},
+            </if>
+            <if test="org.updateTime !=null ">
+                #{org.updateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="org.updateUserId !=null ">
+                #{org.updateUserId,jdbcType=INTEGER},
+            </if>
+            <if test="org.deleteFlag !=null ">
+                #{org.deleteFlag,jdbcType=INTEGER},
+            </if>
+            <if test="org.tenantId !=null ">
+                #{org.tenantId,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <!-- 查询组织架构列表 -->
+    <select id="findOrganizationList" resultType="com.account.modules.userAuthority.model.response.ListOrganizationRes">
+        SELECT `id`,
+        `name`,
+        `organization_code`,
+        `sort`,
+        `level`,
+        `parent_id`,
+        `type`,
+        `is_leaf`,
+        `create_time`,
+        `create_user_id`,
+        `update_time`,
+        `update_user_id`,
+        `delete_flag`,
+        `tenant_id` FROM organization
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="org.organizationCode != null and org.organizationCode != ''">
+                AND organization_code = #{org.organizationCode}
+            </if>
+            <if test="org.name != null and org.name != ''">
+                AND name like CONCAT ('%',#{org.name},'%')
+            </if>
+            <if test="org.parentId != null ">
+                AND parent_id = #{org.parentId}
+            </if>
+            <if test="org.tenantId != null ">
+                AND tenant_id = #{org.tenantId}
+            </if>
+            AND delete_flag = 0
+        </trim>
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 组织架构子集信息 -->
+    <select id="findByChildrenList" parameterType="java.lang.Long"
+            resultType="com.account.modules.userAuthority.model.response.ListOrganizationRes">
+        SELECT `id`,
+        `name`,
+        `organization_code`,
+        `sort`,
+        `level`,
+        `parent_id`,
+        `type`,
+        `is_leaf`,
+        `create_time`,
+        `create_user_id`,
+        `update_time`,
+        `update_user_id`,
+        `delete_flag`,
+        `tenant_id` FROM organization
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null and id != ''">
+                AND parent_id = #{id}
+            </if>
+            AND delete_flag = 0
+        </trim>
+    </select>
+
+    <!-- 查询组织集合 -->
+    <select id="findByOrgList" resultType="com.account.modules.userAuthority.model.response.ListOrganizationRes"
+            parameterType="com.account.modules.userAuthority.domain.Organization">
+        SELECT `id`,
+        `name`,
+        `organization_code`,
+        `sort`,
+        `level`,
+        `parent_id`,
+        `type`,
+        `is_leaf`,
+        `create_time`,
+        `create_user_id`,
+        `update_time`,
+        `update_user_id`,
+        `delete_flag`,
+        `tenant_id` FROM organization
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="org.id != null and org.id != 0">
+                AND id = #{org.id}
+            </if>
+            <if test="org.organizationCode != null and org.organizationCode != ''">
+                AND organization_code = #{org.organizationCode}
+            </if>
+            <if test="org.name != null and org.name != ''">
+                AND name #{org.name}
+            </if>
+            <if test="org.parentId != null ">
+                AND parent_id = #{org.parentId}
+            </if>
+            AND delete_flag = 0
+        </trim>
+    </select>
+
+    <!-- 修改组织信息 -->
+    <update id="updateByOrg" parameterType="com.account.modules.userAuthority.model.request.EditOrganizationReq">
+        UPDATE organization
+        <set>
+            <if test="request.name != null and request.name != ''">
+                name = #{request.name,jdbcType=VARCHAR},
+            </if>
+        </set>
+        WHERE
+        id = #{request.id}
+    </update>
+
+    <!-- ids修改状态 -->
+    <update id="updateByIds" parameterType="com.account.modules.userAuthority.model.dto.OrganizationDTO">
+        UPDATE organization
+        <set>
+            <if test="request.deleteFlag != null and request.deleteFlag != ''">
+                delete_flag = #{request.deleteFlag,jdbcType=INTEGER},
+            </if>
+        </set>
+        WHERE
+        id IN
+        <foreach collection="request.ids" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </update>
+
+    <!-- 组织详情 -->
+    <select id="findOrgDetails" resultType="com.account.modules.userAuthority.domain.Organization"
+            parameterType="java.lang.Long">
+        SELECT `id`,
+        `name`,
+        `organization_code`,
+        `sort`,
+        `level`,
+        `parent_id`,
+        `type`,
+        `is_leaf`,
+        `create_time`,
+        `create_user_id`,
+        `update_time`,
+        `update_user_id`,
+        `delete_flag`,
+        `tenant_id` FROM organization
+         WHERE id = #{id} AND delete_flag = 0
+         ORDER BY level DESC
+    </select>
+
+    <select id="findOrgByCode" resultType="com.account.modules.userAuthority.domain.Organization"
+            parameterType="java.lang.String">
+        SELECT `id`,
+        `name`,
+        `organization_code`,
+        `sort`,
+        `level`,
+        `parent_id`,
+        `type`,
+        `is_leaf`,
+        `create_time`,
+        `create_user_id`,
+        `update_time`,
+        `update_user_id`,
+        `delete_flag`,
+        `tenant_id` FROM organization
+         WHERE  organization_code = #{code}
+         AND delete_flag = 0
+    </select>
+
+    <!-- 学校信息 -->
+    <select id="findAppOrgList" resultType="com.account.modules.userAuthority.domain.Organization"
+            parameterType="java.lang.Long">
+        SELECT `id`,`name`,`parent_id`,`tenant_id`,`level` FROM organization
+        WHERE id = #{id} AND delete_flag = 0
+    </select>
+
+    <!-- 查询用户组织角色信息 -->
+    <select id="findUserOrgRole" resultType="com.account.modules.userAuthority.domain.UserOrganizationRole"
+            parameterType="java.lang.Long">
+        SELECT COUNT(id),user_id,org_id FROM user_organization_role
+        WHERE user_id = #{userId} AND org_id = #{orgId}
+    </select>
+
+    <delete id="deleteUserOrg" parameterType="java.lang.Long">
+        DELETE FROM user_organization_role
+        WHERE id = #{id}
+    </delete>
+
+    <select id="findOrgUserNum" resultType="com.account.modules.userAuthority.model.response.ListOrgUserNumRes" parameterType="com.account.modules.userAuthority.model.request.CommonIdsRequest">
+        SELECT o.id, o.`name` FROM organization AS o
+        WHERE
+        o.id in
+        <foreach collection="ids.ids" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+        AND o.`delete_flag` = 0
+    </select>
+
+</mapper>

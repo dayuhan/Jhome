@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.account.modules.userAuthority.dao.TenantMapper">
+
+    <!-- 根据租户ID统计该租户组织的注册用户数 -->
+    <select id="calcUserNumByTenantId" parameterType="java.lang.Long" resultType="java.lang.Integer">
+        select count(1) from user A inner join tenant B on A.tenant_id = B.id
+            WHERE B.id = #{tenantId}
+            AND B.delete_flag = 0
+            AND A.delete_flag = 0
+    </select>
+
+    <select id="calcTextBookNumByTenantId" parameterType="java.lang.Long" resultType="java.lang.Integer">
+        select count(1) from textbook A inner join tenant B on A.tenant_id = B.id
+            WHERE B.id = #{tenantId}
+            AND B.delete_flag = 0
+            AND A.delete_flag = 0
+    </select>
+
+    <select id="calcResourceNumByTenantId" parameterType="java.lang.Long" resultType="java.lang.Integer">
+        select count(1) from resources A inner join tenant B on A.tenant_id = B.id
+            WHERE B.id = #{tenantId}
+            AND B.delete_flag = 0
+            AND A.delete_flag = 0
+    </select>
+
+    <select id="calcStudyDurationByTenantId" parameterType="java.lang.Long" resultType="com.account.modules.userAuthority.domain.UserStudyLog">
+        select A.date, A.total_time, A.user_id from user_study_log A inner join `user` B on A.user_id = B.id
+            inner join tenant C on B.tenant_id = C.id
+            where C.id = #{tenantId}
+            and B.delete_flag = 0
+            and C.delete_flag = 0
+    </select>
+
+    <select id="queryLoginLogByTimeGap" resultType="com.account.modules.userAuthority.domain.LoginLog">
+        select
+        distinct A.user_id,
+        date_format(A.create_time, '%Y-%m-%d') as create_time
+        from login_log A inner join user B
+        on A.user_id = B.id
+	    inner join tenant C
+	    on B.tenant_id = C.id
+	    where C.id = #{tenantId}
+	    and A.create_time between date_add(now(), interval -(#{gapDayNum}+1) day) and date_add(now(), interval -1 day)
+	    and B.delete_flag = 0
+	    and C.delete_flag = 0
+    </select>
+</mapper>

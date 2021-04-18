@@ -35,7 +35,7 @@ import java.util.List;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: jhome-root
+ * @program: account-root
  * @description: 服务发现
  * @author: Daxv
  * @create: 2020-10-08 19:32
@@ -97,7 +97,7 @@ public class ServiceDiscovery {
 
     public static void main(String[] args) throws InterruptedException {
         ServiceDiscovery serviceDiscovery=new ServiceDiscovery();
-        serviceDiscovery.init("jhome-account");
+        serviceDiscovery.init("account-account");
         for (int i=0;i<10;i++)
         {
             serviceDiscovery.logger.info(serviceDiscovery.getServiceRepos());
