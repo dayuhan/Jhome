@@ -1,0 +1,213 @@
+
+#====================================================================== 版本-配置 ================#
+# 产品或项目名称、软件开发公司名称
+productName: Jhome-JavaHome 开发平台
+companyName: Jhome V1.0
+# 产品版本、版权年份
+productVersion: V1.0
+copyrightYear: 2020
+
+#====================================================================== server-配置 ================#
+
+server:
+  port: 8300
+  servlet:
+    context-path: /account
+  tomcat:
+    uri-encoding: UTF-8
+adminPath: ${lux.sysproperties.adminPath}
+
+#====================================================================== System-配置 ================#
+lux:
+  # 系统参数
+  sysproperties:
+    # 管理基础路径
+    adminPath: fileStore
+    #消息服务配置
+    queueconfig:
+      #队列服务器地址
+      hostName: 127.0.0.1
+      #用户名
+      userName: admin
+      #密码
+      passWord: admin
+      #虚拟主机
+      virtualHost: dxhost
+    #上传类型
+    rootPath: D:\downloadFile\resource #${user.home}\resource
+    #服务类型
+    serverType: 0
+#====================================================================== 日志支持-配置 ================#
+# 日志支持
+logging.level.project.user.UserClient: DEBUG
+#====================================================================== Spring-配置 ================#
+spring:
+  # 应用程序名称
+  application:
+    name: jhome-translateService
+    include: translateService
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB #【修改multipart上传大小】
+      max-request-size: 100MB #【修改multipart上传大小】
+  # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
+  profiles:
+    active: default
+    #active: ${SPRING_PROFILES_ACTIVE:local}
+  # 打印横幅
+  main:
+    bannerMode: "CONSOLE"
+    allow-bean-definition-overriding: true #遇到同样名字是否覆盖操作
+  thymeleaf:
+    prefix: classpath:/templates/
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mysqlDb?serverTimezone=UTC&useSSL=false
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      web-stat-filter:
+        #不统计这些请求数据
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+      stat-view-servlet:
+        # 默认true 内置监控页面首页/druid/index.html
+        enabled: true
+        url-pattern: /druid/*
+        # 允许清空统计数据
+        reset-enable: true
+        login-username: admin
+        login-password: ENC(9o6QgYtA5qN3i4shHlgfCw==)
+        # IP白名单 多个逗号分隔
+        allow:
+        # IP黑名单
+        deny:
+      initial-size: 1
+      min-idle: 0
+      max-active: 1000
+      max-wait: 60000
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: -1
+      validation-query: SELECT 1 FROM DUAL
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      filters: stat,wall,log4j
+      useGlobalDataSourceStat: true
+  redis:
+    host: 127.0.0.1
+    database: 0
+    port: 6379
+    password: 123456
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active:  1000 # 连接池最大连接数（使用负值表示没有限制）
+        max-idle: 300 # 连接池中的最大空闲连接
+        min-idle: 0 # 连接池中的最小空闲连接
+        max-wait: 6000 # 连接池最大阻塞等待时间（使用负值表示没有限制）
+
+
+#====================================================================== Shrio-配置 ================#
+shiro:
+  filterChainDefinitionMap: |
+
+    /login:anon,
+    /logout:anon,
+    /css/**:anon,
+    /images/**:anon,
+    /script/**:anon,
+    /swagger-ui.html:anon,
+    /webjars/**:anon,
+    /v2/**:anon,
+    /swagger-resources/**:anon,
+    /fileStore/**: authc,
+    /**: authc
+  LoginUrl: http://127.0.0.1:8100/account/account/login
+  #  LoginUrl: http://10.1.20.58:8100/zlbzxt/account/login
+  SuccessUrl: /${lux.sysproperties.adminPath}/index
+  UnauthorizedUrl: /${lux.sysproperties.adminPath}/sys/error
+
+#====================================================================== mybatis-配置 ================#
+#====================================================================== mybatis-plus-配置 ================#
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  configuration:
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#====================================================================== thymeleaf-配置 =============#
+#====================================================================== 分页配置-配置 ===============#
+#pagehelper:
+#  helper-dialect: mysql
+#  reasonable: true
+#  support-methods-arguments: true
+#  params: count=countSql
+
+#====================================================================== 消息队列服务器地址-配置 ===============#
+#====================================================================== eureka配置-配置 ===============#
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://daxunihao:123456@127.0.0.1:9100/account/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+  instance:
+    #instanceId: ${spring.application.name}-${server.port} 任务链
+    preferIpAddress: true
+    ipAddress: 127.0.0.1
+#    ipAddress: 10.1.20.58 #当前IP
+
+
+feign:
+  compression:
+    request:
+      enabled: true
+      # 限制格式
+      mimeTypes: text/xml,application/xml,application/json
+      # 限制大小
+      minRequestSize: 3000
+    response:
+      enabled: true
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  eureka:
+    enabled: true
+#====================================================================== swagger2-配置 ===============#
+swagger:
+  enable: true
+
+#====================================================================== 版本-配置 ================#
+#unzip dir
+decompress_dir: decompress_dir
+
+#actuator properties
+management:
+  #  security:
+  #     enabled: false
+  endpoints:
+    web:
+      base-path: /monitor
+      exposure:
+        include: '*'
+      health:
+        show-details: always
+
+# LOGGING
+logging:
+  config: classpath:logback-spring.xml
+  path: ${user.home}/logs/demo/${spring.profiles.active}/${spring.application.name}/${server.port:unknown}
+
+
+# 文件服务器地址
+file_server_addr: 127.0.0.1:22122
+fastdfs:
+  http_secret_key: HandFastDFSToken

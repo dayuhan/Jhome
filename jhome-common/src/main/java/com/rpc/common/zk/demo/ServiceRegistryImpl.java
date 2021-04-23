@@ -1,4 +1,4 @@
-package com.rpc.common.zk;
+package com.rpc.common.zk.demo;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;

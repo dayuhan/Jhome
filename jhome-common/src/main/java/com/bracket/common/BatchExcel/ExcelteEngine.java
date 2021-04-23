@@ -69,10 +69,8 @@ public class ExcelteEngine<T extends Object> {
 			try {
 				int nullcolumncount = 0; 
 				for (ExcelteColumnMapping mapping : columnMappings) {
-					Cell cell = (Cell) GetCellValue(row,
-							mapping.getExcelColumnName());
-					if (cell == null
-							|| cell.getCellType() == Cell.CELL_TYPE_BLANK) {
+					Cell cell = (Cell) GetCellValue(row,mapping.getExcelColumnName());
+					if (cell == null|| cell.getCellType() == Cell.CELL_TYPE_BLANK) {
 						nullcolumncount++;
 					}
 				}

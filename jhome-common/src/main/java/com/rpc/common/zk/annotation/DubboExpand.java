@@ -1,6 +1,5 @@
-package com.rpc.common.zk.scoket;
+package com.rpc.common.zk.annotation;
 
-import com.rpc.common.zk.ZkRegistry;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;

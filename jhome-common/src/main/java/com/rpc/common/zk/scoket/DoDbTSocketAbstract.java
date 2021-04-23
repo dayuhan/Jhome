@@ -8,6 +8,7 @@ import org.apache.thrift.transport.TTransportException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -101,7 +102,7 @@ public abstract class DoDbTSocketAbstract {
      * @param dbTSocketExpand
      * @return
      */
-    public abstract String doLoadAlgorithm(List<String> hosts, DbTSocketExpand dbTSocketExpand);
+    public abstract String doLoadAlgorithm(List<String> hosts, DbTSocketExpand dbTSocketExpand) throws IOException;
 
 
 }

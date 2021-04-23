@@ -1,5 +1,7 @@
 package com.rpc.common.zk.loadBanalce;
 
+import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.List;
 
 /**
@@ -28,6 +30,6 @@ import java.util.List;
  * @create: 2020-10-08 19:45
  **/
 public interface LoadBanalceStrategy {
-    String selectHost(List<String> serviceRepos);
+    String selectHost(List<String> serviceRepos) throws IOException;
 }
 

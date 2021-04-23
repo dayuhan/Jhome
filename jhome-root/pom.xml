@@ -35,6 +35,10 @@
         <module>../jhome-doc</module>
         <!--   GEOSERVER     -->
         <module>../jhome-geoServerToolsService</module>
+
+        <!--   翻译服务     -->
+        <module>../jhome-translateService</module>
+
     </modules>
     <developers>
         <developer>

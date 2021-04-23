@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.rpc.common.zk.ZkUtil;
 import com.rpc.common.zk.loadBanalce.LoadBanalceStrategy;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -92,7 +93,7 @@ public class DoDbTSocketInvoked extends DoDbTSocketAbstract implements Invoked {
     }
 
     @Override
-    public String doLoadAlgorithm(List<String> hosts, DbTSocketExpand dbTSocketExpand) {
+    public String doLoadAlgorithm(List<String> hosts, DbTSocketExpand dbTSocketExpand) throws IOException {
         if (hosts.size() == 0)
             LOGGER.error(String.format("DubboExpand 提示：注册中心暂无服务"));
         //Expand...

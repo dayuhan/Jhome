@@ -1,4 +1,4 @@
-package com.rpc.common.zk;
+package com.rpc.common.zk.demo;
 
 import com.rpc.common.zk.loadBanalce.LoadBanalceStrategy;
 import com.rpc.common.zk.loadBanalce.RandomLoadBalance;
@@ -11,6 +11,7 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -90,12 +91,12 @@ public class ServiceDiscovery {
         pathChildrenCache.start();
     }
 
-    public String getServiceRepos() {
+    public String getServiceRepos() throws IOException {
         return loadBanalceStrategy.selectHost(serviceRepos);
     }
 
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
         ServiceDiscovery serviceDiscovery=new ServiceDiscovery();
         serviceDiscovery.init("account-account");
         for (int i=0;i<10;i++)

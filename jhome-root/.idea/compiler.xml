@@ -10,6 +10,7 @@
         <module name="jhome-api" />
         <module name="jhome-position" />
         <module name="jhome-registerMachine" />
+        <module name="jhome-account" />
         <module name="jhome-transactionService" />
         <module name="jhome-configService" />
         <module name="jhome-geoServerToolsService" />
@@ -22,12 +23,13 @@
         <module name="jhome-fileStore" />
         <module name="jhome-codeGenerator" />
         <module name="jhome-appPush" />
-        <module name="jhome-account" />
+        <module name="jhome-translateService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Jhome-ConfigService" target="1.8" />
       <module name="jhome-dataCenter" target="1.8" />
+      <module name="jhome-fileStore (1)" target="1.8" />
       <module name="jhome-NettyServer" target="1.8" />
       <module name="jhome-Pay" target="1.8" />
       <module name="jhome-registrationCenter_One" target="1.8" />
@@ -51,6 +53,7 @@
       <module name="jhome-dataCenter" options="-parameters" />
       <module name="jhome-doc" options="-parameters" />
       <module name="jhome-fileStore" options="-parameters" />
+      <module name="jhome-fileStore (1)" options="-parameters" />
       <module name="jhome-geoServerToolsService" options="-parameters" />
       <module name="jhome-nettyService" options="-parameters" />
       <module name="jhome-parent" options="" />
@@ -60,6 +63,7 @@
       <module name="jhome-registrationService" options="-parameters" />
       <module name="jhome-sysAnnotation" options="-parameters" />
       <module name="jhome-transactionService" options="-parameters -verbose -bootclasspath &quot;C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar;C:/Program Files/Java/jdk1.8.0_181/jre/lib/jce.jar;C:/Program Files/Java/jdk1.8.0_181/jre/lib/jsse.jar&quot;" />
+      <module name="jhome-translateService" options="-parameters" />
       <module name="jhome-web" options="-parameters" />
       <module name="jhome-webSpiderService" options="-parameters" />
       <module name="jhome-webspiderService" options="-parameters" />

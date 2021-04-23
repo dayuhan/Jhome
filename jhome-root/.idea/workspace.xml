@@ -12,6 +12,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="201" />
+  </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -111,7 +114,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jhome-registrationService" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jhome-translateService/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.33256084" />
@@ -119,15 +122,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\bracket\common\Translate\motherVersion" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources\lib" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\多线程" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-registrationService" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-fileStore" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-configService" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-account\src\main\java\com\account\common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.account.modules.config" />
@@ -136,12 +139,12 @@
       <recent name="com.geoServer.conmmon" />
       <recent name="com.geoServer.autoconfiguration" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\多线程" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-translateService\src\main\resources" />
+      <recent name="D:\EatingTools\XProject\Jhome" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-registrationService" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-fileStore" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -158,18 +161,30 @@
     <option name="configurationTypes">
       <set>
         <option value="AntRunConfiguration" />
-        <option value="Application" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.jhome-account">
-    <configuration name="JhomeNettyService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.nettyService.JhomeNettyService" />
-      <module name="jhome-nettyService" />
+  <component name="RunManager" selected="Spring Boot.JhomeTranslateServiceApplication">
+    <configuration name="GoogleTranslateApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bracket.common.Translate.motherVersion.GoogleTranslateApi" />
+      <module name="jhome-common" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.nettyService.*" />
+          <option name="PATTERN" value="com.bracket.common.Translate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslateCommander" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bracket.common.Translate.TranslateCommander" />
+      <module name="jhome-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bracket.common.Translate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,19 +197,6 @@
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.geoServer.GeoServerApplication" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_181\jre" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JhomeAcccountApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="jhome-account" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.account.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.account.JhomeAcccountApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -232,22 +234,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JhomePostionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="jhome-position" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.position.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.position.JhomePostionApplication" />
+    <configuration name="JhomeRegistrationService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jhome-registrationService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.registrationService.JhomeRegistrationService" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JhomeRegistrationService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="jhome-registrationService" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.registrationService.JhomeRegistrationService" />
+    <configuration name="JhomeTranslateServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="jhome-translateService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.translate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.translate.JhomeTranslateServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -292,25 +294,25 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.JhomeNettyService" />
+      <item itemvalue="Application.GoogleTranslateApi" />
+      <item itemvalue="Application.TranslateCommander" />
       <item itemvalue="Docker.jhome-account" />
       <item itemvalue="Spring Boot.JhomeConfigServiceApplication" />
       <item itemvalue="Spring Boot.JhomeRegistrationService" />
       <item itemvalue="Spring Boot.JhomeWebApplication" />
       <item itemvalue="Spring Boot.RegisterMachineApplication" />
       <item itemvalue="Spring Boot.GeoServerApplication" />
-      <item itemvalue="Spring Boot.JhomePostionApplication" />
-      <item itemvalue="Spring Boot.JhomeAcccountApplication" />
       <item itemvalue="Spring Boot.JhomeAppPushApplication" />
       <item itemvalue="Spring Boot.JhomeFileStorageApplication" />
+      <item itemvalue="Spring Boot.JhomeTranslateServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.JhomeTranslateServiceApplication" />
+        <item itemvalue="Application.TranslateCommander" />
+        <item itemvalue="Application.GoogleTranslateApi" />
         <item itemvalue="Spring Boot.JhomeFileStorageApplication" />
         <item itemvalue="Spring Boot.JhomeAppPushApplication" />
-        <item itemvalue="Spring Boot.JhomeAcccountApplication" />
-        <item itemvalue="Spring Boot.JhomePostionApplication" />
-        <item itemvalue="Application.JhomeNettyService" />
       </list>
     </recent_temporary>
   </component>
@@ -318,9 +320,14 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.19663742" />
+          <option name="contentProportion" value="0.18494152" />
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="com.intellij.execution.dashboard.RunDashboardServiceViewContributor@4a4512b" type="d2cb1801:ServiceModel$ContributorNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
           <option name="groupByServiceGroups" value="false" />
@@ -655,7 +662,15 @@
       <workItem from="1618558265667" duration="8232000" />
       <workItem from="1618651660809" duration="843000" />
       <workItem from="1618742866413" duration="768000" />
-      <workItem from="1618743709014" duration="370000" />
+      <workItem from="1618743709014" duration="1006000" />
+      <workItem from="1618820783150" duration="6118000" />
+      <workItem from="1618879781643" duration="5672000" />
+      <workItem from="1618886608283" duration="15525000" />
+      <workItem from="1618912290250" duration="315000" />
+      <workItem from="1618967446174" duration="20669000" />
+      <workItem from="1619053749529" duration="8433000" />
+      <workItem from="1619063765018" duration="15704000" />
+      <workItem from="1619139610827" duration="13671000" />
     </task>
     <servers />
   </component>
@@ -670,10 +685,6 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="444" y="148" key="#Docker/0.40.1440.920@0.40.1440.920" timestamp="1615277986568" />
-    <state x="357" y="40" width="741" height="920" key="#GeoServerApplication" timestamp="1610448087827">
-      <screen x="0" y="40" width="1440" height="920" />
-    </state>
-    <state x="357" y="40" width="741" height="920" key="#GeoServerApplication/0.40.1440.920@0.40.1440.920" timestamp="1610448087827" />
     <state x="313" y="162" key="#Project_Structure" timestamp="1614150489074">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -686,14 +697,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1615448505053" />
-    <state x="508" y="205" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1610446686757">
+    <state x="365" y="39" width="921" height="761" key="#com.intellij.ide.util.MemberChooser" timestamp="1619084451977">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="508" y="205" key="#com.intellij.ide.macro.MacrosDialog/0.40.1440.920@0.40.1440.920" timestamp="1610446686757" />
-    <state x="365" y="39" width="921" height="761" key="#com.intellij.ide.util.MemberChooser" timestamp="1618558875011">
-      <screen x="0" y="40" width="1440" height="920" />
-    </state>
-    <state x="365" y="39" key="#com.intellij.ide.util.MemberChooser/0.40.1440.920@0.40.1440.920" timestamp="1618558875011" />
+    <state x="365" y="39" key="#com.intellij.ide.util.MemberChooser/0.40.1440.920@0.40.1440.920" timestamp="1619084451977" />
     <state x="542" y="359" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1610679058915">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -706,14 +713,18 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="583" y="164" width="713" height="577" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.40.1440.920@0.40.1440.920" timestamp="1613972747243" />
-    <state x="0" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610163970945">
+    <state x="294" y="426" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1619082261969">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="0" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.1440.920@0.40.1440.920" timestamp="1610163970945" />
-    <state x="450" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613972700129">
+    <state x="294" y="426" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.40.1440.920@0.40.1440.920" timestamp="1619082261969" />
+    <state x="0" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1619075042908">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="450" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1440.920@0.40.1440.920" timestamp="1613972700129" />
+    <state x="0" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.1440.920@0.40.1440.920" timestamp="1619075042908" />
+    <state x="450" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619070779511">
+      <screen x="0" y="40" width="1440" height="920" />
+    </state>
+    <state x="450" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1440.920@0.40.1440.920" timestamp="1619070779511" />
     <state x="147" y="143" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1615434458794">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -722,217 +733,372 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="431" y="74" key="#jhome-account/0.40.1440.920@0.40.1440.920" timestamp="1615277828298" />
-    <state width="559" height="466" key="DebuggerActiveHint" timestamp="1610590337483">
+    <state width="559" height="466" key="DebuggerActiveHint" timestamp="1619150244489">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="559" height="466" key="DebuggerActiveHint/0.40.1440.920@0.40.1440.920" timestamp="1610590337483" />
-    <state x="475" y="216" key="DetectedRootsChooserDialog" timestamp="1610444638171">
+    <state width="559" height="466" key="DebuggerActiveHint/0.40.1440.920@0.40.1440.920" timestamp="1619150244489" />
+    <state x="769" y="118" key="FileChooserDialogImpl" timestamp="1619070351861">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="475" y="216" key="DetectedRootsChooserDialog/0.40.1440.920@0.40.1440.920" timestamp="1610444638171" />
-    <state x="769" y="118" key="FileChooserDialogImpl" timestamp="1618743059145">
-      <screen x="0" y="40" width="1440" height="920" />
-    </state>
-    <state x="769" y="118" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1618743059145" />
+    <state x="769" y="118" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1619070351861" />
     <state x="545" y="397" width="375" height="207" key="Github.CreateGistDialog" timestamp="1610590650221">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="545" y="397" width="375" height="207" key="Github.CreateGistDialog/0.40.1440.920@0.40.1440.920" timestamp="1610590650221" />
-    <state width="1397" height="290" key="GridCell.Tab.0.bottom" timestamp="1618743642555">
+    <state width="1114" height="294" key="GridCell.Tab.0.bottom" timestamp="1619162248770">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="290" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1618743642555" />
-    <state width="1397" height="290" key="GridCell.Tab.0.center" timestamp="1618743642555">
+    <state width="1114" height="294" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1619162248770" />
+    <state width="1114" height="294" key="GridCell.Tab.0.center" timestamp="1619162248770">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="290" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1618743642555" />
-    <state width="1397" height="290" key="GridCell.Tab.0.left" timestamp="1618743642554">
+    <state width="1114" height="294" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1619162248770" />
+    <state width="1114" height="294" key="GridCell.Tab.0.left" timestamp="1619162248770">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="290" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1618743642554" />
-    <state width="1397" height="290" key="GridCell.Tab.0.right" timestamp="1618743642555">
+    <state width="1114" height="294" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1619162248770" />
+    <state width="1114" height="294" key="GridCell.Tab.0.right" timestamp="1619162248770">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="290" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1618743642555" />
-    <state width="1098" height="251" key="GridCell.Tab.1.bottom" timestamp="1614074301517">
+    <state width="1114" height="294" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1619162248770" />
+    <state width="1114" height="294" key="GridCell.Tab.1.bottom" timestamp="1619162248770">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="251" key="GridCell.Tab.1.bottom/0.40.1440.920@0.40.1440.920" timestamp="1614074301517" />
-    <state width="1098" height="251" key="GridCell.Tab.1.center" timestamp="1614074301517">
+    <state width="1114" height="294" key="GridCell.Tab.1.bottom/0.40.1440.920@0.40.1440.920" timestamp="1619162248770" />
+    <state width="1114" height="294" key="GridCell.Tab.1.center" timestamp="1619162248770">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="251" key="GridCell.Tab.1.center/0.40.1440.920@0.40.1440.920" timestamp="1614074301517" />
-    <state width="1098" height="251" key="GridCell.Tab.1.left" timestamp="1614074301517">
+    <state width="1114" height="294" key="GridCell.Tab.1.center/0.40.1440.920@0.40.1440.920" timestamp="1619162248770" />
+    <state width="1114" height="294" key="GridCell.Tab.1.left" timestamp="1619162248770">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="251" key="GridCell.Tab.1.left/0.40.1440.920@0.40.1440.920" timestamp="1614074301517" />
-    <state width="1098" height="251" key="GridCell.Tab.1.right" timestamp="1614074301517">
+    <state width="1114" height="294" key="GridCell.Tab.1.left/0.40.1440.920@0.40.1440.920" timestamp="1619162248770" />
+    <state width="1114" height="294" key="GridCell.Tab.1.right" timestamp="1619162248770">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="251" key="GridCell.Tab.1.right/0.40.1440.920@0.40.1440.920" timestamp="1614074301517" />
-    <state width="1098" height="260" key="GridCell.Tab.2.bottom" timestamp="1610594149516">
+    <state width="1114" height="294" key="GridCell.Tab.1.right/0.40.1440.920@0.40.1440.920" timestamp="1619162248770" />
+    <state width="1114" height="288" key="GridCell.Tab.2.bottom" timestamp="1619150260776">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="260" key="GridCell.Tab.2.bottom/0.40.1440.920@0.40.1440.920" timestamp="1610594149516" />
-    <state width="1098" height="260" key="GridCell.Tab.2.center" timestamp="1610594149516">
+    <state width="1114" height="288" key="GridCell.Tab.2.bottom/0.40.1440.920@0.40.1440.920" timestamp="1619150260776" />
+    <state width="1114" height="288" key="GridCell.Tab.2.center" timestamp="1619150260776">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="260" key="GridCell.Tab.2.center/0.40.1440.920@0.40.1440.920" timestamp="1610594149516" />
-    <state width="1098" height="260" key="GridCell.Tab.2.left" timestamp="1610594149516">
+    <state width="1114" height="288" key="GridCell.Tab.2.center/0.40.1440.920@0.40.1440.920" timestamp="1619150260776" />
+    <state width="1114" height="288" key="GridCell.Tab.2.left" timestamp="1619150260776">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="260" key="GridCell.Tab.2.left/0.40.1440.920@0.40.1440.920" timestamp="1610594149516" />
-    <state width="1098" height="260" key="GridCell.Tab.2.right" timestamp="1610594149516">
+    <state width="1114" height="288" key="GridCell.Tab.2.left/0.40.1440.920@0.40.1440.920" timestamp="1619150260776" />
+    <state width="1114" height="288" key="GridCell.Tab.2.right" timestamp="1619150260776">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1098" height="260" key="GridCell.Tab.2.right/0.40.1440.920@0.40.1440.920" timestamp="1610594149516" />
-    <state x="251" y="156" key="Maven.ArtifactSearchDialog" timestamp="1615429478717">
+    <state width="1114" height="288" key="GridCell.Tab.2.right/0.40.1440.920@0.40.1440.920" timestamp="1619150260776" />
+    <state x="251" y="156" key="Maven.ArtifactSearchDialog" timestamp="1618823698511">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="251" y="156" key="Maven.ArtifactSearchDialog/0.40.1440.920@0.40.1440.920" timestamp="1615429478717" />
-    <state x="95" y="125" width="1122" height="715" key="SettingsEditor" timestamp="1615434470769">
+    <state x="251" y="156" key="Maven.ArtifactSearchDialog/0.40.1440.920@0.40.1440.920" timestamp="1618823698511" />
+    <state x="95" y="125" width="1122" height="715" key="SettingsEditor" timestamp="1619070355298">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="95" y="125" width="1122" height="715" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1615434470769" />
+    <state x="95" y="125" width="1122" height="715" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1619070355298" />
     <state x="442" y="242" width="540" height="524" key="StructurePopup" timestamp="1611912536114">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="442" y="242" width="540" height="524" key="StructurePopup/0.40.1440.920@0.40.1440.920" timestamp="1611912536114" />
-    <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1610540797722">
+    <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1619144079170">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="727" height="467" key="XDebugger.FullValuePopup/0.40.1440.920@0.40.1440.920" timestamp="1610540797722" />
+    <state width="727" height="467" key="XDebugger.FullValuePopup/0.40.1440.920@0.40.1440.920" timestamp="1619144079170" />
     <state x="594" y="231" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1615277906954">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="594" y="231" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/0.40.1440.920@0.40.1440.920" timestamp="1615277906954" />
-    <state x="404" y="351" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1610444719772">
+    <state x="388" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1618995852971">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="404" y="351" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.40.1440.920@0.40.1440.920" timestamp="1610444719772" />
-    <state x="388" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1616056272447">
+    <state x="388" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.40.1440.920@0.40.1440.920" timestamp="1618995852971" />
+    <state x="257" y="237" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1619084653894">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="388" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.40.1440.920@0.40.1440.920" timestamp="1616056272447" />
-    <state x="222" y="68" width="884" height="892" key="find.popup" timestamp="1618562868383">
+    <state x="257" y="237" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.40.1440.920@0.40.1440.920" timestamp="1619084653894" />
+    <state x="556" y="68" width="884" height="892" key="find.popup" timestamp="1619147667655">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="222" y="68" width="884" height="892" key="find.popup/0.40.1440.920@0.40.1440.920" timestamp="1618562868383" />
-    <state x="382" y="211" width="763" height="571" key="new project wizard" timestamp="1610162342988">
+    <state x="556" y="68" width="884" height="892" key="find.popup/0.40.1440.920@0.40.1440.920" timestamp="1619147667655" />
+    <state x="377" y="231" key="run.anything.popup" timestamp="1619061637306">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="382" y="211" width="763" height="571" key="new project wizard/0.40.1440.920@0.40.1440.920" timestamp="1610162342988" />
-    <state x="377" y="231" key="run.anything.popup" timestamp="1618364983628">
+    <state x="377" y="231" key="run.anything.popup/0.40.1440.920@0.40.1440.920" timestamp="1619061637306" />
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1619150166115">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="377" y="231" key="run.anything.popup/0.40.1440.920@0.40.1440.920" timestamp="1618364983628" />
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1618471929001">
-      <screen x="0" y="40" width="1440" height="920" />
-    </state>
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1618471929001" />
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1619150166115" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Identity/UserUtil.java</url>
           <line>67</line>
           <option name="timeStamp" value="117" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Identity/UserUtil.java</url>
           <line>71</line>
           <option name="timeStamp" value="118" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-fileStore/src/main/java/com/fileStore/modules/fileManagement/controller/FastDFSController.java</url>
           <line>72</line>
           <option name="timeStamp" value="123" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-fileStore/src/main/java/com/fileStore/modules/fileManagement/controller/FastDFSController.java</url>
           <line>188</line>
           <option name="timeStamp" value="124" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/FastDFS/FastDFSClient.java</url>
           <line>171</line>
           <option name="timeStamp" value="125" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/FastDFS/FastDFSClient.java</url>
           <line>176</line>
           <option name="timeStamp" value="126" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/FastDFS/FastDFSClient.java</url>
           <line>181</line>
           <option name="timeStamp" value="127" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/FastDFS/FastDFSClient.java</url>
           <line>281</line>
           <option name="timeStamp" value="129" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/FastDFS/FastDFSClient.java</url>
           <line>316</line>
           <option name="timeStamp" value="130" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-account/src/main/java/com/account/modules/userAuthentication/cert/CustomRealm.java</url>
           <line>110</line>
           <option name="timeStamp" value="131" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java/com/geoServer/modules/geoServer/service/impl/GeoServiceImpl.java</url>
           <line>128</line>
           <option name="timeStamp" value="133" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java/com/geoServer/modules/geoServer/service/impl/GeoServiceImpl.java</url>
           <line>145</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java/com/geoServer/modules/geoServer/service/impl/GeoServiceImpl.java</url>
           <line>58</line>
           <option name="timeStamp" value="136" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java/com/geoServer/modules/geoServer/service/impl/GeoServiceImpl.java</url>
           <line>84</line>
           <option name="timeStamp" value="141" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java/com/geoServer/modules/geoServer/service/impl/GeoServiceImpl.java</url>
           <line>146</line>
           <option name="timeStamp" value="142" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/BeanFactoryUtils/SpringBeanFactoryUtils.java</url>
           <line>17</line>
           <option name="timeStamp" value="170" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java/com/geoServer/conmmon/ThreadProcess.java</url>
           <line>62</line>
           <option name="timeStamp" value="179" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java/com/geoServer/conmmon/ThreadProcess.java</url>
           <line>61</line>
           <option name="timeStamp" value="180" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java/com/geoServer/conmmon/GDALUtil.java</url>
           <line>172</line>
           <option name="timeStamp" value="181" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-geoServerToolsService/src/main/java/com/geoServer/GeoServerApplication.java</url>
           <line>87</line>
           <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleApi.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleApi.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleApi.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleApi.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleApi.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleApi.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://D:/mavenRepository/com/googlecode/google-api-translate-java/0.92/google-api-translate-java-0.92.jar!/com/google/api/translate/Translate.class</url>
+          <line>28</line>
+          <option name="timeStamp" value="196" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://D:/mavenRepository/com/googlecode/google-api-translate-java/0.92/google-api-translate-java-0.92.jar!/com/google/api/GoogleAPI.class</url>
+          <line>59</line>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://D:/mavenRepository/com/googlecode/google-api-translate-java/0.92/google-api-translate-java-0.92.jar!/com/google/api/GoogleAPI.class</url>
+          <line>70</line>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://D:/mavenRepository/com/googlecode/google-api-translate-java/0.92/google-api-translate-java-0.92.jar!/com/google/api/GoogleAPI.class</url>
+          <line>69</line>
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://D:/mavenRepository/com/googlecode/google-api-translate-java/0.92/google-api-translate-java-0.92.jar!/com/google/api/GoogleAPI.class</url>
+          <line>87</line>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-web/src/main/java/com/account/JhomeWebApplication.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/DualStackPlainSocketImpl.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleApi.java</url>
+          <line>170</line>
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleApi.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleTranslateApi.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleTranslateApi.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/motherVersion/GoogleTranslateApi.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/TranslateAbstract.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/ProxyServerThread.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/BatchExcel/ExcelteEngine.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="242" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/BatchExcel/ExcelteEngine.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="244" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/BatchExcel/RowToEntity.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="245" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/BatchExcel/RowToEntity.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="246" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/GoogleTranslate.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="247" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/InetSocketAddress.java</url>
+          <line>215</line>
+          <option name="timeStamp" value="252" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/ProxyUtil.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="254" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Http/HttpClient.java</url>
+          <line>310</line>
+          <option name="timeStamp" value="255" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/TranslateHttpUtil.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="258" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/TranslateHttpUtil.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="260" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Translate/TranslateHttpUtil.java</url>
+          <line>251</line>
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Http/HttpClient.java</url>
+          <line>186</line>
+          <properties class="com.bracket.common.Http.HttpClient" method="getData">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="257" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -943,5 +1109,10 @@
     <option name="charset" value="UTF-8" />
     <option name="whitePaths" value="" />
     <option name="enabled" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jhome_root$GoogleTranslateApi.ic" NAME="GoogleTranslateApi Coverage Results" MODIFIED="1618906341994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bracket.common.Translate.*</FILTER>
+    </SUITE>
   </component>
 </project>

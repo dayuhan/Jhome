@@ -20,6 +20,7 @@
     <file url="file://$PROJECT_DIR$/../jhome-registrationService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-transactionService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-transactionService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../jhome-translateService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../jhome-webSpiderService/src/main/java" charset="UTF-8" />
   </component>
