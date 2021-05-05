@@ -1,5 +1,5 @@
 package com.domain.common;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-07-04 15:13
@@ -27,7 +27,7 @@ import java.io.Serializable;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
  * @description:
  * @author: Daxv
  * @create: 2020-07-04 15:13

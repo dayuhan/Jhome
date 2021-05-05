@@ -370,7 +370,7 @@ public class ShiroConfig {
      */
     @Bean("Config")
     @DependsOn("CasClient")
-    @ConditionalOnProperty(name = "lux.sysproperties.casConfig.isEnable", havingValue = "true")
+    @ConditionalOnProperty(name = "jhome.sysproperties.casConfig.isEnable", havingValue = "true")
     public Config config() {
         return new Config(casClient());
     }
@@ -382,7 +382,7 @@ public class ShiroConfig {
      */
     @Bean("CasClient")
     @DependsOn("CasConfiguration")
-    @ConditionalOnProperty(name = "lux.sysproperties.casConfig.isEnable", havingValue = "true")
+    @ConditionalOnProperty(name = "jhome.sysproperties.casConfig.isEnable", havingValue = "true")
     public CasClient casClient() {
         CasClient casClient = new CasClient(casConfiguration());
         //设置cas服务端信息
@@ -399,7 +399,7 @@ public class ShiroConfig {
      * @return
      */
     @Bean("CasConfiguration")
-    @ConditionalOnProperty(name = "account.sysproperties.casConfig.isEnable", havingValue = "true")
+    @ConditionalOnProperty(name = "jhome.sysproperties.casConfig.isEnable", havingValue = "true")
     public CasConfiguration casConfiguration() {
         CasConfiguration casConfiguration = new CasConfiguration();
         //CAS 版本，默认为 CAS30， CAS20

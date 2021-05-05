@@ -85,7 +85,7 @@ public class AccountController extends BaseController {
     //退出
     @RequestMapping(value = "/logout", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
 
-    public String logout(@RequestParam("luxToken") String jhomeToken, HttpServletRequest request, HttpServletResponse response) {
+    public String logout(@RequestParam("jhomeToken") String jhomeToken, HttpServletRequest request, HttpServletResponse response) {
         try {
             if (StringUtil.isBlank(jhomeToken))
                 return new ResponseJson().error("token不能为空！").toString();

@@ -1,5 +1,5 @@
 package com.account.common.utils;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-07-25 15:53
@@ -32,7 +32,7 @@ import com.shiro.common.realm.ServerRedisSessionDao;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 用户辅助类
  * @author: Daxv
  * @create: 2020-07-25 15:53

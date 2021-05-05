@@ -1,5 +1,5 @@
 package com.registrationService;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-08-02 16:09
@@ -33,7 +33,7 @@ import javax.swing.*;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
  * @description: JhomeRegistrationService 注册中心
  * @author: Daxv
  * @create: 2017-08-02 16:09

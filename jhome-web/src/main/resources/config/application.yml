@@ -31,7 +31,7 @@ jhome:
 server:
   port: 8200
   servlet:
-    context-path: /account
+    context-path: /jhome
   tomcat:
     uri-encoding: UTF-8
 
@@ -44,7 +44,7 @@ logging.level.project.user.UserClient: DEBUG
 spring:
   # 应用程序名称
   application:
-    name: account-controller
+    name: jhome-web
   # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
   profiles:
     active: default
@@ -89,7 +89,7 @@ shiro:
     /swagger-resources/**:anon,
     /web/**: authc,
     /**: authc
-  LoginUrl: http://127.0.0.1:8100/account/account/login
+  LoginUrl: http://127.0.0.1:8100/jhome/account/login
   SuccessUrl: /${jhome.sysproperties.adminPath}/controller/index
   UnauthorizedUrl: /${jhome.sysproperties.adminPath}/userAuthentication/error
 
@@ -129,7 +129,7 @@ shiro:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://daxunihao:123456@127.0.0.1:9100/account/eureka/
+      defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/
     ###因为该应用为服务提供者，是eureka的一个客户端，需要注册到注册中心
     ####defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/,http://daxunihao:123456@127.0.0.1:9200/jhome/eureka/
     registerWithEureka: true

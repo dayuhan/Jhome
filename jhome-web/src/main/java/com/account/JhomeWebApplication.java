@@ -1,6 +1,7 @@
 package com.account;
 
-import com.bracket.common.Translate.GoogleApi;
+import com.bracket.common.Word.WordUtil;
+import com.bracket.common.Word.XWPFHelper;
 import com.google.api.translate.Language;
 import com.google.api.translate.Translate;
 import org.omg.CORBA.NameValuePair;
@@ -27,35 +28,34 @@ import java.util.regex.Pattern;
 //@MapperScan("")
 public class JhomeWebApplication {
     public static void main1(String[] args) throws IOException {
-        tt();
+
         new SpringApplicationBuilder(JhomeWebApplication.class).bannerMode(Banner.Mode.OFF).run(args);
     }
-
-
-    public static void tt()
+    public static void main(String[] args) throws IOException {
     {
-        GoogleApi googleApi = new GoogleApi();
-        //GoogleApi googleApi = new GoogleApi("122.224.227.202", 3128);
-        String result = googleApi.translate("Many applications within the enterprise domain ", "", "zh");
-        System.out.println("-------------------------------------------");
-        System.out.println(result);
+        WordUtil xwpfHelper=new WordUtil();
+        xwpfHelper.test1();
+
+                /*
+        String templatePath = "D:\\word\\template.doc";
+        InputStream is = new FileInputStream(templatePath);
+        HWPFDocument doc = new HWPFDocument(is);
+        Range range = doc.getRange();
+        //把range范围内的${reportDate}替换为当前的日期
+        range.replaceText("${reportDate}", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+        range.replaceText("${appleAmt}", "100.00");
+        range.replaceText("${bananaAmt}", "200.00");
+        range.replaceText("${totalAmt}", "300.00");
+        OutputStream os = new FileOutputStream("D:\\word\\write.doc");
+        //把doc输出到输出流中
+        doc.write(os);
+        this.closeStream(os);
+        this.closeStream(is);*/
+    }
+
+
 
     }
 
 
-    public static void main(String[] args) throws Exception {
-        // Set the HTTP referrer to your website address.
-        Translate.setHttpReferrer("https://www.hao123.com/");
-        String translatedText = Translate.execute("You", Language.ENGLISH, Language.ENGLISH);
-
-        System.out.println(translatedText);
-
-        try{
-   /*         String translatedText=Translate.execute("你好",Language.CHINESE,Language.ENGLISH);
-            System.out.println(translatedText);*/
-        }catch(Exception ex){
-            ex.printStackTrace();
-        }
-
-    }
 }

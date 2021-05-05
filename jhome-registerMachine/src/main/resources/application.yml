@@ -2,7 +2,7 @@
 server:
   port: 8891
   servlet:
-    context-path: /account
+    context-path: /jhome
   tomcat:
     uri-encoding: UTF-8
 jhome:
@@ -16,7 +16,7 @@ spring:
     active: jdbc
     include: configService
   application:
-    name: account-configService
+    name: jhome-configService
   datasource:
     url: jdbc:mysql://192.168.52.130:3306/mysqlDb?serverTimezone=UTC&useSSL=false
     username: root

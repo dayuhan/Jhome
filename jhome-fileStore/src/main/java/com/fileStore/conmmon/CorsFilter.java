@@ -28,7 +28,7 @@ import java.io.IOException;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: Lux-root
+ * @program: jhome-root
  * @description: CorsFilter
  * @author: Daxv
  * @create: 2020-07-07 13:13

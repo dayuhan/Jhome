@@ -24,7 +24,7 @@ import com.shiro.common.session.ClientSessionDAO;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
  * @description: 获取用户信息辅助类
  * @author: Daxv
  * @create: 2020-08-28 11:54

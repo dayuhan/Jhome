@@ -10,10 +10,9 @@ copyrightYear: 2020
 server:
   port: 8100
   servlet:
-    context-path: /account
+    context-path: /jhome
   tomcat:
     uri-encoding: UTF-8
-
 adminPath: ${jhome.sysproperties.adminPath}
 foreignServerPath: ${jhome.sysproperties.foreignServerPath}
 #================================================================================ System settings ===========#
@@ -47,7 +46,7 @@ jhome:
     casConfig:
       clientName: SmartCampus #cas服务器名称
       serverUrl: #cas服务器认证地址
-      projectUrl: http://127.0.0.1:8100/account/account #项目地址
+      projectUrl: http://127.0.0.1:8100/jhome/account #项目地址
       redirectUrl: #前段部署地址
       isEnable: false #是否启用Cas认证
     callbackUrl: http://xxxx.com #CAS单点登录退出地址
@@ -62,7 +61,7 @@ jhome:
 spring:
   # 应用程序名称
   application:
-    name: account-account
+    name: jhome-account
   # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
   profiles:
     active: default #（配置多文件環境 @spring.active@ ）
@@ -105,7 +104,7 @@ spring:
 
 #================================================================================ Shrio 基础配置信息 ===========#
 #    /f/**: authc,
-#    /a/**: authc,  #LoginUrl: /${account.sysproperties.adminPath}/userAuthentication/login
+#    /a/**: authc,  #LoginUrl: /${jhome.sysproperties.adminPath}/userAuthentication/login
 shiro:
   filterChainDefinitionMap: |
 
@@ -121,10 +120,10 @@ shiro:
     /v2/**:anon,
     /swagger-resources/**:anon,
     /web/**:authc,
-    /account/index:casSecurityFilter,
-    /account/callback**:callbackFilter,
+    /jhome/index:casSecurityFilter,
+    /jhome/callback**:callbackFilter,
     /**:casSecurityFilter,
-    /account/**:authc,
+    /jhome/**:authc,
     /**:authc
 
   LoginUrl: /${adminPath}/login
@@ -168,7 +167,7 @@ mybatis-plus:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://daxunihao:123456@127.0.0.1:9100/account/eureka/
+      defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/
       ###defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/,http://daxunihao:123456@127.0.0.1:9200/jhome/eureka/
     ###因为该应用为服务提供者，是eureka的一个客户端，需要注册到注册中心
     registerWithEureka: true

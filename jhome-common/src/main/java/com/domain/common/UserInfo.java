@@ -1,5 +1,5 @@
 package com.domain.common;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-07-09 23:36
@@ -32,7 +32,7 @@ import java.util.List;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 用户信息
  * @author: Daxv
  * @create: 2020-07-09 23:36

@@ -28,7 +28,7 @@ import java.util.List;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 抽象负载均衡算法
  * @author: Daxv
  * @create: 2020-10-08 19:47

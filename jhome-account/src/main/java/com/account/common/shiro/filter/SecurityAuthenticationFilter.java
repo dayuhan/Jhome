@@ -1,5 +1,5 @@
 package com.account.common.shiro.filter;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-07-18 15:09
@@ -43,7 +43,7 @@ import javax.servlet.http.HttpServletResponse;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 前后台分离模式过滤器
  * @author: Daxv
  * @create: 2020-07-18 15:09
@@ -69,7 +69,7 @@ public class SecurityAuthenticationFilter extends MixedModeFormAuthenticationFil
         String sessionId = httpServletRequest.getParameter("sessionId");
         if (StringUtil.isNotBlank(sessionId)) {
             //sessionId = (String) UserUtil.ParsingToken(sessionId);
-            CookieUtil.set(httpServletResponse, "LuxCookie", sessionId, 30);
+            CookieUtil.set(httpServletResponse, "jhomeCookie", sessionId, 30);
         }
         if ("OPTIONS".equals(httpServletRequest.getMethod())) {
             httpServletResponse.setStatus(org.apache.http.HttpStatus.SC_NO_CONTENT);

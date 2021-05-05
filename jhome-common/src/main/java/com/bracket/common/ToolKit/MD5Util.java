@@ -1,5 +1,5 @@
 package com.bracket.common.ToolKit;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-08-22 12:33
@@ -27,7 +27,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 //     ...:::           ::::::::::::'              ``::.
 //    ```` ':.          ':::::::::'                  ::::..
 //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
         * @description: MD5操作类
         * @author: Daxv
         * @create: 2020-08-22 12:33

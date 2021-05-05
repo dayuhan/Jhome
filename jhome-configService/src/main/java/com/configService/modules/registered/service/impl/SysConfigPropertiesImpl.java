@@ -44,7 +44,7 @@ import java.util.stream.Collectors;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description:
  * @author: Daxv
  * @create: 2020-08-08 13:10
@@ -57,7 +57,7 @@ public class SysConfigPropertiesImpl implements SysConfigPropertiesService {
     @Autowired
     protected RedisTemplate redisTemplate;
 
-    @Value("${account.serviceUrl}")
+    //@Value("${account.serviceUrl}")
     protected String serviceUrl;
 
     @Override

@@ -19,7 +19,7 @@ package com.bracket.common.Bus;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
  * @description: 状态码
  * @author: Daxv
  * @create: 2020-08-15 16:36

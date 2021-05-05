@@ -12,13 +12,13 @@ copyrightYear: 2020
 server:
   port: 8300
   servlet:
-    context-path: /account
+    context-path: /jhome
   tomcat:
     uri-encoding: UTF-8
-adminPath: ${lux.sysproperties.adminPath}
+adminPath: ${jhome.sysproperties.adminPath}
 
 #====================================================================== System-配置 ================#
-lux:
+jhome:
   # 系统参数
   sysproperties:
     # 管理基础路径
@@ -126,10 +126,10 @@ shiro:
     /swagger-resources/**:anon,
     /fileStore/**: authc,
     /**: authc
-  LoginUrl: http://127.0.0.1:8100/account/account/login
+  LoginUrl: http://127.0.0.1:8100/jhome/account/login
   #  LoginUrl: http://10.1.20.58:8100/zlbzxt/account/login
-  SuccessUrl: /${lux.sysproperties.adminPath}/index
-  UnauthorizedUrl: /${lux.sysproperties.adminPath}/sys/error
+  SuccessUrl: /${jhome.sysproperties.adminPath}/index
+  UnauthorizedUrl: /${jhome.sysproperties.adminPath}/sys/error
 
 #====================================================================== mybatis-配置 ================#
 #====================================================================== mybatis-plus-配置 ================#
@@ -156,7 +156,7 @@ mybatis-plus:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://daxunihao:123456@127.0.0.1:9100/account/eureka/
+      defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/
     registerWithEureka: true
     fetchRegistry: true
   instance:

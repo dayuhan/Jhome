@@ -36,7 +36,7 @@ public class SysDataRoleController {
 
 
     @ApiOperation("角色分配数据权限")
-    @RequestMapping(value = "/addRoleSysData", headers = "luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/addRoleSysData", headers = "jhomeToken", method = RequestMethod.POST)
     @ResponseBody
     public CommonRlt addRoleSysData(@Validated @RequestBody AddRoleSysDataRequest request, BindingResult result) {
         sysDataRoleService.addRoleSysData(request);
@@ -44,7 +44,7 @@ public class SysDataRoleController {
     }
 
     @ApiOperation("获取用户数据权限")
-    @RequestMapping(value = "/getUserRoleSysData",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/getUserRoleSysData",headers="jhomeToken", method = RequestMethod.POST)
     @ResponseBody
     public  CommonRlt<List<GetSysDataResponse>> getUserRoleSysData(@Validated @RequestBody CommonUserIdRequest request, BindingResult result) {
         CommonRlt<List<GetSysDataResponse>> commonRlt = new CommonRlt<>(BasicRestStatusEnum.OK, sysDataRoleService.findRoleDataByUserId(request));
@@ -52,7 +52,7 @@ public class SysDataRoleController {
     }
 
     @ApiOperation("获取用户数据权限列表")
-    @RequestMapping(value = "/getUserRoleSysDataList",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/getUserRoleSysDataList",headers="jhomeToken", method = RequestMethod.POST)
     @ResponseBody
     public  CommonRlt<List<GetSysDataResponse>> getUserRoleSysDataList(@Validated @RequestBody AddRoleSysDataRequest request, BindingResult result) {
         CommonRlt<List<GetSysDataResponse>> commonRlt = new CommonRlt<>(BasicRestStatusEnum.OK, sysDataRoleService.getUserRoleSysDataList(request));

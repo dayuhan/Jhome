@@ -1,5 +1,5 @@
 package com.api.dubbo.entity;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-10-15 15:03
@@ -27,7 +27,7 @@ import java.io.Serializable;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
  * @description: 测试类
  * @author: Daxv
  * @create: 2020-10-15 15:03

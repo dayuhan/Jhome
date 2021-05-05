@@ -55,7 +55,7 @@ public class FsFileDirectoryDetailController  extends BaseController {
     protected FsFileDirectoryDetailService doFsFileDirectoryDetailService;
 
     @ResponseBody
-    @ApiOperation(value = "添加[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "添加[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/addFsFileDirectoryDetail", produces = "application/json;charset=UTF-8")
     public ResponseJson addFsFileDirectoryDetail(
     @Validated @RequestBody FsFileDirectoryDetailQuery obj,
@@ -70,7 +70,7 @@ public class FsFileDirectoryDetailController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "编辑 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "编辑 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/editFsFileDirectoryDetail", produces = "application/json;charset=UTF-8")
     public ResponseJson editFsFileDirectoryDetail(
             @Validated @RequestBody FsFileDirectoryDetailQuery obj,
@@ -85,7 +85,7 @@ public class FsFileDirectoryDetailController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "删除 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "删除 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/deleteFsFileDirectoryDetail", produces = "application/json;charset=UTF-8")
     public ResponseJson deleteFsFileDirectoryDetail(
             @Validated @RequestBody FsFileDirectoryDetailQuery obj,
@@ -98,7 +98,7 @@ public class FsFileDirectoryDetailController  extends BaseController {
                 return new ResponseJson().error(Status.SC_INTERNAL_SERVER_ERROR,ex.getMessage());
             }
     }
-    @ApiOperation(value = "批量删除 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "批量删除 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/batchDeleteFsFileDirectoryDetail", produces = "application/json;charset=UTF-8")
     public ResponseJson batchDeleteFsFileDirectoryDetail(@RequestParam("ids") String ids) {
             try {
@@ -112,7 +112,7 @@ public class FsFileDirectoryDetailController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "获取列表[分页][代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "获取列表[分页][代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectFsFileDirectoryDetailPageList", produces = "application/json;charset=UTF-8")
     public ResponseJson selectFsFileDirectoryDetailPageList(@Validated @RequestBody FsFileDirectoryDetailQuery query, BindingResult result) {
         if (result.hasErrors())
@@ -130,7 +130,7 @@ public class FsFileDirectoryDetailController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据Id获取 单个对象 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据Id获取 单个对象 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectFsFileDirectoryDetailById", produces = "application/json;charset=UTF-8")
     public ResponseJson selectFsFileDirectoryDetailById(String id) {
     try {
@@ -141,7 +141,7 @@ public class FsFileDirectoryDetailController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据Ids获取多个FsFileDirectoryDetail对象[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据Ids获取多个FsFileDirectoryDetail对象[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectBatchFsFileDirectoryDetailByIds", produces = "application/json;charset=UTF-8")
         public ResponseJson selectBatchFsFileDirectoryDetailByIds(String ids) {
         try {
@@ -153,7 +153,7 @@ public class FsFileDirectoryDetailController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据条件获取FsFileDirectoryDetail对象[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据条件获取FsFileDirectoryDetail对象[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectFsFileDirectoryDetailOne", produces = "application/json;charset=UTF-8")
     public ResponseJson selectFsFileDirectoryDetailOne(@Validated @RequestBody FsFileDirectoryDetailQuery query, BindingResult result)
     {
@@ -169,7 +169,7 @@ public class FsFileDirectoryDetailController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据自定义条件获取FsFileDirectoryDetail对象实体集合[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据自定义条件获取FsFileDirectoryDetail对象实体集合[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectFsFileDirectoryDetailList", produces = "application/json;charset=UTF-8")
     public ResponseJson selectFsFileDirectoryDetailList(@Validated @RequestBody FsFileDirectoryDetailQuery query, BindingResult result)
     {

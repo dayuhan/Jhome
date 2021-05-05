@@ -24,7 +24,7 @@ import java.net.*;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: socket帮助类
  * @author: Daxv
  * @create: 2021-03-19 09:47

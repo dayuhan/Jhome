@@ -57,7 +57,7 @@ public class CsRegisteredConfigController  extends BaseController {
     protected  CsRegisteredConfigService doCsRegisteredConfigService;
 
     @ResponseBody
-    @ApiOperation(value = "添加[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "添加[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/addCsRegisteredConfig", produces = "application/json;charset=UTF-8")
     public ResponseJson addCsRegisteredConfig(
             @Validated @RequestBody  CsRegisteredConfigQuery  obj,
@@ -72,7 +72,7 @@ public class CsRegisteredConfigController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "编辑 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "编辑 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/editCsRegisteredConfig", produces = "application/json;charset=UTF-8")
     public ResponseJson editCsRegisteredConfig(
             @Validated @RequestBody CsRegisteredConfigQuery obj,
@@ -87,7 +87,7 @@ public class CsRegisteredConfigController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "删除 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "删除 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/deleteCsRegisteredConfig", produces = "application/json;charset=UTF-8")
     public ResponseJson deleteCsRegisteredConfig(
             @Validated @RequestBody CsRegisteredConfigQuery obj,
@@ -100,7 +100,7 @@ public class CsRegisteredConfigController  extends BaseController {
             return new ResponseJson().error(Status.SC_INTERNAL_SERVER_ERROR,ex.getMessage());
         }
     }
-    @ApiOperation(value = "批量删除 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "批量删除 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/batchDeleteCsRegisteredConfig", produces = "application/json;charset=UTF-8")
     public ResponseJson batchDeleteCsRegisteredConfig(@RequestParam("ids") String ids) {
         try {
@@ -114,7 +114,7 @@ public class CsRegisteredConfigController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "获取列表[分页][代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "获取列表[分页][代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectCsRegisteredConfigPageList", produces = "application/json;charset=UTF-8")
     public ResponseJson selectCsRegisteredConfigList(@Validated @RequestBody CsRegisteredConfigQuery query, BindingResult result) {
         if (result.hasErrors())
@@ -132,7 +132,7 @@ public class CsRegisteredConfigController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据Id获取 单个对象 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据Id获取 单个对象 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectCsRegisteredConfigById", produces = "application/json;charset=UTF-8")
     public ResponseJson selectCsRegisteredConfigById(String id) {
         try {
@@ -143,7 +143,7 @@ public class CsRegisteredConfigController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据Ids获取多个CsRegisteredConfig对象[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据Ids获取多个CsRegisteredConfig对象[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectBatchCsRegisteredConfigByIds", produces = "application/json;charset=UTF-8")
     public ResponseJson selectBatchCsRegisteredConfigByIds(String ids) {
         try {
@@ -155,7 +155,7 @@ public class CsRegisteredConfigController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据条件获取CsRegisteredConfig对象[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据条件获取CsRegisteredConfig对象[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectCsRegisteredConfigOne", produces = "application/json;charset=UTF-8")
     public ResponseJson selectCsRegisteredConfigOne(@Validated @RequestBody CsRegisteredConfigQuery query, BindingResult result)
     {
@@ -172,7 +172,7 @@ public class CsRegisteredConfigController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据自定义条件获取CsRegisteredConfig对象实体集合[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据自定义条件获取CsRegisteredConfig对象实体集合[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectCsRegisteredConfigList", produces = "application/json;charset=UTF-8")
     public ResponseJson selectCsRegisteredConfigList(@Validated @RequestBody CsRegisteredConfig query, BindingResult result)
     {

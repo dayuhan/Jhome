@@ -1,15 +1,12 @@
-package com.account.modules.config;/**
- * @program: account-root
- * @description
- * @author: Daxv
- * @create: 2020-07-04 14:16
- **/
+package com.account.modules.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * //
@@ -32,16 +29,18 @@ import org.springframework.context.annotation.Bean;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: MybatisPlusConfig
  * @author: Daxv
  * @create: 2020-07-04 14:16
  **/
-@Configurable
-@MapperScan({"com.account.modules.userAuthentication.dao.impl.mapperDao"})
+@Configuration
+@EnableTransactionManagement
+@MapperScan({"com.account.modules.*.dao","com.account.modules.sysConfig.dao","com.account.modules.userAuthority.dao","com.account.modules.userAuthentication.dao.mapperDao","com.account.common.sbUtil.dao"})
 public class MybatisPlusConfig {
 
     /**
+     *
      * 分页插件.**.
      *
      * @return

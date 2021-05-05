@@ -1,5 +1,5 @@
 package com.rpc.common.zk.loadBanalce;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-10-08 19:52
@@ -29,7 +29,7 @@ import java.util.Random;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 随机选取主机
  * @author: Daxv
  * @create: 2020-10-08 19:52

@@ -31,7 +31,7 @@ import java.util.Map;
 /**
  * 用户帮助类
  *
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-06-04 22:10
@@ -39,7 +39,7 @@ import java.util.Map;
 
 public class UserUtil extends AuthUtil {
     protected static Logger logger = LoggerFactory.getLogger(UserUtil.class);
-    public final static String HEADER_TOKEN_NAME="jhomeToken";
+    public final static String HEADER_TOKEN_NAME = "jhomeToken";
     public static Subject subject;
 
     /**
@@ -83,10 +83,10 @@ public class UserUtil extends AuthUtil {
 
     /**
      * 获取token
+     *
      * @return
      */
-    public static String  GetSessionId()
-    {
+    public static String GetSessionId() {
         return (String) SecurityUtils.getSubject().getSession().getId();
     }
 
@@ -119,7 +119,7 @@ public class UserUtil extends AuthUtil {
 
     /**
      * 获取用户信息
-     * {"deviceType":"UcCas","gender":"1","loginName":"admin2","luxToken":"Tp3a353216-bf67-46a9-ac1e-015ba8a8b3e9","phone":"14738490400","productId":"1271318084763017218","realName":"管理员","remotelyToken":"PC-8178134ede762c42e41a7b1695082e28-666-20200720160651-2c2de0","roleNames":"学生,超级管理员","schoolName":"国泰安大学","userId":"666"}     * 获取用户信息1
+     * {"deviceType":"UcCas","gender":"1","loginName":"admin2","jhomeToken":"Tp3a353216-bf67-46a9-ac1e-015ba8a8b3e9","phone":"14738490400","productId":"1271318084763017218","realName":"管理员","remotelyToken":"PC-8178134ede762c42e41a7b1695082e28-666-20200720160651-2c2de0","roleNames":"学生,超级管理员","schoolName":"国泰安大学","userId":"666"}     * 获取用户信息1
      *
      * @return json
      */
@@ -139,12 +139,7 @@ public class UserUtil extends AuthUtil {
             }
             //remoteService.getSession(sessionPac4jId)
             JSONObject userObj = (JSONObject) JSONObject.parse(userInfoJson);
-            userInfo.setDeviceType(userObj.getString("deviceType"));
-            userInfo.setUserId(userObj.getString("userId"));
-            userInfo.setLoginName(userObj.getString("loginName"));
-            userInfo.setJhomeToken(userObj.getString("jhomeToken"));
-            //return (UserInfo) JSONUtils.jsonToBean(userInfoJson, UserInfo.class); 报错，不知道为啥，后续优化；
-            return userInfo;
+            return JSONObject.toJavaObject(userObj, userInfo.getClass());
         } catch (Exception ex) {
             logger.debug("获取用户报错：%s", ex.getMessage());
         }
@@ -219,9 +214,9 @@ public class UserUtil extends AuthUtil {
 
     public static Map<String, String> getJSON(HttpServletRequest request, HttpServletResponse response) throws Exception {
         MyHttpServletRequestWrapper requestWrapper = new MyHttpServletRequestWrapper((HttpServletRequest) request);
-        request= (HttpServletRequest) requestWrapper.getRequest();
+        request = (HttpServletRequest) requestWrapper.getRequest();
 
-        String str= requestWrapper.getBodyString();
+        String str = requestWrapper.getBodyString();
         BufferedReader streamReader = new BufferedReader(new InputStreamReader(((HttpServletRequest) requestWrapper).getInputStream(), "UTF-8"));
         StringBuilder responseStrBuilder = new StringBuilder();
         String inputStr;
@@ -232,6 +227,7 @@ public class UserUtil extends AuthUtil {
 
         return null;
     }
+
     /**
      * 获取 Pac4 回调用户信息
      *

@@ -1,5 +1,5 @@
 package com.account.common.shiro.filter.cas;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-07-18 14:56
@@ -25,7 +25,7 @@ package com.account.common.shiro.filter.cas;/**
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
  * @description:
  * @author: Daxv
  * @create: 2020-07-18 14:56

@@ -27,7 +27,7 @@ import org.springframework.context.annotation.Configuration;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: Lux-root
+ * @program: jhome-root
  * @description: MybatisPlusConfig
  * @author: Daxv
  * @create: 2020-07-01 09:45

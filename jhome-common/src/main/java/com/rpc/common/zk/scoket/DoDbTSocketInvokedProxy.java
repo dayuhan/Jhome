@@ -23,7 +23,7 @@ import com.rpc.common.zk.loadBanalce.LoadBanalceStrategy;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description:代理对象
  * @author: Daxv
  * @create: 2021-03-26 10:40

@@ -33,7 +33,7 @@ import java.util.List;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: Lux-root
+ * @program: jhome-root
  * @description: SpringMvcConfig
  * @author: Daxv
  * @create: 2020-08-03 14:26

@@ -29,7 +29,7 @@ import javax.validation.constraints.NotNull;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
  * @description:
  * @author: Daxv
  * @create: 2020-08-08 12:43
@@ -54,7 +54,7 @@ public class SysConfigProperties extends DataEntity<SysConfigProperties> {
     private String value;
 
     @NotNull(message = "应用名称不能为空")
-    @ApiModelProperty(value = "应用名称", name = "application", example = "Lux-account")
+    @ApiModelProperty(value = "应用名称", name = "application", example = "jhome-account")
     private String application;
 
     @IsEnableValidator(value = "是否启用 0:启用 1:禁用", message = "默认为0启用")

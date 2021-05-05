@@ -19,7 +19,7 @@ package com.rpc.common.zk.demo;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
  * @description: 注册服务
  * @author: Daxv
  * @create: 2020-10-08 19:05

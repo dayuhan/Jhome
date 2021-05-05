@@ -14,7 +14,7 @@ import java.util.Collection;
 /**
  * SessionDao
  *
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-06-03 22:50

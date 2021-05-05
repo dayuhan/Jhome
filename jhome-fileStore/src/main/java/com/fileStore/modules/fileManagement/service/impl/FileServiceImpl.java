@@ -35,7 +35,7 @@ public class FileServiceImpl implements FileService {
     @Autowired
     private AliyunOSSUtil aliyunOSSUtil;
 
-    @Value("${lux.sysproperties.serverType}")
+    @Value("${jhome.sysproperties.serverType}")
     private String serverType;
 
 /*    @Autowired

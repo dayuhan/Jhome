@@ -122,7 +122,7 @@ public class ShiroConfig {
     @Bean
     public SimpleCookie rememberMeCookie() {
         //cookie的name,对应的默认是 JSESSIONID
-        SimpleCookie simpleCookie = new SimpleCookie("LuxCookie");
+        SimpleCookie simpleCookie = new SimpleCookie("jhomeCookie");
         simpleCookie.setMaxAge(3600);
         // jsessionId的path为 / 用于多个系统共享jsessionId
         simpleCookie.setPath("/");

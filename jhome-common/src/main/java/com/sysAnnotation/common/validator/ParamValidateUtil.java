@@ -23,7 +23,7 @@ import org.springframework.validation.BindingResult;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 参数验证
  * @author: Daxv
  * @create: 2020-09-30 16:26

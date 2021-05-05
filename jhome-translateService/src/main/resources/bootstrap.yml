@@ -2,7 +2,7 @@
 spring:
   cloud:
     config:
-      uri: http://127.0.0.1:8769/account # http://localhost:8769/zlbzxt
+      uri: http://127.0.0.1:8769/jhome # http://localhost:8769/zlbzxt
       fail-fast: true
   profiles:
     active: dev

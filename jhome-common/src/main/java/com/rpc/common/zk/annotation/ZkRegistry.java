@@ -33,7 +33,7 @@ import org.springframework.core.type.AnnotationMetadata;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: zk注册
  * @author: Daxv
  * @create: 2021-03-26 09:02

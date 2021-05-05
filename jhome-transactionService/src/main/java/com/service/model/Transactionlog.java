@@ -56,7 +56,7 @@ public class Transactionlog implements Serializable {
     @ApiModelProperty(value = "生产者服务")
     private String producer;
 
-    @ApiModelProperty(value = "消费者服务",notes = "其他上下游服务需要处理，消息队列名称为:account-account,account-fileStore ")
+    @ApiModelProperty(value = "消费者服务",notes = "其他上下游服务需要处理，消息队列名称为:jhome-account,jhome-fileStore ")
     private String consumer;
 
     @JsonFormat(

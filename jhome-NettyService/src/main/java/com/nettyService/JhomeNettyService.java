@@ -28,7 +28,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: JhomeNettyService  消息中心
  * @author: Daxv
  * @create: 2017-08-02 13:51

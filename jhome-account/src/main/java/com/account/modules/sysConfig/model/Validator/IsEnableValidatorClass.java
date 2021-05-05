@@ -25,7 +25,7 @@ import java.util.Arrays;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: Lux-root
+ * @program: jhome-root
  * @description: IsEnableValidatorClass
  * @author: Daxv
  * @create: 2020-08-04 14:31

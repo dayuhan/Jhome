@@ -31,7 +31,7 @@ jhome:
 server:
   port: 9110
   servlet:
-    context-path: /account
+    context-path: /jhome
   tomcat:
     uri-encoding: UTF-8
 
@@ -44,7 +44,7 @@ logging.level.project.user.UserClient: DEBUG
 spring:
   # 应用程序名称
   application:
-    name: account-position
+    name: jhome-position
   # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
   profiles:
     active: default

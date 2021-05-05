@@ -4,6 +4,7 @@ import ${package.Entity}.${entity};
 import ${package.Mapper}.${table.mapperName};
 import ${package.Service}.${table.serviceName};
 import ${superServiceImplClassPackage};
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -19,6 +20,7 @@ import com.bracket.common.ToolKit.StringUtil;
 import com.bracket.common.ToolKit.ObjectBaseUtils
 import com.bracket.common.Bus.AbstractModel.PageUtils;
 import com.bracket.common.Bus.Status;
+import org.springframework.transaction.annotation.Transactional;
 
 
 /**
@@ -45,7 +47,9 @@ import com.bracket.common.Bus.Status;
  * @author:  ${author}
  * @create: ${date}
  **/
+@Slf4j
 @Service
+@Transactional
 #if(${kotlin})
 open class ${table.serviceImplName} : ${superServiceImplClass}<${table.mapperName}, ${entity}>(), ${table.serviceName} {
         }

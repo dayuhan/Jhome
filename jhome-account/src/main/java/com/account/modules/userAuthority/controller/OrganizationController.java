@@ -38,7 +38,7 @@ public class OrganizationController  {
     @Autowired
     StringEncryptor stringEncryptor;
 
-    @RequestMapping(value = "/findOrganizationList",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/findOrganizationList",headers="jhomeToken", method = RequestMethod.POST)
     @ApiOperation(value = "查询组织架构列表", notes = "Query the list of organizational structures")
     public CommonRlt<List<ListOrganizationRes>> findOrganizationList(@Validated @RequestBody ListOrganizationReq request, BindingResult result) throws IllegalValidateException {
         log.info("OrganizationController findOrganizationList  show info ：" + request);
@@ -55,7 +55,7 @@ public class OrganizationController  {
         return organizationService.addOrganization(request);
     }
 
-    @RequestMapping(value = "/editOrganization", headers = "luxToken",method = RequestMethod.POST)
+    @RequestMapping(value = "/editOrganization", headers = "jhomeToken",method = RequestMethod.POST)
     @ApiOperation(value = "修改组织架构", notes = "edit organizational structure")
     public CommonRlt editOrganization(@Validated @RequestBody EditOrganizationReq request, BindingResult result) throws IllegalValidateException {
         log.info("OrganizationController editOrganization  show info ：" + request);

@@ -76,7 +76,7 @@ public class ${table.controllerName}  extends BaseController {
     protected  ${table.serviceName} do${entity}Service;
 
     @ResponseBody
-    @ApiOperation(value = "添加$!{table.comment}[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "添加$!{table.comment}[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/add${entity}", produces = "application/json;charset=UTF-8")
     public ResponseJson add${entity}(
     @Validated @RequestBody  ${entity}Query  obj,
@@ -86,7 +86,7 @@ public class ${table.controllerName}  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "编辑$!{table.comment} [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "编辑$!{table.comment} [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/edit${entity}", produces = "application/json;charset=UTF-8")
     public ResponseJson edit${entity}(
     @Validated @RequestBody ${entity}Query obj,
@@ -96,7 +96,7 @@ public class ${table.controllerName}  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "删除$!{table.comment} [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "删除$!{table.comment} [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/delete${entity}", produces = "application/json;charset=UTF-8")
     public ResponseJson delete${entity}(
     @Validated @RequestBody ${entity}Query obj,
@@ -104,7 +104,7 @@ public class ${table.controllerName}  extends BaseController {
         do${entity}Service.delete${entity}(obj);
         return new ResponseJson().success();
     }
-    @ApiOperation(value = "批量删除$!{table.comment} [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "批量删除$!{table.comment} [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/batchDelete${entity}", produces = "application/json;charset=UTF-8")
     public ResponseJson batchDelete${entity}(@RequestParam("ids") String ids) {
         if(StringUtil.isBlank(ids))
@@ -115,21 +115,21 @@ public class ${table.controllerName}  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "获取$!{table.comment}列表[分页][代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "获取$!{table.comment}列表[分页][代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/select${entity}PageList", produces = "application/json;charset=UTF-8")
     public ResponseJson select${entity}PageList(@Validated @RequestBody ${entity}Query query, BindingResult result) {
         return new ResponseJson().success().setValue("data", do${entity}Service.select${entity}PageList(query));
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据Id获取 单个对象 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据Id获取 单个对象 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/select${entity}ById", produces = "application/json;charset=UTF-8")
     public ResponseJson select${entity}ById(String id) {
         return new ResponseJson().success().setValue("data", do${entity}Service.select${entity}ById(id));
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据Ids获取多个${entity}对象[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据Ids获取多个${entity}对象[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectBatch${entity}ByIds", produces = "application/json;charset=UTF-8")
     public ResponseJson selectBatch${entity}ByIds(String ids)   {
         List<String>idList= Arrays.asList(ids.split(","));
@@ -137,7 +137,7 @@ public class ${table.controllerName}  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据条件获取${entity}对象[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据条件获取${entity}对象[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/select${entity}One", produces = "application/json;charset=UTF-8")
     public ResponseJson select${entity}One(@Validated @RequestBody ${entity}Query query, BindingResult result){
         ${entity} targetObj = BaseUtil.copyProperties(query, ${entity}.class);
@@ -146,7 +146,7 @@ public class ${table.controllerName}  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据自定义条件获取${entity}对象实体集合[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据自定义条件获取${entity}对象实体集合[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/select${entity}List", produces = "application/json;charset=UTF-8")
     public ResponseJson select${entity}List(@Validated @RequestBody ${entity}Query query, BindingResult result){
         ${entity} targetObj = BaseUtil.copyProperties(query, ${entity}.class);

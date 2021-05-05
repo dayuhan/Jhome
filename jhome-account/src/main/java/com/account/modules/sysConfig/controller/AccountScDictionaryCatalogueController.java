@@ -54,7 +54,7 @@ public class AccountScDictionaryCatalogueController  extends BaseController {
     protected  AccountScDictionaryCatalogueService doAccountScDictionaryCatalogueService;
 
     @ResponseBody
-    @ApiOperation(value = "添加字典分类表[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "添加字典分类表[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/addAccountScDictionaryCatalogue", produces = "application/json;charset=UTF-8")
     public ResponseJson addAccountScDictionaryCatalogue(
     @Validated @RequestBody  AccountScDictionaryCatalogueQuery  obj,
@@ -69,7 +69,7 @@ public class AccountScDictionaryCatalogueController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "编辑字典分类表 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "编辑字典分类表 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/editAccountScDictionaryCatalogue", produces = "application/json;charset=UTF-8")
     public ResponseJson editAccountScDictionaryCatalogue(
             @Validated @RequestBody AccountScDictionaryCatalogueQuery obj,
@@ -84,7 +84,7 @@ public class AccountScDictionaryCatalogueController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "删除字典分类表 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "删除字典分类表 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/deleteAccountScDictionaryCatalogue", produces = "application/json;charset=UTF-8")
     public ResponseJson deleteAccountScDictionaryCatalogue(
             @Validated @RequestBody AccountScDictionaryCatalogueQuery obj,
@@ -97,7 +97,7 @@ public class AccountScDictionaryCatalogueController  extends BaseController {
                 return new ResponseJson().error(Status.SC_INTERNAL_SERVER_ERROR,ex.getMessage());
             }
     }
-    @ApiOperation(value = "批量删除字典分类表 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "批量删除字典分类表 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/batchDeleteAccountScDictionaryCatalogue", produces = "application/json;charset=UTF-8")
     public ResponseJson batchDeleteAccountScDictionaryCatalogue(@RequestParam("ids") String ids) {
             try {
@@ -111,7 +111,7 @@ public class AccountScDictionaryCatalogueController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "获取字典分类表列表[分页][代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "获取字典分类表列表[分页][代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectAccountScDictionaryCataloguePageList", produces = "application/json;charset=UTF-8")
     public ResponseJson selectAccountScDictionaryCataloguePageList(@Validated @RequestBody AccountScDictionaryCatalogueQuery query, BindingResult result) {
         if (result.hasErrors())
@@ -129,7 +129,7 @@ public class AccountScDictionaryCatalogueController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据Id获取 单个对象 [代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据Id获取 单个对象 [代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectAccountScDictionaryCatalogueById", produces = "application/json;charset=UTF-8")
     public ResponseJson selectAccountScDictionaryCatalogueById(String id) {
     try {
@@ -140,7 +140,7 @@ public class AccountScDictionaryCatalogueController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据Ids获取多个AccountScDictionaryCatalogue对象[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据Ids获取多个AccountScDictionaryCatalogue对象[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectBatchAccountScDictionaryCatalogueByIds", produces = "application/json;charset=UTF-8")
         public ResponseJson selectBatchAccountScDictionaryCatalogueByIds(String ids) {
         try {
@@ -152,7 +152,7 @@ public class AccountScDictionaryCatalogueController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据条件获取AccountScDictionaryCatalogue对象[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据条件获取AccountScDictionaryCatalogue对象[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectAccountScDictionaryCatalogueOne", produces = "application/json;charset=UTF-8")
     public ResponseJson selectAccountScDictionaryCatalogueOne(@Validated @RequestBody AccountScDictionaryCatalogueQuery query, BindingResult result)
     {
@@ -169,7 +169,7 @@ public class AccountScDictionaryCatalogueController  extends BaseController {
     }
 
     @ResponseBody
-    @ApiOperation(value = "根据自定义条件获取AccountScDictionaryCatalogue对象实体集合[代码生成器生成]", notes = "注意：LuxToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
+    @ApiOperation(value = "根据自定义条件获取AccountScDictionaryCatalogue对象实体集合[代码生成器生成]", notes = "注意：jhomeToken默认由前端放到header中,调试模式不提供改参数，从cookies中获取")
     @PostMapping(value = "/selectAccountScDictionaryCatalogueList", produces = "application/json;charset=UTF-8")
     public ResponseJson selectAccountScDictionaryCatalogueList(@Validated @RequestBody AccountScDictionaryCatalogueQuery query, BindingResult result)
     {

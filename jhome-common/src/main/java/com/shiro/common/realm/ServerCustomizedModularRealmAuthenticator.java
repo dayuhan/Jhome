@@ -43,7 +43,7 @@ public class ServerCustomizedModularRealmAuthenticator extends ModularRealmAuthe
                             .findFirst()
                             .orElse(null)
                     , authenticationToken);
-        //标准LuxToken执行
+        //标准jhomeToken执行
         jhomeToken customizedToken = (jhomeToken) authenticationToken;
         String deviceType = customizedToken.getDeviceType();
         if(deviceType==null)

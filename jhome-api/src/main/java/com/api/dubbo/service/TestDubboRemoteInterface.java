@@ -23,7 +23,7 @@ import com.api.dubbo.entity.TestInfo;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 公共接口
  * @author: Daxv
  * @create: 2020-10-15 15:10

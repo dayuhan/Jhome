@@ -30,7 +30,7 @@ package com.account.modules.userAuthentication.controller;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 测试socket服务
  * @author: Daxv
  * @create: 2020-07-29 13:51

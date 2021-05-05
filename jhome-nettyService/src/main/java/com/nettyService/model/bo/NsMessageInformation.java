@@ -1,5 +1,5 @@
 package com.nettyService.model.bo;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-09-12 16:28
@@ -32,7 +32,7 @@ import java.util.Date;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
  * @description: 离线消息类
  * @author: Daxv
  * @create: 2020-09-12 16:28

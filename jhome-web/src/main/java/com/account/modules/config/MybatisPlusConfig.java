@@ -1,5 +1,5 @@
 package com.account.modules.config;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-07-04 14:16
@@ -32,7 +32,7 @@ import org.springframework.context.annotation.Bean;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: MybatisPlusConfig
  * @author: Daxv
  * @create: 2020-07-04 14:16

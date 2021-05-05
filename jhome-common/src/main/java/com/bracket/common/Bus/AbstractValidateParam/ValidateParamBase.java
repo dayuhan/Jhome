@@ -34,7 +34,7 @@ import org.springframework.validation.BindingResult;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: ValidateParamBase 需要工程项目继承 AOP拦截验证参数
  * @author: Daxv
  * @create: 2020-09-30 16:34
@@ -84,6 +84,7 @@ public class ValidateParamBase {
                 throw new Exception(ex);
             }
         } else {
+            //注意在account中返回和原来老版返回对象冲突
             return new ResponseJson().error(HttpStatus.INTERNAL_SERVER_ERROR.value(), validateResult.getMessAge());
         }
         return result;

@@ -32,7 +32,7 @@ import java.util.UUID;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 导出ex
  * @author: Daxv
  * @create: 2021-01-07 15:07
@@ -74,8 +74,15 @@ public abstract class ExlExportUtils {
     }
 
     private void setResponseHeader(HttpServletResponse response, String fileName) {
+        //exl导出设置的头
         response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
         response.setHeader("Content-Disposition", "attachment;filename=" + fileName + ".xls");
+        //word 导出设置的头
+/*        response.setCharacterEncoding("utf-8");
+        response.setContentType("application/msword");
+        // 设置浏览器以下载的方式处理该文件默认名为resume.doc
+        response.addHeader("Content-Disposition","attachment;filename=resume.doc");*/
+
     }
 
     protected abstract XSSFSheet GetSheetInfo(XSSFWorkbook wb);

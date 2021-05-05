@@ -31,7 +31,7 @@ import lombok.Setter;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 注册类
  * @author: Daxv
  * @create: 2020-12-31 15:33

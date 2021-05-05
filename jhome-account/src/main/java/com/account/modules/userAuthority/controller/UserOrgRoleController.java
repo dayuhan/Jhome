@@ -31,7 +31,7 @@ public class UserOrgRoleController   {
     private UserOrgRoleService userOrgRoleService;
 
     @ApiOperation("获取角色的成员列表")
-    @RequestMapping(value = "/listRoleMember",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/listRoleMember",headers="jhomeToken", method = RequestMethod.POST)
     @ResponseBody
     public CommonRlt<PageUtils<List<ListRoleMemberResponse>>> listRoleMember(@Validated @RequestBody CommonIdAndPageRequest request, BindingResult result) {
         IPage<ListRoleMemberResponse> pageInfo = userOrgRoleService.listRoleMember(request);
@@ -39,7 +39,7 @@ public class UserOrgRoleController   {
     }
 
     @ApiOperation("删除角色的成员")
-    @RequestMapping(value = "/deleteRoleMember",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/deleteRoleMember",headers="jhomeToken", method = RequestMethod.POST)
     @ResponseBody
     public CommonRlt deleteRoleMember(@Validated @RequestBody CommonIdsRequest request, BindingResult result) {
         userOrgRoleService.deleteRoleMember(request);
@@ -47,7 +47,7 @@ public class UserOrgRoleController   {
     }
 
     @ApiOperation("获取成员列表不包含此角色的成员")
-    @RequestMapping(value = "/listMemberExcludeRole",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/listMemberExcludeRole",headers="jhomeToken", method = RequestMethod.POST)
     @ResponseBody
     public CommonRlt<PageUtils<List<ListRoleMemberResponse>>> listMemberExcludeRole(@Validated @RequestBody UserOrgRolePageRequest request, BindingResult result) {
         IPage<ListRoleMemberResponse> pageInfo = userOrgRoleService.listMemberExcludeRole(request);
@@ -55,7 +55,7 @@ public class UserOrgRoleController   {
     }
 
     @ApiOperation("添加用户组织角色成员")
-    @RequestMapping(value = "/addUserOrgRoleMember",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/addUserOrgRoleMember",headers="jhomeToken", method = RequestMethod.POST)
     @ResponseBody
     public CommonRlt addUserOrgRoleMember(@Validated @RequestBody AddUserOrgRoleMemberRequset request, BindingResult result) {
         userOrgRoleService.addUserOrgRoleMember(request);

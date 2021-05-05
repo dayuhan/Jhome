@@ -30,7 +30,7 @@ public class SysExceptionController  {
     @Autowired
     StringEncryptor stringEncryptor;
 
-    @PostMapping(value="/addSysException",headers="luxToken")
+    @PostMapping(value="/addSysException",headers="jhomeToken")
     @ApiOperation(value = "记录异常信息", notes = "Requires AccessToken")
     public CommonRlt addSysException(@Validated @RequestBody SysExceptionRequest request, BindingResult result) throws
             IllegalValidateException {

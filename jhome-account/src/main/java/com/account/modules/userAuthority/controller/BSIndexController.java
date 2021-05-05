@@ -35,7 +35,7 @@ public class BSIndexController  {
 
     @Autowired
     BackupService backupService;
-    @RequestMapping(value = "/sysIndexBasicInfoCalc", headers = "luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/sysIndexBasicInfoCalc", headers = "jhomeToken", method = RequestMethod.POST)
     @ApiOperation(value = "AVR后台首页基本数据统计：注册用户数，全校学习时长，本校资源，本校教材")
     public CommonRlt sysIndexBasicInfoCalc(@Validated @RequestBody BSMainStatusReq request) {
         log.info("BSIndexController sysIndexBasicInfoCalc show info : " + request);
@@ -48,7 +48,7 @@ public class BSIndexController  {
         return new CommonRlt<>(BasicRestStatusEnum.OK, response);
     }
 
-    @RequestMapping(value = "/sysActivelyUsersCount", headers = "luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/sysActivelyUsersCount", headers = "jhomeToken", method = RequestMethod.POST)
     @ApiOperation(value = "AVR后台首页基本数据统计：活跃用户数")
     public CommonRlt sysActivelyUsersCount(@Validated @RequestBody BSMainStatusReq request) {
         log.info("BSIndexController sysActivelyUsersCount show info : " + request);

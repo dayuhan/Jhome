@@ -27,7 +27,7 @@ import java.util.Date;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: mybatis plus 字段填充
  * @author: Daxv
  * @create: 2020-12-07 20:05

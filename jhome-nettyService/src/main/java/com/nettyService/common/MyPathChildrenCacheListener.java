@@ -1,5 +1,5 @@
 package com.nettyService.common;/**
- * @program: account-root
+ * @program: jhome-root
  * @description
  * @author: Daxv
  * @create: 2020-10-10 17:58
@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
  //     ...:::           ::::::::::::'              ``::.
  //    ```` ':.          ':::::::::'                  ::::..
  //                       '.:::::'                    ':'````..
- * @program: account-root
+ * @program: jhome-root
  * @description: 服务注册
  * @author: Daxv
  * @create: 2020-10-10 17:58

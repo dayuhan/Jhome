@@ -1,5 +1,6 @@
 package com.account.autoconfiguration;
 
+import com.account.common.sbUtil.service.impl.DisposableWorkerIdAssigner;
 import com.bracket.common.BatchExcel.ExcelteEngine;
 import com.bracket.common.Cache.MemcachedManager;
 import com.bracket.common.Http.HttpClient;
@@ -7,6 +8,7 @@ import com.bracket.common.Queue.Bus;
 import com.bracket.common.Queue.Config;
 import com.bracket.common.WebSocket.WebSocket;
 import com.rpc.common.thrift.socketService;
+import com.xfvape.uid.impl.DefaultUidGenerator;
 import org.apache.thrift.protocol.TCompactProtocol;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.TFramedTransport;
@@ -162,6 +164,32 @@ public class SysAutoConfiguration {
         pageHelper.setProperties(properties);
         return pageHelper;
     }*/
+
+
+    /**
+     * 用完即弃的WorkerIdAssigner, 依赖DB操作
+     *
+     * @return
+     */
+    @Bean
+    public DisposableWorkerIdAssigner disposableWorkerIdAssigner() {
+        return new DisposableWorkerIdAssigner();
+    }
+
+    @Bean
+    public DefaultUidGenerator defaultUidGenerator(DisposableWorkerIdAssigner disposableWorkerIdAssigner) {
+        DefaultUidGenerator defaultUidGenerator = new DefaultUidGenerator();
+        defaultUidGenerator.setWorkerIdAssigner(disposableWorkerIdAssigner);
+        //以下为可选配置, 如未指定将采用默认值
+        defaultUidGenerator.setTimeBits(29);
+        defaultUidGenerator.setWorkerBits(21);
+        defaultUidGenerator.setSeqBits(13);
+//        defaultUidGenerator.setEpochStr("2019-01-01");
+        return defaultUidGenerator;
+    }
+
+
+
     @Bean
     @LoadBalanced //(启用spring cloud 负载均衡 查询服务 如果单纯调外部网址，请删除)
     @ConditionalOnMissingBean(RestTemplate.class)

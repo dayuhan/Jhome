@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 代理对象类
  * @author: Daxv
  * @create: 2021-03-26 09:15

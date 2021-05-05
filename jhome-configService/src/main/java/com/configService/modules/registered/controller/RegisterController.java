@@ -40,7 +40,7 @@ import java.util.List;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 注册控制器
  * @author: Daxv
  * @create: 2020-08-08 12:35

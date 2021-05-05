@@ -12,13 +12,13 @@ copyrightYear: 2020
 server:
   port: 8300
   servlet:
-    context-path: /account
+    context-path: /jhome
   tomcat:
     uri-encoding: UTF-8
-adminPath: ${lux.sysproperties.adminPath}
+adminPath: ${jhome.sysproperties.adminPath}
 
 #====================================================================== System-配置 ================#
-lux:
+jhome:
   # 系统参数
   sysproperties:
     # 管理基础路径
@@ -44,13 +44,16 @@ logging.level.project.user.UserClient: DEBUG
 spring:
   # 应用程序名称
   application:
-    name: account-fileStore
+    name: jhome-fileStore
     include: fileStoreService
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
   servlet:
     multipart:
       enabled: true
-      max-file-size: 100MB #【修改multipart上传大小】
-      max-request-size: 100MB #【修改multipart上传大小】
+      max-file-size: 1000MB #【修改multipart上传大小】
+      max-request-size: 1000MB #【修改multipart上传大小】
   # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
   profiles:
     active: default
@@ -126,10 +129,10 @@ shiro:
     /swagger-resources/**:anon,
     /fileStore/**: authc,
     /**: authc
-  LoginUrl: http://127.0.0.1:8100/account/account/login
+  LoginUrl: http://127.0.0.1:8100/jhome/account/login
   #  LoginUrl: http://10.1.20.58:8100/zlbzxt/account/login
-  SuccessUrl: /${lux.sysproperties.adminPath}/index
-  UnauthorizedUrl: /${lux.sysproperties.adminPath}/sys/error
+  SuccessUrl: /${jhome.sysproperties.adminPath}/index
+  UnauthorizedUrl: /${jhome.sysproperties.adminPath}/sys/error
 
 #====================================================================== mybatis-配置 ================#
 #====================================================================== mybatis-plus-配置 ================#
@@ -156,7 +159,7 @@ mybatis-plus:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://daxunihao:123456@127.0.0.1:9100/account/eureka/
+      defaultZone: http://daxunihao:123456@127.0.0.1:9100/jhome/eureka/
     registerWithEureka: true
     fetchRegistry: true
   instance:

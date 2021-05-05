@@ -35,7 +35,7 @@ import java.util.concurrent.TimeUnit;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: spring cloud config  配置中心
  * @author: Daxv
  * @create: 2017-08-02 13:51
@@ -52,7 +52,7 @@ public class JhomeConfigServiceApplication {
     private static final int intervalMin = 5; // 定时器间隔时间
     protected static RedisTemplate redisTemplate;
     static {
-//        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(LuxConfigServiceApplication.class);
+//        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(jhomeConfigServiceApplication.class);
 //        redisTemplate= (RedisTemplate) applicationContext.getBean("StringRedisTemplate");
     }
 

@@ -35,7 +35,7 @@ eureka:
   #    客户端调用地址
   client:
     service-url:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/account/eureka/
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/jhome/eureka/
                    # http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
                    # http://${security.user.name}:${security.user.password}@127.0.0.1:${server.port}/eureka/
                    # http://daxunihao:123456@127.0.0.1:8100/eureka/

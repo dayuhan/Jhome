@@ -64,36 +64,36 @@ public class UserInfoController  {
         return service.register(request);
     }
 
-    @GetMapping(value = "/loginOut",headers="luxToken")
+    @GetMapping(value = "/loginOut",headers="jhomeToken")
     @ApiOperation(value = "注销")
-    @ApiImplicitParam(paramType="header",required=true,name="luxToken",value="用户认证凭据",defaultValue="PC-c84258e9c39059a89ab77d846ddab909-666-20200305140004-24efc2")
+    @ApiImplicitParam(paramType="header",required=true,name="jhomeToken",value="用户认证凭据",defaultValue="PC-c84258e9c39059a89ab77d846ddab909-666-20200305140004-24efc2")
     public CommonRlt login(HttpServletRequest request) throws IllegalValidateException {
         log.info("UserInfoController loginOut show info ：" + request);
         return service.loginOut(request);
     }
 
-    @RequestMapping(value = "/resetPasswords",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/resetPasswords",headers="jhomeToken", method = RequestMethod.POST)
     @ApiOperation(value = "重置密码", notes = "reset passwords")
     public CommonRlt resetPasswords(@Validated @RequestBody CommonIdsRequest request, BindingResult result) throws IllegalValidateException {
         log.info("UserInfoController resetPasswords show info ：" + request);
         return service.resetPasswords(request);
     }
 
-    @RequestMapping(value = "/switchStatus",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/switchStatus",headers="jhomeToken", method = RequestMethod.POST)
     @ApiOperation(value = "启动/禁用", notes = "Start/disable")
     public CommonRlt switchStatus(@Validated @RequestBody EditUserStatusReq request, BindingResult result) throws IllegalValidateException {
         log.info("UserInfoController switchStatus show info ：" + request);
         return service.switchStatus(request);
     }
 
-    @RequestMapping(value = "/batchDelete",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/batchDelete",headers="jhomeToken", method = RequestMethod.POST)
     @ApiOperation(value = "批量删除(支持单删)", notes = "batch Delete")
     public CommonRlt batchDelete(@Validated @RequestBody CommonIdsRequest request, BindingResult result) throws IllegalValidateException {
         log.info("UserInfoController switchStatus show info ：" + request);
         return service.batchDelete(request);
     }
 
-    @RequestMapping(value = "/findUserInfoList",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/findUserInfoList",headers="jhomeToken", method = RequestMethod.POST)
     @ApiOperation(value = "查询用户列表", notes = "user info")
     public CommonRlt<PageUtils<List<ListUserInfoRes>>> findUserInfoList(@Validated @RequestBody ListUserReq request, BindingResult result) throws IllegalValidateException {
         log.info("UserInfoController findUserInfoList show info :" + request);
@@ -102,7 +102,7 @@ public class UserInfoController  {
         return CommonRlt.success(new PageUtils<>(pageInfo.getRecords(), pageInfo.getTotal(), request.getPageSize()));
     }
 
-    @RequestMapping(value = "/getUserDetails", method = RequestMethod.GET,headers="luxToken")
+    @RequestMapping(value = "/getUserDetails", method = RequestMethod.GET,headers="jhomeToken")
     @ApiOperation(value = "获取用户详情", notes = "get user info")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id", paramType = "query", value = "用户ID", required = true, dataType = "Long")
@@ -112,7 +112,7 @@ public class UserInfoController  {
         return service.getUserDetails(id);
     }
 
-    @RequestMapping(value = "/addUser",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/addUser",headers="jhomeToken", method = RequestMethod.POST)
     @ApiOperation(value = "添加用户", notes = "add user")
     public CommonRlt addUser(@Validated @RequestBody OperateUserReq request, BindingResult result) throws IllegalValidateException {
         log.info("UserInfoController addUser  show info ：" + request);
@@ -125,7 +125,7 @@ public class UserInfoController  {
         return service.addUser(request);
     }
 
-    @RequestMapping(value = "/editUser",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/editUser",headers="jhomeToken", method = RequestMethod.POST)
     @ApiOperation(value = "修改用户", notes = "edit user ")
     public CommonRlt editUser(@Validated @RequestBody OperateUserReq request, BindingResult result) throws IllegalValidateException {
         log.info("UserInfoController editUser  show info ：" + request);
@@ -137,13 +137,13 @@ public class UserInfoController  {
         return service.editUser(request);
     }
 
-    @PostMapping(value = "/updateUserOrg",headers="luxToken")
+    @PostMapping(value = "/updateUserOrg",headers="jhomeToken")
     @ApiOperation(value = "切换组织", notes = "Requires AccessToken")
     public CommonRlt<LoginRes> UpdateUserOrg(@Validated @RequestBody UpdateUserOrgRequest request, BindingResult result) throws IllegalValidateException {
         return CommonRlt.success(service.UpdateUserOrg(request));
     }
 
-    @RequestMapping(value = "/userImport",headers="luxToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/userImport",headers="jhomeToken", method = RequestMethod.POST)
     @ApiOperation(value = "用户批量上传", notes = "User batch upload")
     public CommonRlt addBatchImport(Long orgId, @RequestParam("file") MultipartFile file) throws IOException {
         String fileName = file.getOriginalFilename();
@@ -151,7 +151,7 @@ public class UserInfoController  {
         return service.addBatchImport(orgId, fileName, file);
     }
 
-    @PostMapping(value = "/findUserToken",headers="luxToken")
+    @PostMapping(value = "/findUserToken",headers="jhomeToken")
     @ApiOperation(value = "获取用户令牌信息", notes = "Requires AccessToken")
     public CommonRlt<LoginRes> findUserToken(ServletRequest request, ServletResponse response) throws IllegalValidateException {
         String token= UserUtil.GetToken(request,response);

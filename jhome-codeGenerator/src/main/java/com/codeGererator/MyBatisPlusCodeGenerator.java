@@ -38,7 +38,7 @@ import java.util.*;
  * //    ```` ':.          ':::::::::'                  ::::..
  * //                       '.:::::'                    ':'````..
  *
- * @program: account-root
+ * @program: jhome-root
  * @description: 代码生成器
  * @author: Daxv
  * @create: 2020-08-14 16:02
@@ -50,7 +50,7 @@ public class MyBatisPlusCodeGenerator {
     private static String packageName = "src/main"; //初始文件路径
     private static String customPath = "com.account.modules"; //自定义路径
     private static String authorName = "daxv"; //作者
-    private static String path = System.getProperty("user.dir") + "/account-account/src/main/java";
+    private static String path = System.getProperty("user.dir") + "/jhome-account/src/main/java";
     //private static String path = file.getAbsolutePath();
     //private static String table = "sys_account"; //table名字
     //private static String prefix = "sys_"; //table前缀
