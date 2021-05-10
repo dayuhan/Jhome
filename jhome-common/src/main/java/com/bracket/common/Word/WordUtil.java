@@ -5,10 +5,13 @@ import org.apache.log4j.Logger;
 import org.apache.poi.POIXMLDocument;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.usermodel.Range;
+import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTRow;
 import springfox.documentation.schema.Entry;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -109,7 +112,7 @@ public class WordUtil {
      *
      * @throws IOException
      */
-    public void test1() {
+    public void test1(HttpServletRequest request, HttpServletResponse response) {
         // TODO Auto-generated method stub
         String path = this.getClass().getClassLoader().getResource("BgTemple.docx").getPath();
         path = path.substring(1);
@@ -127,6 +130,7 @@ public class WordUtil {
         System.out.println(replaceAndGenerateWord(filepathString,
                 destpathString, map));
     }
+
 
 
     // 返回Docx中需要替换的特殊字符，没有重复项
@@ -247,7 +251,12 @@ public class WordUtil {
                                         oneparaString = oneparaString.replace(entry.getKey(), entry.getValue());
                                 }
                                 runs.get(i).setText(oneparaString, 0);
-
+                                //增加图表 向word中写入图片
+                                if (StringUtil.isNotBlank(oneparaString) && oneparaString.contains("其他指标展示")) {
+                                    byte[] data=Base64.getDecoder().decode("图表Base64编码");
+                                    ByteArrayInputStream byteArrayInputStream=new ByteArrayInputStream(data);
+                                    runs.get(i).addPicture(byteArrayInputStream,XWPFDocument.PICTURE_TYPE_PNG,i+".png", Units.toEMU(400),Units.toEMU(200));
+                                }
                                 //扩展段落
                                 if (StringUtil.isNotBlank(oneparaString) && oneparaString.contains("其他指标展示")) {
                                     //XWPFTable table = XWPFHelperTable.createTable(document, 4, 4, false, null);
@@ -374,6 +383,45 @@ public class WordUtil {
         } else {
             return false;
         }
+    }
+
+    /**
+     * 导出word
+     * @param request
+     * @param response
+     * @param wd
+     */
+    public   void exportReport(HttpServletRequest request,HttpServletResponse response,XWPFDocument wd){
+        String fileName=UUID.randomUUID().toString()+"";
+        OutputStream outputStream=null;
+        try {
+            setResponsetHeader(response,fileName);
+            outputStream=new BufferedOutputStream(response.getOutputStream());
+            wd.write(outputStream);
+            outputStream.flush();
+            outputStream.close();;
+
+        }catch (Exception e)
+        {
+            logger.error("导出文件："+e.getMessage());
+        }finally {
+            if (outputStream!=null)
+            {
+                try {
+                    outputStream.close();
+
+                }catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    public   void setResponsetHeader(HttpServletResponse response,String fileName)
+    {
+        response.setCharacterEncoding("utf-8");
+        response.setContentType("application//msword");
+        response.setHeader("Content-Disposition","attachment;filename="+fileName+".docx");
     }
 
 }

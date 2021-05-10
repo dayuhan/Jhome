@@ -115,7 +115,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Lux/Lux-root/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jhome-doc/doc/images" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.33256084" />
@@ -123,15 +123,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\bracket\common\Translate\motherVersion" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\多线程" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-web\src\main\resources" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-translateService\src\main\resources" />
+      <recent name="D:\EatingTools\XProject\Jhome" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-registrationService" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.account.modules.config" />
@@ -140,12 +140,12 @@
       <recent name="com.geoServer.conmmon" />
       <recent name="com.geoServer.autoconfiguration" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-web\src\main\resources" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-translateService\src\main\resources" />
-      <recent name="D:\EatingTools\XProject\Jhome" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-registrationService" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-registerMachine" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\bracket\common\Translate\motherVersion" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources\lib" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\多线程" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -676,7 +676,11 @@
       <workItem from="1619604289252" duration="630000" />
       <workItem from="1619661265874" duration="1197000" />
       <workItem from="1620006209596" duration="12573000" />
-      <workItem from="1620187073101" duration="6690000" />
+      <workItem from="1620187073101" duration="7249000" />
+      <workItem from="1620288687409" duration="1232000" />
+      <workItem from="1620350610398" duration="3939000" />
+      <workItem from="1620435565435" duration="3807000" />
+      <workItem from="1620637164587" duration="1426000" />
     </task>
     <servers />
   </component>
@@ -735,10 +739,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state width="901" height="466" key="DebuggerActiveHint/0.40.1440.920@0.40.1440.920" timestamp="1619312567737" />
-    <state x="769" y="118" key="FileChooserDialogImpl" timestamp="1620189839324">
+    <state x="769" y="118" key="FileChooserDialogImpl" timestamp="1620288727710">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="769" y="118" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1620189839324" />
+    <state x="769" y="118" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1620288727710" />
     <state width="1397" height="193" key="GridCell.Tab.0.bottom" timestamp="1620023556889">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -1082,17 +1086,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Word/WordUtil.java</url>
-          <line>53</line>
+          <line>56</line>
           <option name="timeStamp" value="267" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Word/WordUtil.java</url>
-          <line>60</line>
+          <line>63</line>
           <option name="timeStamp" value="268" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Word/WordUtil.java</url>
-          <line>113</line>
+          <line>116</line>
           <option name="timeStamp" value="269" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1107,22 +1111,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Word/WordUtil.java</url>
-          <line>331</line>
+          <line>340</line>
           <option name="timeStamp" value="295" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Word/WordUtil.java</url>
-          <line>301</line>
+          <line>310</line>
           <option name="timeStamp" value="296" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Word/WordUtil.java</url>
-          <line>240</line>
+          <line>244</line>
           <option name="timeStamp" value="297" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Word/WordUtil.java</url>
-          <line>248</line>
+          <line>252</line>
           <option name="timeStamp" value="299" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

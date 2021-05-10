@@ -30,6 +30,15 @@
     
         #keepalive_timeout  0;
         keepalive_timeout  65;
+        # 配置Nginx setCookie长度过大 设置
+        proxy_connect_timeout 300;
+        proxy_send_timeout 300;
+        proxy_read_timeout 300;
+        proxy_buffering on;
+        proxy_buffer_size 100k;
+        proxy_buffers 100 200k;
+        proxy_busy_buffers_size 200k
+        proxy_temp_file_write_size 200k;
     
         #gzip  on;
     
