@@ -123,8 +123,22 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\值转换" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\bracket\common\Translate\motherVersion" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
+      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources\lib" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.account.common.feign" />
+      <recent name="com.account.modules.config" />
+      <recent name="com.account.common" />
+      <recent name="com.shiro.common.realm" />
+      <recent name="com.geoServer.conmmon" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\images" />
@@ -132,20 +146,6 @@
       <recent name="D:\EatingTools\XProject\Jhome\jhome-translateService\src\main\resources" />
       <recent name="D:\EatingTools\XProject\Jhome" />
       <recent name="D:\EatingTools\XProject\Jhome\jhome-registrationService" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.account.modules.config" />
-      <recent name="com.account.common" />
-      <recent name="com.shiro.common.realm" />
-      <recent name="com.geoServer.conmmon" />
-      <recent name="com.geoServer.autoconfiguration" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-common\src\main\java\com\bracket\common\Translate\motherVersion" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-geoServerToolsService\src\main\resources\lib" />
-      <recent name="D:\EatingTools\XProject\Jhome\jhome-doc\doc\多线程" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -215,6 +215,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JhomeAppPushApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jhome-appPush" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.appPush.JhomeAppPushApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JhomeConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="jhome-configService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.configService.JhomeConfigServiceApplication" />
@@ -231,6 +238,13 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.fileStore.JhomeFileStorageApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JhomePostionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jhome-position" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.position.JhomePostionApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -306,6 +320,8 @@
       <item itemvalue="Spring Boot.JhomeFileStorageApplication" />
       <item itemvalue="Spring Boot.JhomeTranslateServiceApplication" />
       <item itemvalue="Spring Boot.JhomeAcccountApplication" />
+      <item itemvalue="Spring Boot.JhomePostionApplication" />
+      <item itemvalue="Spring Boot.JhomeAppPushApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -680,7 +696,10 @@
       <workItem from="1620288687409" duration="1232000" />
       <workItem from="1620350610398" duration="3939000" />
       <workItem from="1620435565435" duration="3807000" />
-      <workItem from="1620637164587" duration="1426000" />
+      <workItem from="1620637164587" duration="1464000" />
+      <workItem from="1620704975438" duration="630000" />
+      <workItem from="1620713483490" duration="2815000" />
+      <workItem from="1620801398465" duration="5874000" />
     </task>
     <servers />
   </component>
@@ -707,10 +726,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="460" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1440.920@0.40.1440.920" timestamp="1615448505053" />
-    <state x="365" y="39" width="921" height="761" key="#com.intellij.ide.util.MemberChooser" timestamp="1619239087909">
+    <state x="365" y="39" width="921" height="761" key="#com.intellij.ide.util.MemberChooser" timestamp="1620811089026">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="365" y="39" key="#com.intellij.ide.util.MemberChooser/0.40.1440.920@0.40.1440.920" timestamp="1619239087909" />
+    <state x="365" y="39" key="#com.intellij.ide.util.MemberChooser/0.40.1440.920@0.40.1440.920" timestamp="1620811089026" />
     <state x="583" y="164" width="713" height="577" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1613972747243">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -743,22 +762,22 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="769" y="118" key="FileChooserDialogImpl/0.40.1440.920@0.40.1440.920" timestamp="1620288727710" />
-    <state width="1397" height="193" key="GridCell.Tab.0.bottom" timestamp="1620023556889">
+    <state width="1397" height="193" key="GridCell.Tab.0.bottom" timestamp="1620813752551">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="193" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1620023556889" />
-    <state width="1397" height="193" key="GridCell.Tab.0.center" timestamp="1620023556889">
+    <state width="1397" height="193" key="GridCell.Tab.0.bottom/0.40.1440.920@0.40.1440.920" timestamp="1620813752551" />
+    <state width="1397" height="193" key="GridCell.Tab.0.center" timestamp="1620813752550">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="193" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1620023556889" />
-    <state width="1397" height="193" key="GridCell.Tab.0.left" timestamp="1620023556889">
+    <state width="1397" height="193" key="GridCell.Tab.0.center/0.40.1440.920@0.40.1440.920" timestamp="1620813752550" />
+    <state width="1397" height="193" key="GridCell.Tab.0.left" timestamp="1620813752550">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="193" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1620023556889" />
-    <state width="1397" height="193" key="GridCell.Tab.0.right" timestamp="1620023556889">
+    <state width="1397" height="193" key="GridCell.Tab.0.left/0.40.1440.920@0.40.1440.920" timestamp="1620813752550" />
+    <state width="1397" height="193" key="GridCell.Tab.0.right" timestamp="1620813752550">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state width="1397" height="193" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1620023556889" />
+    <state width="1397" height="193" key="GridCell.Tab.0.right/0.40.1440.920@0.40.1440.920" timestamp="1620813752550" />
     <state width="1031" height="262" key="GridCell.Tab.1.bottom" timestamp="1620023556887">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -799,10 +818,6 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="95" y="125" width="1122" height="715" key="SettingsEditor/0.40.1440.920@0.40.1440.920" timestamp="1619070355298" />
-    <state x="442" y="242" width="540" height="524" key="StructurePopup" timestamp="1611912536114">
-      <screen x="0" y="40" width="1440" height="920" />
-    </state>
-    <state x="442" y="242" width="540" height="524" key="StructurePopup/0.40.1440.920@0.40.1440.920" timestamp="1611912536114" />
     <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1619268614704">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
@@ -831,10 +846,10 @@
       <screen x="0" y="40" width="1440" height="920" />
     </state>
     <state x="377" y="231" key="run.anything.popup/0.40.1440.920@0.40.1440.920" timestamp="1620195523332" />
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1619150166115">
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup" timestamp="1620811741274">
       <screen x="0" y="40" width="1440" height="920" />
     </state>
-    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1619150166115" />
+    <state x="431" y="238" width="785" height="448" key="search.everywhere.popup/0.40.1440.920@0.40.1440.920" timestamp="1620811741274" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1118,16 +1133,6 @@
           <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Word/WordUtil.java</url>
           <line>310</line>
           <option name="timeStamp" value="296" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Word/WordUtil.java</url>
-          <line>244</line>
-          <option name="timeStamp" value="297" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../jhome-common/src/main/java/com/bracket/common/Word/WordUtil.java</url>
-          <line>252</line>
-          <option name="timeStamp" value="299" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../jhome-account/src/main/java/com/account/modules/userAuthority/model/request/AddRoleSysMenuRequest.java</url>

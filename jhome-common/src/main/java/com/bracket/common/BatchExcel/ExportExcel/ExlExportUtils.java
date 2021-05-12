@@ -85,5 +85,5 @@ public abstract class ExlExportUtils {
 
     }
 
-    protected abstract XSSFSheet GetSheetInfo(XSSFWorkbook wb);
+    protected abstract XSSFSheet  GetSheetInfo(XSSFWorkbook wb);
 }

@@ -574,6 +574,19 @@
             <version>0.0.4-RELEASE</version>
             <scope>compile</scope>
         </dependency>
+
+        <!--解决 Feign传参 MultipartFile 问题-->
+<!--        <dependency>
+            <groupId>io.github.openfeign.form</groupId>
+            <artifactId>feign-form</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign.form</groupId>
+            <artifactId>feign-form-spring</artifactId>
+            <version>3.8.0</version>
+        </dependency>-->
+
     </dependencies>
 
     <!--    排除父pom中的通用打包组件-->
