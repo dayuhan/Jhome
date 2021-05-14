@@ -9,7 +9,7 @@ public class YesOrNoConverterImpl implements ConverterDao {
   
 	public Object converterFunc(Row row, Object object) {
 		// TODO Auto-generated method stub
-		return object;
+		return Boolean.valueOf((String)object);
 	}
  
 
