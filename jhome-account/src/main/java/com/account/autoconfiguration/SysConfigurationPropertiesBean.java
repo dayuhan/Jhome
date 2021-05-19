@@ -2,17 +2,20 @@ package com.account.autoconfiguration;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Setter
 @Getter
-@Component
-public class SysConfigurationPropertiesBean extends SysProperties {
+@ConfigurationProperties(
+        prefix = "jhome.sysproperties"
+)
+public class SysConfigurationPropertiesBean  {
     public String adminPath;//后台路径
     public String frontPath;//前台路径
     public QueueConfig queueconfig;//队列配置
     public RedissConfig redissConfig;//缓存配置
-    private long expiredTime;//缓存过期时间
+    private Integer expiredTime;//缓存过期时间
     public DataSourceConfig datasourceconfig;//自定义数据库配置
     public CasConfig casConfig;//CAS单点登录配置
     public String callbackUrl;//cas单点登录回调地址

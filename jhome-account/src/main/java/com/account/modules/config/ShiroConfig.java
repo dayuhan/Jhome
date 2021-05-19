@@ -64,15 +64,13 @@ public class ShiroConfig {
 
     @Autowired
     public RedisTemplate redisTemplate;
-    @Autowired
-    public SysConfigurationPropertiesBean sysConfigurationProperties;
 
     //    @Autowired
 //    public SysShiroProperties spro;
-//    @Bean(name = "SysConfigurationPropertiesBean")
-//    public SysConfigurationPropertiesBean sysConfigurationPropertiesBean() {
-//        return new SysConfigurationPropertiesBean();
-//    }
+    @Bean(name = "SysConfigurationPropertiesBean")
+    public SysConfigurationPropertiesBean sysConfigurationProperties() {
+        return new SysConfigurationPropertiesBean();
+    }
 
 
     @Bean(name = "SysShiroProperties")
@@ -86,7 +84,7 @@ public class ShiroConfig {
      **/
     @Bean(name = "shiroFilter")
     //@DependsOn("config")
-    public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager, CustomRealm customRealm) {
+    public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager, CustomRealm customRealm,@Autowired SysConfigurationPropertiesBean sysConfigurationProperties) {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         try {
             shiroFilterFactoryBean.setLoginUrl(sysShiroProperties().getLoginUrl());//登录页面
@@ -99,25 +97,25 @@ public class ShiroConfig {
                 //cas 资源认证拦截器
                 //SecurityFilter securityFilter = new SecurityFilter();
                 CasSecurityFilter securityFilter = new CasSecurityFilter();
-                securityFilter.setCDao(serverRedisSessionDao());
-                securityFilter.setConfig(config());
+                securityFilter.setCDao(serverRedisSessionDao(sysConfigurationProperties));
+                securityFilter.setConfig(config(sysConfigurationProperties));
                 securityFilter.setClients(sysConfigurationProperties.getCasConfig().getClientName());
                 filterMap.put("casSecurityFilter", securityFilter);
                 //cas 认证后回调拦截器
                 CallbackFilter callbackFilter = new CallbackFilter();
-                callbackFilter.setConfig(config());
+                callbackFilter.setConfig(config(sysConfigurationProperties));
                 callbackFilter.setDefaultUrl(sysConfigurationProperties.getCasConfig().getProjectUrl() + "/index");
                 filterMap.put("callbackFilter", callbackFilter);
                 // 注销 拦截器
                 LogoutFilter logoutFilter = new LogoutFilter();
-                logoutFilter.setConfig(config());
+                logoutFilter.setConfig(config(sysConfigurationProperties));
                 logoutFilter.setCentralLogout(true);
                 logoutFilter.setLocalLogout(true);
                 logoutFilter.setDefaultUrl(sysConfigurationProperties.getCasConfig().getProjectUrl() + "/callback?client_name=" + sysConfigurationProperties.getCasConfig().getClientName());
                 filterMap.put("logout", logoutFilter);
                 filterChainDefinitionMap = sysShiroProperties().getFilterChainDefinitionMap(new String[]{"authc"});
             } else {
-                filterMap.put("authc", shiroAuthcFilter());
+                filterMap.put("authc", shiroAuthcFilter(sysConfigurationProperties));
                 filterMap.put("logout", shiroLogoutFilter());
                 filterMap.put("perms", shiroPermsFilter());
                 filterMap.put("roles", shiroRolesFilter());
@@ -137,7 +135,7 @@ public class ShiroConfig {
      * 2、SecurityManager 配置---------------------------------------------------------------------------
      **/
     @Bean
-    public SecurityManager securityManager() {
+    public SecurityManager securityManager(@Autowired SysConfigurationPropertiesBean sysConfigurationProperties) {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         //设置认证源头
         securityManager.setAuthenticator(new ServerCustomizedModularRealmAuthenticator());
@@ -146,14 +144,14 @@ public class ShiroConfig {
         realms.add(customRealm());//后台系统数据认证
         realms.add(thirdPathShiroRealm());//第三方数据认证
         realms.add(appShiroRealm());//手机端数据认证
-        realms.add(casRealm());//单点登录数认证
+        realms.add(casRealm(sysConfigurationProperties));//单点登录数认证
         securityManager.setRealms(realms);
         //设置会话
         if (sysConfigurationProperties.getCasConfig().getIsEnable().equals("true")) {
             //增加pac4jSubjectFactory
             securityManager.setSubjectFactory(subjectFactory());
         } else {
-            securityManager.setSessionManager(sessionManager());
+            securityManager.setSessionManager(sessionManager(sysConfigurationProperties));
         }
         //注入Cookie(记住我)管理器(remenberMeManager)
         //securityManager.setRememberMeManager(this.rememberMeManager());
@@ -250,7 +248,7 @@ public class ShiroConfig {
      * 4、 sessionManager 配置---------------------------------------------------------------------------
      **/
     @Bean
-    public DefaultWebSessionManager sessionManager() {
+    public DefaultWebSessionManager sessionManager(@Autowired SysConfigurationPropertiesBean sysConfigurationProperties) {
 
         //DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
         ServerDefaultWebSessionManager sessionManager = new ServerDefaultWebSessionManager();
@@ -261,7 +259,7 @@ public class ShiroConfig {
         //是否在会话过期后会调用SessionDAO的delete方法删除会话 默认true
         sessionManager.setDeleteInvalidSessions(true);
         //实现session存储
-        sessionManager.setSessionDAO(serverRedisSessionDao());
+        sessionManager.setSessionDAO(serverRedisSessionDao(sysConfigurationProperties));
         sessionManager.setSessionIdUrlRewritingEnabled(false);
         sessionManager.setSessionIdCookie(rememberMeCookie());
         sessionManager.setSessionIdCookieEnabled(true);
@@ -336,7 +334,7 @@ public class ShiroConfig {
      **/
     @Bean
     @ConditionalOnMissingBean(ServerRedisSessionDao.class)
-    public ServerRedisSessionDao serverRedisSessionDao() {
+    public ServerRedisSessionDao serverRedisSessionDao(@Autowired SysConfigurationPropertiesBean sysConfigurationProperties) {
         ServerRedisSessionDao redisSessionDao = new ServerRedisSessionDao();
         redisSessionDao.setRedisTemplate(redisTemplate);
         redisSessionDao.setExpiredTime(sysConfigurationProperties.getExpiredTime());
@@ -371,8 +369,8 @@ public class ShiroConfig {
     @Bean("Config")
     @DependsOn("CasClient")
     @ConditionalOnProperty(name = "jhome.sysproperties.casConfig.isEnable", havingValue = "true")
-    public Config config() {
-        return new Config(casClient());
+    public Config config(@Autowired SysConfigurationPropertiesBean sysConfigurationProperties) {
+        return new Config(casClient(sysConfigurationProperties));
     }
 
     /**
@@ -383,8 +381,8 @@ public class ShiroConfig {
     @Bean("CasClient")
     @DependsOn("CasConfiguration")
     @ConditionalOnProperty(name = "jhome.sysproperties.casConfig.isEnable", havingValue = "true")
-    public CasClient casClient() {
-        CasClient casClient = new CasClient(casConfiguration());
+    public CasClient casClient(@Autowired SysConfigurationPropertiesBean sysConfigurationProperties) {
+        CasClient casClient = new CasClient(casConfiguration(sysConfigurationProperties));
         //设置cas服务端信息
         //casClient.setConfiguration(casConfiguration);
         //登录成功后重定向回来的请求URL
@@ -400,7 +398,7 @@ public class ShiroConfig {
      */
     @Bean("CasConfiguration")
     @ConditionalOnProperty(name = "jhome.sysproperties.casConfig.isEnable", havingValue = "true")
-    public CasConfiguration casConfiguration() {
+    public CasConfiguration casConfiguration(@Autowired SysConfigurationPropertiesBean sysConfigurationProperties) {
         CasConfiguration casConfiguration = new CasConfiguration();
         //CAS 版本，默认为 CAS30， CAS20
         casConfiguration.setProtocol(CasProtocol.CAS20);
@@ -416,7 +414,7 @@ public class ShiroConfig {
      */
     @Bean
     @ConditionalOnMissingBean(name = "SmartCampusCasRealm")
-    public CasRealm casRealm() {
+    public CasRealm casRealm(@Autowired SysConfigurationPropertiesBean sysConfigurationProperties) {
         CasRealm realm = new CasRealm();
         realm.setName("CasRealm");
         realm.setCachingEnabled(false);
@@ -466,7 +464,7 @@ public class ShiroConfig {
     /**
      * Form登录过滤器 前后台分离过滤器
      */
-    private SecurityAuthenticationFilter shiroAuthcFilter() {
+    private SecurityAuthenticationFilter shiroAuthcFilter(@Autowired SysConfigurationPropertiesBean sysConfigurationProperties) {
         SecurityAuthenticationFilter bean = new SecurityAuthenticationFilter();
         bean.setCallbackUrl(sysConfigurationProperties.getCallbackUrl());
         return bean;
@@ -508,9 +506,9 @@ public class ShiroConfig {
      * @return
      */
     @Bean("UserAuxiliary")
-    public UserAuxiliary userAuxiliary() {
+    public UserAuxiliary userAuxiliary(@Autowired SysConfigurationPropertiesBean sysConfigurationProperties) {
         UserAuxiliary userAuxiliary = new UserAuxiliary();
-        userAuxiliary.setCDao(serverRedisSessionDao());
+        userAuxiliary.setCDao(serverRedisSessionDao(sysConfigurationProperties));
         return userAuxiliary;
     }
 

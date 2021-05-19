@@ -48,7 +48,7 @@ public class ShiroConfig {
     public RedisTemplate redisTemplate;
 
     @Bean(name = "SysConfigurationPropertiesBean")
-    public SysConfigurationPropertiesBean sysConfigurationPropertiesBean() {
+    public SysConfigurationPropertiesBean sysConfigurationProperties() {
         return new SysConfigurationPropertiesBean();
     }
 

@@ -420,7 +420,7 @@ public class WordUtil {
     public   void setResponsetHeader(HttpServletResponse response,String fileName)
     {
         response.setCharacterEncoding("utf-8");
-        response.setContentType("application//msword");
+        response.setContentType("application/msword");
         response.setHeader("Content-Disposition","attachment;filename="+fileName+".docx");
     }
 

@@ -27,14 +27,14 @@ import java.util.regex.Pattern;
 //@ComponentScan({"com.account.autoconfiguration"})
 //@MapperScan("")
 public class JhomeWebApplication {
-    public static void main1(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
         new SpringApplicationBuilder(JhomeWebApplication.class).bannerMode(Banner.Mode.OFF).run(args);
     }
-    public static void main(String[] args) throws IOException {
+    public static void main1(String[] args) throws IOException {
     {
         WordUtil xwpfHelper=new WordUtil();
-        xwpfHelper.test1();
+        //xwpfHelper.test1();
 
                 /*
         String templatePath = "D:\\word\\template.doc";

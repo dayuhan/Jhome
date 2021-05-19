@@ -29,6 +29,10 @@ public class FeignConfig  implements RequestInterceptor {
             String token = (String) request.getAttribute("org.apache.shiro.web.servlet.ShiroHttpServletRequest_REQUESTED_SESSION_ID");
             if (StringUtil.isNotBlank(token)) {
                 requestTemplate.header("jhomeToken",token);
+            }else
+            {
+                token=request.getHeader("jhomeToken");
+                requestTemplate.header("jhomeToken",token);
             }
         }
     }

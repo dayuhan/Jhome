@@ -2,10 +2,16 @@ package com.account.autoconfiguration;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
 
 @Setter
 @Getter
-public class SysConfigurationPropertiesBean extends  SysProperties  {
+@ConfigurationProperties(
+        prefix = "jhome.sysproperties"
+)
+public class SysConfigurationPropertiesBean  {
     public QueueConfig queueconfig;//队列配置
     public String adminPath;//后台路径
     public String frontPath;//前台路径

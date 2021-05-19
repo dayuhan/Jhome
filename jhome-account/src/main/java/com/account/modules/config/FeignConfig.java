@@ -56,6 +56,11 @@ public class FeignConfig implements RequestInterceptor {
             if (StringUtil.isNotBlank(token)) {
                 requestTemplate.header("jhomeToken", token);
             }
+            else
+            {
+                token=request.getHeader("jhomeToken");
+                requestTemplate.header("jhomeToken",token);
+            }
         }
     }
 
