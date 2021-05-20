@@ -10,8 +10,8 @@
         <module name="jhome-api" />
         <module name="jhome-position" />
         <module name="jhome-registerMachine" />
+        <module name="jhome-account" />
         <module name="jhome-transactionService" />
-        <module name="jhome-translateService" />
         <module name="jhome-configService" />
         <module name="jhome-geoServerToolsService" />
         <module name="jhome-common" />
@@ -23,7 +23,7 @@
         <module name="jhome-fileStore" />
         <module name="jhome-codeGenerator" />
         <module name="jhome-appPush" />
-        <module name="jhome-account" />
+        <module name="jhome-translateService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
